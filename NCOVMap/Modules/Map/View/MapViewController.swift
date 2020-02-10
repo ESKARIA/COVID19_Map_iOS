@@ -39,6 +39,7 @@ class MapViewController: BaseViewController {
         let mapContainer = UIView()
         let camera = GMSCameraPosition(latitude: 0, longitude: 0, zoom: 1)
         self.mapView = GMSMapView(frame: mapContainer.frame, camera: camera)
+        self.mapView.delegate = self
         self.setupMaps()
         mapContainer.addSubview(self.mapView)
         self.mapView.snp.makeConstraints { (make) in
@@ -82,13 +83,22 @@ class MapViewController: BaseViewController {
 }
 extension MapViewController: MapViewProtocol {
     
-    func showOnMap(model: [StatisticsRegionModel]) {
-        
+    func showOnMap(model: [StatisticsRegionCoordinatesModel]) {
+        mapView.clear()
         for dotkaOnMap in model {
-            let position = CLLocationCoordinate2D(latitude: dotkaOnMap.coordinates.latitude, longitude: dotkaOnMap.coordinates.longitude)
-            let marker = GMSMarker(position: position)
-            marker.map = mapView
+            let position = CLLocationCoordinate2D(latitude: dotkaOnMap.latitude, longitude: dotkaOnMap.longitude)
+            let circle = GMSCircle(position: position, radius: 100000)
+            let mark = GMSMarker(position: position)
+            circle.map = mapView
+            mark.map = mapView
         }
     }
     
+}
+
+extension MapViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        self.presenter.requestPoint()
+    }
 }

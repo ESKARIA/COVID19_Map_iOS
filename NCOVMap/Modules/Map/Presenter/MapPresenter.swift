@@ -14,6 +14,8 @@ class MapPresenter: BasePresenter {
     private var wireFrame: MapWireFrameProtocol
     private var interactor: MapInteractorProtocol
 
+    private var statisticsModel = StatisticsModel()
+    
     init(view: MapViewProtocol, wireFrame: MapWireFrameProtocol, interactor: MapInteractorProtocol) {
         self.view = view
         self.interactor = interactor
@@ -24,7 +26,7 @@ class MapPresenter: BasePresenter {
 extension MapPresenter: MapPresenterProtocol {
     
     func viewLoaded() {
-        
+        self.getStatistics()
     }
     
     func viewAppeared() {
@@ -36,8 +38,32 @@ extension MapPresenter: MapPresenterProtocol {
             if let error = error {
                 return
             }
-            guard let showedData = model?.regionsData else { return }
-            self.view?.showOnMap(model: showedData)
+            guard let model = model else { return }
+            self.statisticsModel = model
+            self.requestPoint()
         }
     }
+    
+    func requestPoint() {
+        var encodedCoordinates = [String]()
+        for coordinatesModel in self.statisticsModel.regionsData {
+            let hash = Geohash.encode(latitude: coordinatesModel.coordinates.latitude, longitude: coordinatesModel.coordinates.longitude, precision: .sixHundredThirtyKilometers)
+            encodedCoordinates.append(hash)
+        }
+        
+        encodedCoordinates = Array(Set(encodedCoordinates))
+        let decodedCoordinates = encodedCoordinates.compactMap{Geohash.decode(hash: $0)}
+        
+        var result = [StatisticsRegionCoordinatesModel]()
+        for coordinate in decodedCoordinates {
+            let _coordinate = StatisticsRegionCoordinatesModel()
+            _coordinate.latitude = coordinate.latitude.max - coordinate.latitude.min
+            _coordinate.longitude = coordinate.longitude.max - coordinate.longitude.min
+            
+            result.append(_coordinate)
+        }
+        
+        self.view?.showOnMap(model: result)
+    }
+    
 }
