@@ -165,6 +165,7 @@ DEPENDENCIES:
   - Firebase/Performance
   - GoogleMaps
   - GooglePlaces
+  - R.swift
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:

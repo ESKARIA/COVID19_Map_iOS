@@ -9,13 +9,18 @@
 import UIKit
 
 // PRESENTER -> VIEW
-protocol MapViewProtocol: class { }
+protocol MapViewProtocol: class {
+    
+}
 
 // PRESENTER -> WIREFRAME
 protocol MapWireFrameProtocol: class { }
 
 // VIEW -> PRESENTER
-protocol MapPresenterProtocol: class { }
+protocol MapPresenterProtocol: class {
+    func viewLoaded()
+    func viewAppeared()
+}
 
 // PRESENTER -> INTERACTOR
 protocol MapInteractorProtocol: class { }
