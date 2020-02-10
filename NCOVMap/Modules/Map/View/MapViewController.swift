@@ -8,6 +8,8 @@
 
 import UIKit
 import SnapKit
+import GoogleMaps
+import GooglePlaces
 
 class MapViewController: BaseViewController {
 
@@ -21,13 +23,7 @@ class MapViewController: BaseViewController {
 
     private func createUI() {
 
-//        let label = UILabel.makeLabel(size: 36, weight: .medium, color: .black)
-//        label.text = "Map"
-//
-//        self.view.addSubview(label)
-//        label.snp.makeConstraints {
-//            $0.center.equalToSuperview()
-//        }
+        let ma
     }
 
 }
