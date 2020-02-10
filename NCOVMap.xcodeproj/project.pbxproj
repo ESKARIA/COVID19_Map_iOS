@@ -12,6 +12,12 @@
 		1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525AA315E86B8660139E1761 /* Map+DIResolver.swift */; };
 		1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */; };
 		1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B23087CCC0195FB14850F /* NavigationInteractor.swift */; };
+		2005F60423F18DBD00A52FC2 /* Network+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */; };
+		2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */; };
+		2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */; };
+		2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60F23F1974200A52FC2 /* AccountManager.swift */; };
+		204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */; };
+		20B3E3A823F15A0F00371FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */; };
 		249C7ADCE30F0333660F12BF /* TabBar+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CF82A6C973EA838B8D6F4 /* TabBar+Tests.swift */; };
 		27690D9B536083481CAF5F77 /* Navigation+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72A4FCA822B14CE9A8921D /* Navigation+Tests.swift */; };
 		34D95971F31FC4EADD6242C5 /* StatisticsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FAB6421CAD08A2DAA6B6BC /* StatisticsWireFrame.swift */; };
@@ -42,7 +48,6 @@
 		D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */; };
 		D43CCDD623F14BF7005F0F31 /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD523F14BF7005F0F31 /* DIResolver.swift */; };
 		D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD823F14C2E005F0F31 /* RootViewController.swift */; };
-		D43CCDDE23F16029005F0F31 /* StatisticsJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDDD23F16029005F0F31 /* StatisticsJSONModel.swift */; };
 		D43CCDE423F166F4005F0F31 /* StatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE323F166F4005F0F31 /* StatisticsModel.swift */; };
 		D43CCDE623F1675A005F0F31 /* StatisticsTotalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE523F1675A005F0F31 /* StatisticsTotalModel.swift */; };
 		D43CCDE823F16855005F0F31 /* StatisticsRegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE723F16855005F0F31 /* StatisticsRegionModel.swift */; };
@@ -80,6 +85,13 @@
 		10DC22A3C06916B24DDF781B /* MapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1217F991A013B715536BA4C3 /* Pods-NCOVMap-NCOVMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap-NCOVMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Navigation+DIResolver.swift"; path = "../Modules/Navigation/Navigation+DIResolver.swift"; sourceTree = "<group>"; };
+		2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Statistics.swift"; sourceTree = "<group>"; };
+		2005F60523F18E1F00A52FC2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsJSONModel.swift; sourceTree = "<group>"; };
+		2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsApiRequest.swift; sourceTree = "<group>"; };
+		2005F60F23F1974200A52FC2 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
+		20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A037B25A458CFF342856AC0 /* StatisticsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatisticsInteractor.swift; sourceTree = "<group>"; };
 		3F5246AB131557365BC863A0 /* NavigationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationPresenter.swift; sourceTree = "<group>"; };
@@ -213,6 +225,65 @@
 				D4B166C394CA3C7C735422A5 /* Statistics+Tests.swift */,
 			);
 			path = Statistics;
+			sourceTree = "<group>";
+		};
+		2005F60723F18F5B00A52FC2 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDDD23F16029005F0F31 /* StatisticsJSONModel.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		2005F60823F1905300A52FC2 /* responseModel */ = {
+			isa = PBXGroup;
+			children = (
+				2005F60923F1905300A52FC2 /* Statistics */,
+			);
+			path = responseModel;
+			sourceTree = "<group>";
+		};
+		2005F60923F1905300A52FC2 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		2005F60C23F1946000A52FC2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		2005F61123F1974500A52FC2 /* Service Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2005F61223F1975500A52FC2 /* Account */,
+			);
+			path = "Service Layer";
+			sourceTree = "<group>";
+		};
+		2005F61223F1975500A52FC2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				2005F60F23F1974200A52FC2 /* AccountManager.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		204A26D723F17DF0005DC46B /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2005F60C23F1946000A52FC2 /* Requests */,
+				2005F60823F1905300A52FC2 /* responseModel */,
+				204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */,
+				2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */,
+			);
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 		339E9EA04CA9B08BD721F2F8 /* Modules */ = {
@@ -361,12 +432,14 @@
 		D43CCD8C23F1492A005F0F31 = {
 			isa = PBXGroup;
 			children = (
+				2005F60523F18E1F00A52FC2 /* .gitignore */,
 				D43CCD9723F1492A005F0F31 /* NCOVMap */,
 				D43CCDAE23F1492C005F0F31 /* NCOVMapTests */,
 				D43CCDB923F1492C005F0F31 /* NCOVMapUITests */,
 				D43CCD9623F1492A005F0F31 /* Products */,
 				3F4E5254F4C9A9A5D2952497 /* Pods */,
 				E9DA6BAE8A2AE1A907C54EE1 /* Frameworks */,
+				2005F60723F18F5B00A52FC2 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,6 +456,7 @@
 		D43CCD9723F1492A005F0F31 /* NCOVMap */ = {
 			isa = PBXGroup;
 			children = (
+				20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */,
 				D43CCD9823F1492A005F0F31 /* AppDelegate.swift */,
 				D43CCDF123F18AC5005F0F31 /* R.generated.swift */,
 				D43CCD9A23F1492A005F0F31 /* SceneDelegate.swift */,
@@ -390,8 +464,9 @@
 				D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */,
 				D43CCDA623F1492C005F0F31 /* Info.plist */,
 				D43CCDF723F18EC2005F0F31 /* GoogleMapsStyle */,
+				2005F61123F1974500A52FC2 /* Service Layer */,
 				D43CCDDF23F166C7005F0F31 /* Data Layer */,
-				D43CCDDB23F15FF9005F0F31 /* Network Layer */,
+				204A26D723F17DF0005DC46B /* Network Layer */,
 				D43CCDD423F14BEE005F0F31 /* Assembly */,
 				D43CCDC823F14B77005F0F31 /* UI Layer */,
 				339E9EA04CA9B08BD721F2F8 /* Modules */,
@@ -456,23 +531,6 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		D43CCDDB23F15FF9005F0F31 /* Network Layer */ = {
-			isa = PBXGroup;
-			children = (
-				D43CCDED23F17F61005F0F31 /* request */,
-				D43CCDDC23F16005005F0F31 /* responseModel */,
-			);
-			path = "Network Layer";
-			sourceTree = "<group>";
-		};
-		D43CCDDC23F16005005F0F31 /* responseModel */ = {
-			isa = PBXGroup;
-			children = (
-				D43CCDE123F166D6005F0F31 /* Statistics */,
-			);
-			path = responseModel;
-			sourceTree = "<group>";
-		};
 		D43CCDDF23F166C7005F0F31 /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,14 +546,6 @@
 				D43CCDE223F166DF005F0F31 /* Statistics */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D43CCDE123F166D6005F0F31 /* Statistics */ = {
-			isa = PBXGroup;
-			children = (
-				D43CCDDD23F16029005F0F31 /* StatisticsJSONModel.swift */,
-			);
-			path = Statistics;
 			sourceTree = "<group>";
 		};
 		D43CCDE223F166DF005F0F31 /* Statistics */ = {
@@ -644,7 +694,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = ESKARIA;
+				ORGANIZATIONNAME = "ESKARIA LLC";
 				TargetAttributes = {
 					D43CCD9423F1492A005F0F31 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -687,6 +737,7 @@
 				D43CCDF623F18EBC005F0F31 /* GoogleMapStyleLight.json in Resources */,
 				D43CCDA523F1492C005F0F31 /* LaunchScreen.storyboard in Resources */,
 				D43CCDF423F18E4C005F0F31 /* GoogleMapStyleDark.json in Resources */,
+				20B3E3A823F15A0F00371FC5 /* GoogleService-Info.plist in Resources */,
 				D43CCDA223F1492C005F0F31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -889,9 +940,10 @@
 				A11D4F682D21189DCFC2AEDF /* NavigationViewController.swift in Sources */,
 				0080190ADD74A8A938576F69 /* NavigationPresenter.swift in Sources */,
 				D43CCDE423F166F4005F0F31 /* StatisticsModel.swift in Sources */,
-				D43CCDDE23F16029005F0F31 /* StatisticsJSONModel.swift in Sources */,
 				1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */,
 				47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */,
+				2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */,
+				2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */,
 				556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */,
 				D43CCDE823F16855005F0F31 /* StatisticsRegionModel.swift in Sources */,
 				D43CCDEC23F17BAA005F0F31 /* StatisticsRegionDateModel.swift in Sources */,
@@ -903,6 +955,9 @@
 				A55651B76E8E5DEF1DF039F2 /* StatisticsProtocols.swift in Sources */,
 				34D95971F31FC4EADD6242C5 /* StatisticsWireFrame.swift in Sources */,
 				42324B92B0478491844C3FE6 /* Statistics+DIResolver.swift in Sources */,
+				2005F60423F18DBD00A52FC2 /* Network+Statistics.swift in Sources */,
+				204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */,
+				2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,7 +1134,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ESKARIA.NCOVMap;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eskaria.ncov.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1098,7 +1154,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ESKARIA.NCOVMap;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eskaria.ncov.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
