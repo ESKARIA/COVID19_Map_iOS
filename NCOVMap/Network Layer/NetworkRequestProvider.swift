@@ -40,7 +40,6 @@ class NetworkRequestProvider {
             tokenString = "Bearer " + accountManager.getUserToken()
         }
 
-        let s = self
         self.networkWrapper.runRequest(request, baseURL: baseUrl, authToken: tokenString, progressResult: progressResult) { (statusCode, data, error) in
 
             guard let error = error else {
@@ -63,7 +62,7 @@ class NetworkRequestProvider {
 
         var dic: [String: Any] = [:]
         dic.updateValue("\(statusCode)", forKey: "statusCode")
-        
+
         if let value = identifier {
 
             let key: String

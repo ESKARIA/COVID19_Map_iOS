@@ -14,6 +14,8 @@
 		1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B23087CCC0195FB14850F /* NavigationInteractor.swift */; };
 		2005F60423F18DBD00A52FC2 /* Network+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */; };
 		2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */; };
+		2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */; };
+		2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60F23F1974200A52FC2 /* AccountManager.swift */; };
 		204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */; };
 		20B3E3A823F15A0F00371FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */; };
 		249C7ADCE30F0333660F12BF /* TabBar+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CF82A6C973EA838B8D6F4 /* TabBar+Tests.swift */; };
@@ -77,6 +79,8 @@
 		2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Statistics.swift"; sourceTree = "<group>"; };
 		2005F60523F18E1F00A52FC2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsJSONModel.swift; sourceTree = "<group>"; };
+		2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsApiRequest.swift; sourceTree = "<group>"; };
+		2005F60F23F1974200A52FC2 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
 		20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,14 +197,39 @@
 			path = Statistics;
 			sourceTree = "<group>";
 		};
-		204A26D723F17DF0005DC46B /* NetworkLayer */ = {
+		2005F60C23F1946000A52FC2 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		2005F61123F1974500A52FC2 /* Service Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2005F61223F1975500A52FC2 /* Account */,
+			);
+			path = "Service Layer";
+			sourceTree = "<group>";
+		};
+		2005F61223F1975500A52FC2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				2005F60F23F1974200A52FC2 /* AccountManager.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		204A26D723F17DF0005DC46B /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2005F60C23F1946000A52FC2 /* Requests */,
 				2005F60823F1905300A52FC2 /* responseModel */,
 				204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */,
 				2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */,
 			);
-			path = NetworkLayer;
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 		339E9EA04CA9B08BD721F2F8 /* Modules */ = {
@@ -362,8 +391,9 @@
 				D43CCDA123F1492C005F0F31 /* Assets.xcassets */,
 				D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */,
 				D43CCDA623F1492C005F0F31 /* Info.plist */,
+				2005F61123F1974500A52FC2 /* Service Layer */,
 				D43CCDDF23F166C7005F0F31 /* Data Layer */,
-				204A26D723F17DF0005DC46B /* NetworkLayer */,
+				204A26D723F17DF0005DC46B /* Network Layer */,
 				D43CCDD423F14BEE005F0F31 /* Assembly */,
 				D43CCDC823F14B77005F0F31 /* UI Layer */,
 				339E9EA04CA9B08BD721F2F8 /* Modules */,
@@ -805,6 +835,8 @@
 				D43CCDE423F166F4005F0F31 /* StatisticsModel.swift in Sources */,
 				1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */,
 				47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */,
+				2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */,
+				2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */,
 				556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */,
 				D43CCDE823F16855005F0F31 /* StatisticsRegionModel.swift in Sources */,
 				D43CCDEC23F17BAA005F0F31 /* StatisticsRegionDateModel.swift in Sources */,
