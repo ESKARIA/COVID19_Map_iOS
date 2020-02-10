@@ -1,5 +1,5 @@
 //
-//  Network+InfoList.swift
+//  Network+Statistics.swift
 //  NCOVMap
 //
 //  Created by Emil Karimov on 10.02.2020.
@@ -10,6 +10,6 @@ import Foundation
 import EKNetworking
 
 
-protocol NetworkInfoListProtocol {
-    func infoList(_ completion: @escaping([ListModel]?, EKNetworkError?) -> Void)
+protocol NetworkStatisticsProtocol {
+    func getStatistics(_ completion: @escaping(StatisticsJSONModel?, EKNetworkError?) -> Void)
 }
