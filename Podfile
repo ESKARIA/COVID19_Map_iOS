@@ -27,6 +27,7 @@ target 'NCOVMap' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   firebase
+  modules
   # Pods for NCOVMap
   pod 'SnapKit', '~> 5.0.0', :inhibit_warnings => true
   pod 'R.swift', :inhibit_warnings => true
