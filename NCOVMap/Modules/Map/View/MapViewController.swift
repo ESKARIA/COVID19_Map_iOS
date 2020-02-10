@@ -20,13 +20,20 @@ class MapViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createUI()
-
+        self.presenter.viewLoaded()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.presenter.viewAppeared()
     }
 
     private func createUI() {
 
         self.view.backgroundColor = .white
         self.title = "Map"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.isTranslucent = true
         
         let mapContainer = UIView()
         let camera = GMSCameraPosition(latitude: 0, longitude: 0, zoom: 1)
@@ -38,8 +45,7 @@ class MapViewController: BaseViewController {
         
         self.view.addSubview(mapContainer)
         mapContainer.snp.makeConstraints { (make) in
-            make.height.width.equalTo(100)
-            make.center.equalToSuperview()
+            make.edges.equalToSuperview()
         }
     }
 

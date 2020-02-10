@@ -12,6 +12,7 @@
 		1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525AA315E86B8660139E1761 /* Map+DIResolver.swift */; };
 		1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */; };
 		1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B23087CCC0195FB14850F /* NavigationInteractor.swift */; };
+		249C7ADCE30F0333660F12BF /* TabBar+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CF82A6C973EA838B8D6F4 /* TabBar+Tests.swift */; };
 		27690D9B536083481CAF5F77 /* Navigation+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72A4FCA822B14CE9A8921D /* Navigation+Tests.swift */; };
 		47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAFBF8B6D0BE0AE89A7B46F /* NavigationProtocols.swift */; };
 		556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B46ACB5599D8B932C690653 /* NavigationWireFrame.swift */; };
@@ -41,6 +42,8 @@
 		D43CCDE823F16855005F0F31 /* StatisticsRegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE723F16855005F0F31 /* StatisticsRegionModel.swift */; };
 		D43CCDEA23F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE923F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift */; };
 		D43CCDEC23F17BAA005F0F31 /* StatisticsRegionDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDEB23F17BAA005F0F31 /* StatisticsRegionDateModel.swift */; };
+		D43CCDEF23F18824005F0F31 /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDEE23F18824005F0F31 /* BaseTabBar.swift */; };
+		D43CCDF223F18AC5005F0F31 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDF123F18AC5005F0F31 /* R.generated.swift */; };
 		E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE182BFC86D996A255804F /* MapInteractor.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,8 +109,11 @@
 		D43CCDE723F16855005F0F31 /* StatisticsRegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsRegionModel.swift; sourceTree = "<group>"; };
 		D43CCDE923F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsRegionCoordinatesModel.swift; sourceTree = "<group>"; };
 		D43CCDEB23F17BAA005F0F31 /* StatisticsRegionDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsRegionDateModel.swift; sourceTree = "<group>"; };
+		D43CCDEE23F18824005F0F31 /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
+		D43CCDF123F18AC5005F0F31 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		E2DE182BFC86D996A255804F /* MapInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		EEB9458638991B667467141F /* Pods-NCOVMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F43CF82A6C973EA838B8D6F4 /* TabBar+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TabBar+Tests.swift"; sourceTree = "<group>"; };
 		F57B23087CCC0195FB14850F /* NavigationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +204,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5C71E23B7AC724EDFF526A37 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F43CF82A6C973EA838B8D6F4 /* TabBar+Tests.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		602195E98CC6AAC072575960 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +265,7 @@
 			children = (
 				1B4C265FFEE29EA3459A8833 /* Map */,
 				7DAFA1BACFA913C97EA1E065 /* Navigation */,
+				5C71E23B7AC724EDFF526A37 /* TabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -297,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				D43CCD9823F1492A005F0F31 /* AppDelegate.swift */,
+				D43CCDF123F18AC5005F0F31 /* R.generated.swift */,
 				D43CCD9A23F1492A005F0F31 /* SceneDelegate.swift */,
 				D43CCDA123F1492C005F0F31 /* Assets.xcassets */,
 				D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */,
@@ -340,6 +356,7 @@
 		D43CCDC923F14B7C005F0F31 /* Base classes */ = {
 			isa = PBXGroup;
 			children = (
+				D43CCDEE23F18824005F0F31 /* BaseTabBar.swift */,
 				D43CCDCC23F14B9E005F0F31 /* BaseInteractor.swift */,
 				D43CCDCE23F14BAD005F0F31 /* BasePresenter.swift */,
 				D43CCDD023F14BC9005F0F31 /* BaseViewController.swift */,
@@ -369,6 +386,7 @@
 		D43CCDDB23F15FF9005F0F31 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D43CCDED23F17F61005F0F31 /* request */,
 				D43CCDDC23F16005005F0F31 /* responseModel */,
 			);
 			path = "Network Layer";
@@ -418,6 +436,13 @@
 			path = Statistics;
 			sourceTree = "<group>";
 		};
+		D43CCDED23F17F61005F0F31 /* request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
 		D6BD2D98D91D90E1D3FFD748 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +481,7 @@
 			buildConfigurationList = D43CCDBF23F1492C005F0F31 /* Build configuration list for PBXNativeTarget "NCOVMap" */;
 			buildPhases = (
 				036CEE4C3469C5BED0E3A274 /* [CP] Check Pods Manifest.lock */,
+				D43CCDF023F18A81005F0F31 /* R Swift */,
 				D43CCD9123F1492A005F0F31 /* Sources */,
 				D43CCD9223F1492A005F0F31 /* Frameworks */,
 				D43CCD9323F1492A005F0F31 /* Resources */,
@@ -659,6 +685,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D43CCDF023F18A81005F0F31 /* R Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "R Swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		D6682AFCC727B5C0C9F3353B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -732,10 +778,12 @@
 				D43CCDD123F14BC9005F0F31 /* BaseViewController.swift in Sources */,
 				10AE3493D7752C2860D9C38C /* MapPresenter.swift in Sources */,
 				E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */,
+				D43CCDEF23F18824005F0F31 /* BaseTabBar.swift in Sources */,
 				D43CCDE623F1675A005F0F31 /* StatisticsTotalModel.swift in Sources */,
 				9802F087B50FF8900AA32B45 /* MapProtocols.swift in Sources */,
 				5B0DE34987B7DC93CCBFF8C0 /* MapWireFrame.swift in Sources */,
 				1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */,
+				D43CCDF223F18AC5005F0F31 /* R.generated.swift in Sources */,
 				D43CCDD623F14BF7005F0F31 /* DIResolver.swift in Sources */,
 				D43CCDCF23F14BAD005F0F31 /* BasePresenter.swift in Sources */,
 				A11D4F682D21189DCFC2AEDF /* NavigationViewController.swift in Sources */,
@@ -758,6 +806,7 @@
 				D43CCDB023F1492C005F0F31 /* NCOVMapTests.swift in Sources */,
 				932AAE40101AE6BAC3D20EBA /* Map+Tests.swift in Sources */,
 				27690D9B536083481CAF5F77 /* Navigation+Tests.swift in Sources */,
+				249C7ADCE30F0333660F12BF /* TabBar+Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

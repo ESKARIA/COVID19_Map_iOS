@@ -19,4 +19,13 @@ class MapPresenter: BasePresenter {
     }
 }
 
-extension MapPresenter: MapPresenterProtocol { }
+extension MapPresenter: MapPresenterProtocol {
+    
+    func viewLoaded() {
+        
+    }
+    
+    func viewAppeared() {
+        
+    }
+}

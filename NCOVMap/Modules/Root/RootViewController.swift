@@ -28,12 +28,11 @@ class RootViewController: UIViewController {
     }
     
     private func showMapScreen() {
-        let new = self.resolver.presentMapViewController()
-        let navVC = self.resolver.presentNavigationViewController(rootController: new)
-        self.addChild(navVC)
-        self.view.addSubview(navVC.view)
-        navVC.didMove(toParent: self)
+        let new = self.resolver.mainTabBarController()
+        self.addChild(new)
+        self.view.addSubview(new.view)
+        new.didMove(toParent: self)
         
-        self.current = navVC
+        self.current = new
     }
 }

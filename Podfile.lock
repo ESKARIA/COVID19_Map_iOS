@@ -20,6 +20,9 @@ PODS:
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
   - Result (4.1.0)
   - SnapKit (5.0.1)
 
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - EKNetworking (from `Frameworks/EKNetworking`)
   - GoogleMaps
   - GooglePlaces
+  - R.swift
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
@@ -38,6 +42,8 @@ SPEC REPOS:
     - KRActivityIndicatorView
     - KRProgressHUD
     - Moya
+    - R.swift
+    - R.swift.Library
     - Result
     - SnapKit
 
@@ -56,9 +62,11 @@ SPEC CHECKSUMS:
   KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
   KRProgressHUD: c3b9a48a0ee4824ea13212ac3f1efa50dca021e3
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 16d23cb605193200474a4aa0d8a1046467a4519d
+PODFILE CHECKSUM: bb3796944b5a3365444ff25d89f9cc249619a645
 
 COCOAPODS: 1.8.4

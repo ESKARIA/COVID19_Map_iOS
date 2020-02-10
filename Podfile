@@ -6,11 +6,12 @@ target 'NCOVMap' do
   use_frameworks!
 
   # Pods for NCOVMap
-pod 'SnapKit', '~> 5.0.0', :inhibit_warnings => true
-pod 'DevHelper', :path => 'Frameworks/DevHelper', :inhibit_warnings => true
-pod 'EKNetworking', :path => 'Frameworks/EKNetworking', :inhibit_warnings => true
-pod 'GoogleMaps', :inhibit_warnings => true
- pod 'GooglePlaces', :inhibit_warnings => true
+  pod 'SnapKit', '~> 5.0.0', :inhibit_warnings => true
+  pod 'DevHelper', :path => 'Frameworks/DevHelper', :inhibit_warnings => true
+  pod 'EKNetworking', :path => 'Frameworks/EKNetworking', :inhibit_warnings => true
+  pod 'GoogleMaps', :inhibit_warnings => true
+  pod 'GooglePlaces', :inhibit_warnings => true
+  pod 'R.swift', :inhibit_warnings => true
 
   target 'NCOVMapTests' do
     inherit! :search_paths

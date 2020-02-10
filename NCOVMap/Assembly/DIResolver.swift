@@ -15,4 +15,9 @@ class DIResolver {
         let controller = RootViewController(resolver: self)
         return controller
     }
+    
+    func mainTabBarController() -> UIViewController {
+        let controller = BaseTabBarController(resolver: self)
+        return controller
+    }
 }
