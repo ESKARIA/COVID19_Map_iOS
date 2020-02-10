@@ -23,7 +23,19 @@ class MapViewController: BaseViewController {
 
     private func createUI() {
 
-        let ma
+        self.view.backgroundColor = .white
+        self.title = "Map"
+        
+        let mapContainer = UIView()
+        let camera = GMSCameraPosition(latitude: 0, longitude: 0, zoom: 1)
+        let mapView = GMSMapView(frame: mapContainer.frame, camera: camera)
+        mapContainer.addSubview(mapView)
+        
+        self.view.addSubview(mapContainer)
+        mapContainer.snp.makeConstraints { (make) in
+            make.height.width.equalTo(100)
+            make.center.equalToSuperview()
+        }
     }
 
 }

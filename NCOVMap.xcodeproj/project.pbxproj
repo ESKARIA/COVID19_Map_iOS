@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0080190ADD74A8A938576F69 /* NavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5246AB131557365BC863A0 /* NavigationPresenter.swift */; };
 		10AE3493D7752C2860D9C38C /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDCB344B071ED520618C66 /* MapPresenter.swift */; };
 		1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525AA315E86B8660139E1761 /* Map+DIResolver.swift */; };
+		1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */; };
+		1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B23087CCC0195FB14850F /* NavigationInteractor.swift */; };
+		27690D9B536083481CAF5F77 /* Navigation+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72A4FCA822B14CE9A8921D /* Navigation+Tests.swift */; };
+		47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAFBF8B6D0BE0AE89A7B46F /* NavigationProtocols.swift */; };
+		556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B46ACB5599D8B932C690653 /* NavigationWireFrame.swift */; };
 		5B0DE34987B7DC93CCBFF8C0 /* MapWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02A2F3A86DF07494CE6A39 /* MapWireFrame.swift */; };
 		7C6CE030292538C16EEF4630 /* Pods_NCOVMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD71CC7D3EAB71E3830DADB9 /* Pods_NCOVMap.framework */; };
 		932AAE40101AE6BAC3D20EBA /* Map+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E287B7C9ED4F2FBE9E8C441 /* Map+Tests.swift */; };
 		9802F087B50FF8900AA32B45 /* MapProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E9F9B45E3AC1496093145 /* MapProtocols.swift */; };
+		A11D4F682D21189DCFC2AEDF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEAC687ECE419A872B0623B /* NavigationViewController.swift */; };
 		BF2618D10E9E8C08C9E974C9 /* Pods_NCOVMap_NCOVMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */; };
 		CA104C37033D2EC90116DBDD /* Pods_NCOVMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */; };
 		CD7ECC5244AB970DA0C8DA88 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC22A3C06916B24DDF781B /* MapViewController.swift */; };
@@ -50,13 +57,19 @@
 
 /* Begin PBXFileReference section */
 		0AFDCB344B071ED520618C66 /* MapPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		0B72A4FCA822B14CE9A8921D /* Navigation+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Navigation+Tests.swift"; sourceTree = "<group>"; };
+		0EEAC687ECE419A872B0623B /* NavigationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		10DC22A3C06916B24DDF781B /* MapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1217F991A013B715536BA4C3 /* Pods-NCOVMap-NCOVMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap-NCOVMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Navigation+DIResolver.swift"; path = "../Modules/Navigation/Navigation+DIResolver.swift"; sourceTree = "<group>"; };
 		3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		3F5246AB131557365BC863A0 /* NavigationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationPresenter.swift; sourceTree = "<group>"; };
 		525AA315E86B8660139E1761 /* Map+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Map+DIResolver.swift"; sourceTree = "<group>"; };
 		5B9E9F9B45E3AC1496093145 /* MapProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapProtocols.swift; sourceTree = "<group>"; };
 		5E8F46847075C545E070BFFD /* Pods-NCOVMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMap/Pods-NCOVMap.debug.xcconfig"; sourceTree = "<group>"; };
 		6187E2F7995FCE6129909EB8 /* Pods-NCOVMap-NCOVMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap-NCOVMapUITests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6BAFBF8B6D0BE0AE89A7B46F /* NavigationProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationProtocols.swift; sourceTree = "<group>"; };
+		7B46ACB5599D8B932C690653 /* NavigationWireFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationWireFrame.swift; sourceTree = "<group>"; };
 		87458307E57DF300FE259B71 /* Pods-NCOVMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap.release.xcconfig"; path = "Target Support Files/Pods-NCOVMap/Pods-NCOVMap.release.xcconfig"; sourceTree = "<group>"; };
 		8E287B7C9ED4F2FBE9E8C441 /* Map+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Map+Tests.swift"; sourceTree = "<group>"; };
 		9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCOVMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +96,7 @@
 		D43CCDD823F14C2E005F0F31 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E2DE182BFC86D996A255804F /* MapInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		EEB9458638991B667467141F /* Pods-NCOVMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F57B23087CCC0195FB14850F /* NavigationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		105E975435CE1CCA73C873B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3F5246AB131557365BC863A0 /* NavigationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		1B4C265FFEE29EA3459A8833 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +148,7 @@
 			children = (
 				D43CCDD723F14C1A005F0F31 /* Root */,
 				3E22B7F4C0CC17784BC26B2F /* Map */,
+				D6BD2D98D91D90E1D3FFD748 /* Navigation */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -155,12 +178,44 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5524D6A7DD51F7728B5FE474 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EEAC687ECE419A872B0623B /* NavigationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		602195E98CC6AAC072575960 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				7B46ACB5599D8B932C690653 /* NavigationWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
 		69346D01E9AF250DA56FBC1A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				E2DE182BFC86D996A255804F /* MapInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7B241C95A1E4DE2F1903FCF4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6BAFBF8B6D0BE0AE89A7B46F /* NavigationProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7DAFA1BACFA913C97EA1E065 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0B72A4FCA822B14CE9A8921D /* Navigation+Tests.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		7DD88715676DC4AC14B1C7BB /* Presenter */ = {
@@ -171,10 +226,19 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		A27A6E2EFFEF860E11C7E123 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F57B23087CCC0195FB14850F /* NavigationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		A9C43E39E8054DAB39A64270 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				1B4C265FFEE29EA3459A8833 /* Map */,
+				7DAFA1BACFA913C97EA1E065 /* Navigation */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -274,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				525AA315E86B8660139E1761 /* Map+DIResolver.swift */,
+				12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */,
 				D43CCDD523F14BF7005F0F31 /* DIResolver.swift */,
 			);
 			path = Assembly;
@@ -285,6 +350,18 @@
 				D43CCDD823F14C2E005F0F31 /* RootViewController.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		D6BD2D98D91D90E1D3FFD748 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				5524D6A7DD51F7728B5FE474 /* View */,
+				105E975435CE1CCA73C873B5 /* Presenter */,
+				A27A6E2EFFEF860E11C7E123 /* Interactor */,
+				7B241C95A1E4DE2F1903FCF4 /* Protocols */,
+				602195E98CC6AAC072575960 /* WireFrame */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		DB8C61620C643B2091C3DEA9 /* View */ = {
@@ -593,6 +670,12 @@
 				1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */,
 				D43CCDD623F14BF7005F0F31 /* DIResolver.swift in Sources */,
 				D43CCDCF23F14BAD005F0F31 /* BasePresenter.swift in Sources */,
+				A11D4F682D21189DCFC2AEDF /* NavigationViewController.swift in Sources */,
+				0080190ADD74A8A938576F69 /* NavigationPresenter.swift in Sources */,
+				1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */,
+				47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */,
+				556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */,
+				1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +685,7 @@
 			files = (
 				D43CCDB023F1492C005F0F31 /* NCOVMapTests.swift in Sources */,
 				932AAE40101AE6BAC3D20EBA /* Map+Tests.swift in Sources */,
+				27690D9B536083481CAF5F77 /* Navigation+Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
