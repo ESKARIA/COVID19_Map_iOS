@@ -34,6 +34,7 @@ class MapViewController: BaseViewController {
         self.title = "Map"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: themeManager.mapScreenGetTitleNavigationColor()]
         
         let mapContainer = UIView()
         let camera = GMSCameraPosition(latitude: 0, longitude: 0, zoom: 1)
@@ -54,7 +55,7 @@ class MapViewController: BaseViewController {
     private func setupMaps() {
         do {
           // Set the map style by passing the URL of the local file.
-            if let styleURL = self.themeManager.googleMapsColorMode() {
+            if let styleURL = self.themeManager.mapScreenGetGoogleMapsColorMode() {
             mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
           } else {
             NSLog("Unable to find style.json")
@@ -67,12 +68,14 @@ class MapViewController: BaseViewController {
     override func userActivatedDarkMode(execute: (() -> Void)? = nil) {
         super.userActivatedDarkMode {
             self.setupMaps()
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: self.themeManager.mapScreenGetTitleNavigationColor()]
         }
     }
     
     override func userActivateLightMode(execute: (() -> Void)? = nil) {
         super.userActivateLightMode {
             self.setupMaps()
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: self.themeManager.mapScreenGetTitleNavigationColor()]
         }
     }
      

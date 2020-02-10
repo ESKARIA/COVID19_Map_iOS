@@ -30,13 +30,22 @@ class ThemeManager {
     }
     
     /// тема гугл карт
-    func googleMapsColorMode() -> URL? {
+    func mapScreenGetGoogleMapsColorMode() -> URL? {
         switch self.mode {
             
         case .light:
             return Bundle.main.url(forResource: "GoogleMapStyleLight", withExtension: "json")
         case .dark:
             return Bundle.main.url(forResource: "GoogleMapStyleDark", withExtension: "json")
+        }
+    }
+    
+    func mapScreenGetTitleNavigationColor() -> UIColor {
+        switch self.mode {
+        case .light:
+            return .yellow
+        case .dark:
+            return .blue
         }
     }
 }

@@ -52,10 +52,12 @@ class BaseViewController: UIViewController {
     /// на некоторых экранах (например на карте) происходит жесткое моргание при подгрузке новой темы, так что лучше затемнять экран
     /// - Parameter execute: что выполнить в момент темного экрана
     private func animateChangeMode(execute: (() -> Void)? = nil ) {
+        let window = UIApplication.shared.windows.filter{$0.isKeyWindow}.first
+        guard let _mainView = window else { return }
         let _view = UIView()
         _view.alpha = 0
         _view.backgroundColor = .black
-        self.view.addSubview(_view)
+        _mainView.addSubview(_view)
         _view.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
