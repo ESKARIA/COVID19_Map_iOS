@@ -17,7 +17,7 @@ extension StatisticsViewController {
     
     private enum Constant {
         static let fullViewYPosition: CGFloat = 100
-        static var partialViewYPosition: CGFloat { UIScreen.main.bounds.height - 50 }
+        static var partialViewYPosition: CGFloat { UIScreen.main.bounds.height - 100 }
     }
 }
 
