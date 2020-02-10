@@ -34,10 +34,12 @@ class MapViewController: BaseViewController {
         self.title = "Map"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: themeManager.mapScreenGetTitleNavigationColor()]
         
         let mapContainer = UIView()
         let camera = GMSCameraPosition(latitude: 0, longitude: 0, zoom: 1)
         self.mapView = GMSMapView(frame: mapContainer.frame, camera: camera)
+        self.setupMaps()
         mapContainer.addSubview(self.mapView)
         self.mapView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -49,5 +51,44 @@ class MapViewController: BaseViewController {
         }
     }
 
+    //map design
+    private func setupMaps() {
+        do {
+          // Set the map style by passing the URL of the local file.
+            if let styleURL = self.themeManager.mapScreenGetGoogleMapsColorMode() {
+            mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+          } else {
+            NSLog("Unable to find style.json")
+          }
+        } catch {
+          NSLog("One or more of the map styles failed to load. \(error)")
+        }
+    }
+    
+    override func userActivatedDarkMode(execute: (() -> Void)? = nil) {
+        super.userActivatedDarkMode {
+            self.setupMaps()
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: self.themeManager.mapScreenGetTitleNavigationColor()]
+        }
+    }
+    
+    override func userActivateLightMode(execute: (() -> Void)? = nil) {
+        super.userActivateLightMode {
+            self.setupMaps()
+            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: self.themeManager.mapScreenGetTitleNavigationColor()]
+        }
+    }
+     
 }
-extension MapViewController: MapViewProtocol { }
+extension MapViewController: MapViewProtocol {
+    
+    func showOnMap(model: [StatisticsRegionModel]) {
+        
+        for dotkaOnMap in model {
+            let position = CLLocationCoordinate2D(latitude: dotkaOnMap.coordinates.latitude, longitude: dotkaOnMap.coordinates.longitude)
+            let marker = GMSMarker(position: position)
+            marker.map = mapView
+        }
+    }
+    
+}

@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import EKNetworking
 
 // PRESENTER -> VIEW
 protocol MapViewProtocol: class {
-    
+    func showOnMap(model: [StatisticsRegionModel])
 }
 
 // PRESENTER -> WIREFRAME
-protocol MapWireFrameProtocol: class { }
+protocol MapWireFrameProtocol: class {
+    func presentStatisticsVC(from view: MapViewProtocol?)
+}
 
 // VIEW -> PRESENTER
 protocol MapPresenterProtocol: class {
@@ -23,4 +26,6 @@ protocol MapPresenterProtocol: class {
 }
 
 // PRESENTER -> INTERACTOR
-protocol MapInteractorProtocol: class { }
+protocol MapInteractorProtocol: class {
+    func getStatistics(completion: @escaping (StatisticsModel?, EKNetworkError?) -> Void)
+}

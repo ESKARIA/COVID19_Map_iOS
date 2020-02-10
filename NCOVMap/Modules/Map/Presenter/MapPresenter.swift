@@ -5,6 +5,8 @@
 //  Created by Dmitriy on 10/02/2020.
 //  Copyright © 2020 ESKARIA. All rights reserved.
 //
+import EKNetworking
+import UIKit
 
 class MapPresenter: BasePresenter {
 
@@ -26,6 +28,16 @@ extension MapPresenter: MapPresenterProtocol {
     }
     
     func viewAppeared() {
-        
+        self.wireFrame.presentStatisticsVC(from: view)
+    }
+    
+    func getStatistics() {
+        self.interactor.getStatistics { (model, error) in
+            if let error = error {
+                return
+            }
+            guard let showedData = model?.regionsData else { return }
+            self.view?.showOnMap(model: showedData)
+        }
     }
 }

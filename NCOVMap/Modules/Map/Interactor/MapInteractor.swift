@@ -6,6 +6,20 @@
 //  Copyright © 2020 ESKARIA. All rights reserved.
 //
 
-class MapInteractor: BaseInteractor { }
+import EKNetworking
 
-extension MapInteractor: MapInteractorProtocol { }
+class MapInteractor: BaseInteractor {
+    
+    private var networking: NetworkRequestProvider
+    
+    init(networking: NetworkRequestProvider) {
+        self.networking = networking
+    }
+}
+
+extension MapInteractor: MapInteractorProtocol {
+    
+    func getStatistics(completion: @escaping (StatisticsModel?, EKNetworkError?) -> Void) {
+        self.networking.getStatistics(completion)
+    }
+}
