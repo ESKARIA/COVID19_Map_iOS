@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>GoogleMapsApiKey</key>
-	<string></string>
+	<string>AIzaSyBOOcPpUBG-E2qU4l92qKgVXWoI9NB9vdk</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>googlechromes</string>
@@ -22,7 +22,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
