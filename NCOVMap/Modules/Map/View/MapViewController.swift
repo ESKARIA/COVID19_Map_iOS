@@ -14,7 +14,9 @@ import GooglePlaces
 class MapViewController: BaseViewController {
 
     var presenter: MapPresenterProtocol!
-
+    
+    var mapView: GMSMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createUI()
@@ -28,8 +30,11 @@ class MapViewController: BaseViewController {
         
         let mapContainer = UIView()
         let camera = GMSCameraPosition(latitude: 0, longitude: 0, zoom: 1)
-        let mapView = GMSMapView(frame: mapContainer.frame, camera: camera)
-        mapContainer.addSubview(mapView)
+        self.mapView = GMSMapView(frame: mapContainer.frame, camera: camera)
+        mapContainer.addSubview(self.mapView)
+        self.mapView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
         
         self.view.addSubview(mapContainer)
         mapContainer.snp.makeConstraints { (make) in
