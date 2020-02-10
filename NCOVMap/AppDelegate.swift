@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        self.setupGoogleMapsApi()
         return true
     }
 
@@ -33,5 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    private func setupGoogleMapsApi() {
+        guard let googleMapsKey = Bundle.main.object(forInfoDictionaryKey: "GoogleMapsApiKey") as? String else {
+            fatalError("Insert API key in info.plist!")
+        }
+        GMSServices.provideAPIKey(googleMapsKey)
+        GMSPlacesClient.provideAPIKey(googleMapsKey)
+    }
 }
 
