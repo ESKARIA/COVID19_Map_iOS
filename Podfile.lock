@@ -151,6 +151,9 @@ PODS:
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.3)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
   - Result (4.1.0)
   - SnapKit (5.0.1)
 
@@ -201,6 +204,8 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - R.swift
+    - R.swift.Library
     - Result
     - SnapKit
 
@@ -244,9 +249,11 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 0e94afe3b47cb11876eb6aee296638711a24bf75
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 7f33d6c39b3240efc0ee6b6e4da6455d8038086a
+PODFILE CHECKSUM: cefe578f9e5cfb54c7154a080855edc8a5b1f064
 
 COCOAPODS: 1.8.4
