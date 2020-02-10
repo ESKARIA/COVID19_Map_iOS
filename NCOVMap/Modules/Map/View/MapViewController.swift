@@ -38,6 +38,7 @@ class MapViewController: BaseViewController {
         let mapContainer = UIView()
         let camera = GMSCameraPosition(latitude: 0, longitude: 0, zoom: 1)
         self.mapView = GMSMapView(frame: mapContainer.frame, camera: camera)
+        self.setupMaps()
         mapContainer.addSubview(self.mapView)
         self.mapView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -49,5 +50,31 @@ class MapViewController: BaseViewController {
         }
     }
 
+    //map design
+    private func setupMaps() {
+        do {
+          // Set the map style by passing the URL of the local file.
+            if let styleURL = self.themeManager.googleMapsColorMode() {
+            mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+          } else {
+            NSLog("Unable to find style.json")
+          }
+        } catch {
+          NSLog("One or more of the map styles failed to load. \(error)")
+        }
+    }
+    
+    override func userActivatedDarkMode(execute: (() -> Void)? = nil) {
+        super.userActivatedDarkMode {
+            self.setupMaps()
+        }
+    }
+    
+    override func userActivateLightMode(execute: (() -> Void)? = nil) {
+        super.userActivateLightMode {
+            self.setupMaps()
+        }
+    }
+     
 }
 extension MapViewController: MapViewProtocol { }

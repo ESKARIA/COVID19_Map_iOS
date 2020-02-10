@@ -105,6 +105,28 @@ struct R: Rswift.Validatable {
   }
   #endif
 
+  /// This `R.file` struct is generated, and contains static references to 2 files.
+  struct file {
+    /// Resource file `GoogleMapStyleDark.json`.
+    static let googleMapStyleDarkJson = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleMapStyleDark", pathExtension: "json")
+    /// Resource file `GoogleMapStyleLight.json`.
+    static let googleMapStyleLightJson = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleMapStyleLight", pathExtension: "json")
+
+    /// `bundle.url(forResource: "GoogleMapStyleDark", withExtension: "json")`
+    static func googleMapStyleDarkJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.googleMapStyleDarkJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "GoogleMapStyleLight", withExtension: "json")`
+    static func googleMapStyleLightJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.googleMapStyleLightJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
