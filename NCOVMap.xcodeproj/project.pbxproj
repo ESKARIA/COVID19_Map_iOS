@@ -1,0 +1,889 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10AE3493D7752C2860D9C38C /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDCB344B071ED520618C66 /* MapPresenter.swift */; };
+		1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525AA315E86B8660139E1761 /* Map+DIResolver.swift */; };
+		5B0DE34987B7DC93CCBFF8C0 /* MapWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02A2F3A86DF07494CE6A39 /* MapWireFrame.swift */; };
+		7C6CE030292538C16EEF4630 /* Pods_NCOVMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD71CC7D3EAB71E3830DADB9 /* Pods_NCOVMap.framework */; };
+		932AAE40101AE6BAC3D20EBA /* Map+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E287B7C9ED4F2FBE9E8C441 /* Map+Tests.swift */; };
+		9802F087B50FF8900AA32B45 /* MapProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E9F9B45E3AC1496093145 /* MapProtocols.swift */; };
+		BF2618D10E9E8C08C9E974C9 /* Pods_NCOVMap_NCOVMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */; };
+		CA104C37033D2EC90116DBDD /* Pods_NCOVMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */; };
+		CD7ECC5244AB970DA0C8DA88 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC22A3C06916B24DDF781B /* MapViewController.swift */; };
+		D43CCD9923F1492A005F0F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCD9823F1492A005F0F31 /* AppDelegate.swift */; };
+		D43CCD9B23F1492A005F0F31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCD9A23F1492A005F0F31 /* SceneDelegate.swift */; };
+		D43CCDA223F1492C005F0F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43CCDA123F1492C005F0F31 /* Assets.xcassets */; };
+		D43CCDA523F1492C005F0F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */; };
+		D43CCDB023F1492C005F0F31 /* NCOVMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDAF23F1492C005F0F31 /* NCOVMapTests.swift */; };
+		D43CCDBB23F1492C005F0F31 /* NCOVMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDBA23F1492C005F0F31 /* NCOVMapUITests.swift */; };
+		D43CCDCD23F14B9E005F0F31 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDCC23F14B9E005F0F31 /* BaseInteractor.swift */; };
+		D43CCDCF23F14BAD005F0F31 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDCE23F14BAD005F0F31 /* BasePresenter.swift */; };
+		D43CCDD123F14BC9005F0F31 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD023F14BC9005F0F31 /* BaseViewController.swift */; };
+		D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */; };
+		D43CCDD623F14BF7005F0F31 /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD523F14BF7005F0F31 /* DIResolver.swift */; };
+		D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD823F14C2E005F0F31 /* RootViewController.swift */; };
+		E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE182BFC86D996A255804F /* MapInteractor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D43CCDAC23F1492C005F0F31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D43CCD8D23F1492A005F0F31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D43CCD9423F1492A005F0F31;
+			remoteInfo = NCOVMap;
+		};
+		D43CCDB723F1492C005F0F31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D43CCD8D23F1492A005F0F31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D43CCD9423F1492A005F0F31;
+			remoteInfo = NCOVMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AFDCB344B071ED520618C66 /* MapPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		10DC22A3C06916B24DDF781B /* MapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1217F991A013B715536BA4C3 /* Pods-NCOVMap-NCOVMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap-NCOVMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		525AA315E86B8660139E1761 /* Map+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Map+DIResolver.swift"; sourceTree = "<group>"; };
+		5B9E9F9B45E3AC1496093145 /* MapProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapProtocols.swift; sourceTree = "<group>"; };
+		5E8F46847075C545E070BFFD /* Pods-NCOVMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMap/Pods-NCOVMap.debug.xcconfig"; sourceTree = "<group>"; };
+		6187E2F7995FCE6129909EB8 /* Pods-NCOVMap-NCOVMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap-NCOVMapUITests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		87458307E57DF300FE259B71 /* Pods-NCOVMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap.release.xcconfig"; path = "Target Support Files/Pods-NCOVMap/Pods-NCOVMap.release.xcconfig"; sourceTree = "<group>"; };
+		8E287B7C9ED4F2FBE9E8C441 /* Map+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Map+Tests.swift"; sourceTree = "<group>"; };
+		9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCOVMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD71CC7D3EAB71E3830DADB9 /* Pods_NCOVMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCOVMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCOVMap_NCOVMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE02A2F3A86DF07494CE6A39 /* MapWireFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapWireFrame.swift; sourceTree = "<group>"; };
+		D43CCD9523F1492A005F0F31 /* NCOVMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCOVMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D43CCD9823F1492A005F0F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D43CCD9A23F1492A005F0F31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D43CCDA123F1492C005F0F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D43CCDA423F1492C005F0F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D43CCDA623F1492C005F0F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D43CCDAB23F1492C005F0F31 /* NCOVMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCOVMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D43CCDAF23F1492C005F0F31 /* NCOVMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCOVMapTests.swift; sourceTree = "<group>"; };
+		D43CCDB123F1492C005F0F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D43CCDB623F1492C005F0F31 /* NCOVMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCOVMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D43CCDBA23F1492C005F0F31 /* NCOVMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCOVMapUITests.swift; sourceTree = "<group>"; };
+		D43CCDBC23F1492C005F0F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D43CCDCC23F14B9E005F0F31 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		D43CCDCE23F14BAD005F0F31 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		D43CCDD023F14BC9005F0F31 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		D43CCDD523F14BF7005F0F31 /* DIResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIResolver.swift; sourceTree = "<group>"; };
+		D43CCDD823F14C2E005F0F31 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		E2DE182BFC86D996A255804F /* MapInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		EEB9458638991B667467141F /* Pods-NCOVMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D43CCD9223F1492A005F0F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C6CE030292538C16EEF4630 /* Pods_NCOVMap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D43CCDA823F1492C005F0F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA104C37033D2EC90116DBDD /* Pods_NCOVMapTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D43CCDB323F1492C005F0F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF2618D10E9E8C08C9E974C9 /* Pods_NCOVMap_NCOVMapUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B4C265FFEE29EA3459A8833 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8E287B7C9ED4F2FBE9E8C441 /* Map+Tests.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		339E9EA04CA9B08BD721F2F8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDD723F14C1A005F0F31 /* Root */,
+				3E22B7F4C0CC17784BC26B2F /* Map */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3E22B7F4C0CC17784BC26B2F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DB8C61620C643B2091C3DEA9 /* View */,
+				7DD88715676DC4AC14B1C7BB /* Presenter */,
+				69346D01E9AF250DA56FBC1A /* Interactor */,
+				C40ED6A669FA1C1D683C4299 /* Protocols */,
+				C7348FEB488FD1021668A3A3 /* WireFrame */,
+				525AA315E86B8660139E1761 /* Map+DIResolver.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		3F4E5254F4C9A9A5D2952497 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E8F46847075C545E070BFFD /* Pods-NCOVMap.debug.xcconfig */,
+				87458307E57DF300FE259B71 /* Pods-NCOVMap.release.xcconfig */,
+				1217F991A013B715536BA4C3 /* Pods-NCOVMap-NCOVMapUITests.debug.xcconfig */,
+				6187E2F7995FCE6129909EB8 /* Pods-NCOVMap-NCOVMapUITests.release.xcconfig */,
+				EEB9458638991B667467141F /* Pods-NCOVMapTests.debug.xcconfig */,
+				3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		69346D01E9AF250DA56FBC1A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E2DE182BFC86D996A255804F /* MapInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7DD88715676DC4AC14B1C7BB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0AFDCB344B071ED520618C66 /* MapPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A9C43E39E8054DAB39A64270 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1B4C265FFEE29EA3459A8833 /* Map */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C40ED6A669FA1C1D683C4299 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5B9E9F9B45E3AC1496093145 /* MapProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C7348FEB488FD1021668A3A3 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				CE02A2F3A86DF07494CE6A39 /* MapWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		D43CCD8C23F1492A005F0F31 = {
+			isa = PBXGroup;
+			children = (
+				D43CCD9723F1492A005F0F31 /* NCOVMap */,
+				D43CCDAE23F1492C005F0F31 /* NCOVMapTests */,
+				D43CCDB923F1492C005F0F31 /* NCOVMapUITests */,
+				D43CCD9623F1492A005F0F31 /* Products */,
+				3F4E5254F4C9A9A5D2952497 /* Pods */,
+				E9DA6BAE8A2AE1A907C54EE1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D43CCD9623F1492A005F0F31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCD9523F1492A005F0F31 /* NCOVMap.app */,
+				D43CCDAB23F1492C005F0F31 /* NCOVMapTests.xctest */,
+				D43CCDB623F1492C005F0F31 /* NCOVMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D43CCD9723F1492A005F0F31 /* NCOVMap */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCD9823F1492A005F0F31 /* AppDelegate.swift */,
+				D43CCD9A23F1492A005F0F31 /* SceneDelegate.swift */,
+				D43CCDA123F1492C005F0F31 /* Assets.xcassets */,
+				D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */,
+				D43CCDA623F1492C005F0F31 /* Info.plist */,
+				D43CCDD423F14BEE005F0F31 /* Assembly */,
+				D43CCDC823F14B77005F0F31 /* UI Layer */,
+				339E9EA04CA9B08BD721F2F8 /* Modules */,
+			);
+			path = NCOVMap;
+			sourceTree = "<group>";
+		};
+		D43CCDAE23F1492C005F0F31 /* NCOVMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDAF23F1492C005F0F31 /* NCOVMapTests.swift */,
+				D43CCDB123F1492C005F0F31 /* Info.plist */,
+				A9C43E39E8054DAB39A64270 /* Modules */,
+			);
+			path = NCOVMapTests;
+			sourceTree = "<group>";
+		};
+		D43CCDB923F1492C005F0F31 /* NCOVMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDBA23F1492C005F0F31 /* NCOVMapUITests.swift */,
+				D43CCDBC23F1492C005F0F31 /* Info.plist */,
+			);
+			path = NCOVMapUITests;
+			sourceTree = "<group>";
+		};
+		D43CCDC823F14B77005F0F31 /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDC923F14B7C005F0F31 /* Base classes */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
+		D43CCDC923F14B7C005F0F31 /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDCC23F14B9E005F0F31 /* BaseInteractor.swift */,
+				D43CCDCE23F14BAD005F0F31 /* BasePresenter.swift */,
+				D43CCDD023F14BC9005F0F31 /* BaseViewController.swift */,
+				D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */,
+			);
+			path = "Base classes";
+			sourceTree = "<group>";
+		};
+		D43CCDD423F14BEE005F0F31 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDD523F14BF7005F0F31 /* DIResolver.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		D43CCDD723F14C1A005F0F31 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDD823F14C2E005F0F31 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DB8C61620C643B2091C3DEA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10DC22A3C06916B24DDF781B /* MapViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9DA6BAE8A2AE1A907C54EE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD71CC7D3EAB71E3830DADB9 /* Pods_NCOVMap.framework */,
+				BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */,
+				9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D43CCD9423F1492A005F0F31 /* NCOVMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D43CCDBF23F1492C005F0F31 /* Build configuration list for PBXNativeTarget "NCOVMap" */;
+			buildPhases = (
+				036CEE4C3469C5BED0E3A274 /* [CP] Check Pods Manifest.lock */,
+				D43CCD9123F1492A005F0F31 /* Sources */,
+				D43CCD9223F1492A005F0F31 /* Frameworks */,
+				D43CCD9323F1492A005F0F31 /* Resources */,
+				DDC9438759028029DCDB8E3F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NCOVMap;
+			productName = NCOVMap;
+			productReference = D43CCD9523F1492A005F0F31 /* NCOVMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D43CCDAA23F1492C005F0F31 /* NCOVMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D43CCDC223F1492C005F0F31 /* Build configuration list for PBXNativeTarget "NCOVMapTests" */;
+			buildPhases = (
+				A79F37B564C6BFE53CD102F4 /* [CP] Check Pods Manifest.lock */,
+				D43CCDA723F1492C005F0F31 /* Sources */,
+				D43CCDA823F1492C005F0F31 /* Frameworks */,
+				D43CCDA923F1492C005F0F31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D43CCDAD23F1492C005F0F31 /* PBXTargetDependency */,
+			);
+			name = NCOVMapTests;
+			productName = NCOVMapTests;
+			productReference = D43CCDAB23F1492C005F0F31 /* NCOVMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D43CCDB523F1492C005F0F31 /* NCOVMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D43CCDC523F1492C005F0F31 /* Build configuration list for PBXNativeTarget "NCOVMapUITests" */;
+			buildPhases = (
+				F36C58BADB458F3AA1FDE239 /* [CP] Check Pods Manifest.lock */,
+				D43CCDB223F1492C005F0F31 /* Sources */,
+				D43CCDB323F1492C005F0F31 /* Frameworks */,
+				D43CCDB423F1492C005F0F31 /* Resources */,
+				8CC7DAB4A1787DE2F7BD822B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D43CCDB823F1492C005F0F31 /* PBXTargetDependency */,
+			);
+			name = NCOVMapUITests;
+			productName = NCOVMapUITests;
+			productReference = D43CCDB623F1492C005F0F31 /* NCOVMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D43CCD8D23F1492A005F0F31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = ESKARIA;
+				TargetAttributes = {
+					D43CCD9423F1492A005F0F31 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					D43CCDAA23F1492C005F0F31 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D43CCD9423F1492A005F0F31;
+					};
+					D43CCDB523F1492C005F0F31 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D43CCD9423F1492A005F0F31;
+					};
+				};
+			};
+			buildConfigurationList = D43CCD9023F1492A005F0F31 /* Build configuration list for PBXProject "NCOVMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D43CCD8C23F1492A005F0F31;
+			productRefGroup = D43CCD9623F1492A005F0F31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D43CCD9423F1492A005F0F31 /* NCOVMap */,
+				D43CCDAA23F1492C005F0F31 /* NCOVMapTests */,
+				D43CCDB523F1492C005F0F31 /* NCOVMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D43CCD9323F1492A005F0F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D43CCDA523F1492C005F0F31 /* LaunchScreen.storyboard in Resources */,
+				D43CCDA223F1492C005F0F31 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D43CCDA923F1492C005F0F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D43CCDB423F1492C005F0F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		036CEE4C3469C5BED0E3A274 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NCOVMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CC7DAB4A1787DE2F7BD822B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A79F37B564C6BFE53CD102F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NCOVMapTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDC9438759028029DCDB8E3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NCOVMap/Pods-NCOVMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NCOVMap/Pods-NCOVMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NCOVMap/Pods-NCOVMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F36C58BADB458F3AA1FDE239 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NCOVMap-NCOVMapUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D43CCD9123F1492A005F0F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D43CCDCD23F14B9E005F0F31 /* BaseInteractor.swift in Sources */,
+				D43CCD9923F1492A005F0F31 /* AppDelegate.swift in Sources */,
+				D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */,
+				D43CCD9B23F1492A005F0F31 /* SceneDelegate.swift in Sources */,
+				D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */,
+				CD7ECC5244AB970DA0C8DA88 /* MapViewController.swift in Sources */,
+				D43CCDD123F14BC9005F0F31 /* BaseViewController.swift in Sources */,
+				10AE3493D7752C2860D9C38C /* MapPresenter.swift in Sources */,
+				E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */,
+				9802F087B50FF8900AA32B45 /* MapProtocols.swift in Sources */,
+				5B0DE34987B7DC93CCBFF8C0 /* MapWireFrame.swift in Sources */,
+				1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */,
+				D43CCDD623F14BF7005F0F31 /* DIResolver.swift in Sources */,
+				D43CCDCF23F14BAD005F0F31 /* BasePresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D43CCDA723F1492C005F0F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D43CCDB023F1492C005F0F31 /* NCOVMapTests.swift in Sources */,
+				932AAE40101AE6BAC3D20EBA /* Map+Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D43CCDB223F1492C005F0F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D43CCDBB23F1492C005F0F31 /* NCOVMapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D43CCDAD23F1492C005F0F31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D43CCD9423F1492A005F0F31 /* NCOVMap */;
+			targetProxy = D43CCDAC23F1492C005F0F31 /* PBXContainerItemProxy */;
+		};
+		D43CCDB823F1492C005F0F31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D43CCD9423F1492A005F0F31 /* NCOVMap */;
+			targetProxy = D43CCDB723F1492C005F0F31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D43CCDA423F1492C005F0F31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D43CCDBD23F1492C005F0F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D43CCDBE23F1492C005F0F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D43CCDC023F1492C005F0F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8F46847075C545E070BFFD /* Pods-NCOVMap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V93MRMNEKV;
+				INFOPLIST_FILE = NCOVMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ESKARIA.NCOVMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D43CCDC123F1492C005F0F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87458307E57DF300FE259B71 /* Pods-NCOVMap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V93MRMNEKV;
+				INFOPLIST_FILE = NCOVMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ESKARIA.NCOVMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D43CCDC323F1492C005F0F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEB9458638991B667467141F /* Pods-NCOVMapTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V93MRMNEKV;
+				INFOPLIST_FILE = NCOVMapTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ESKARIA.NCOVMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NCOVMap.app/NCOVMap";
+			};
+			name = Debug;
+		};
+		D43CCDC423F1492C005F0F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V93MRMNEKV;
+				INFOPLIST_FILE = NCOVMapTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ESKARIA.NCOVMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NCOVMap.app/NCOVMap";
+			};
+			name = Release;
+		};
+		D43CCDC623F1492C005F0F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1217F991A013B715536BA4C3 /* Pods-NCOVMap-NCOVMapUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V93MRMNEKV;
+				INFOPLIST_FILE = NCOVMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ESKARIA.NCOVMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NCOVMap;
+			};
+			name = Debug;
+		};
+		D43CCDC723F1492C005F0F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6187E2F7995FCE6129909EB8 /* Pods-NCOVMap-NCOVMapUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V93MRMNEKV;
+				INFOPLIST_FILE = NCOVMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ESKARIA.NCOVMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NCOVMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D43CCD9023F1492A005F0F31 /* Build configuration list for PBXProject "NCOVMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D43CCDBD23F1492C005F0F31 /* Debug */,
+				D43CCDBE23F1492C005F0F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D43CCDBF23F1492C005F0F31 /* Build configuration list for PBXNativeTarget "NCOVMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D43CCDC023F1492C005F0F31 /* Debug */,
+				D43CCDC123F1492C005F0F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D43CCDC223F1492C005F0F31 /* Build configuration list for PBXNativeTarget "NCOVMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D43CCDC323F1492C005F0F31 /* Debug */,
+				D43CCDC423F1492C005F0F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D43CCDC523F1492C005F0F31 /* Build configuration list for PBXNativeTarget "NCOVMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D43CCDC623F1492C005F0F31 /* Debug */,
+				D43CCDC723F1492C005F0F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D43CCD8D23F1492A005F0F31 /* Project object */;
+}
