@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>629639379048-fhunm9nooif6ogofsuhsh8arrsei8esp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.629639379048-fhunm9nooif6ogofsuhsh8arrsei8esp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAZ15wfZVoNH8Ro_Msf6UAyUAa8hjNdJsk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>629639379048</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.eskaria.ncov.ios</string>
+	<key>PROJECT_ID</key>
+	<string>ncov-2019-mobile</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ncov-2019-mobile.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:629639379048:ios:e45adc074174766435e3dd</string>
+	<key>DATABASE_URL</key>
+	<string>https://ncov-2019-mobile.firebaseio.com</string>
+</dict>
+</plist>
