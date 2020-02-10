@@ -105,12 +105,14 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.file` struct is generated, and contains static references to 2 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
     /// Resource file `GoogleMapStyleDark.json`.
     static let googleMapStyleDarkJson = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleMapStyleDark", pathExtension: "json")
     /// Resource file `GoogleMapStyleLight.json`.
     static let googleMapStyleLightJson = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleMapStyleLight", pathExtension: "json")
+    /// Resource file `GoogleService-Info.plist`.
+    static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
 
     /// `bundle.url(forResource: "GoogleMapStyleDark", withExtension: "json")`
     static func googleMapStyleDarkJson(_: Void = ()) -> Foundation.URL? {
@@ -121,6 +123,12 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "GoogleMapStyleLight", withExtension: "json")`
     static func googleMapStyleLightJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.googleMapStyleLightJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
+    static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.googleServiceInfoPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
 
