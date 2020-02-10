@@ -86,7 +86,7 @@
 		1217F991A013B715536BA4C3 /* Pods-NCOVMap-NCOVMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap-NCOVMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMap-NCOVMapUITests/Pods-NCOVMap-NCOVMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Navigation+DIResolver.swift"; path = "../Modules/Navigation/Navigation+DIResolver.swift"; sourceTree = "<group>"; };
 		2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Statistics.swift"; sourceTree = "<group>"; };
-		2005F60523F18E1F00A52FC2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2005F60523F18E1F00A52FC2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsJSONModel.swift; sourceTree = "<group>"; };
 		2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsApiRequest.swift; sourceTree = "<group>"; };
 		2005F60F23F1974200A52FC2 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
@@ -211,22 +211,6 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
-		266AC21A52F0A799038B4149 /* WireFrame */ = {
-			isa = PBXGroup;
-			children = (
-				98FAB6421CAD08A2DAA6B6BC /* StatisticsWireFrame.swift */,
-			);
-			path = WireFrame;
-			sourceTree = "<group>";
-		};
-		29FABC1F5799AE6899EB35D3 /* Statistics */ = {
-			isa = PBXGroup;
-			children = (
-				D4B166C394CA3C7C735422A5 /* Statistics+Tests.swift */,
-			);
-			path = Statistics;
-			sourceTree = "<group>";
-		};
 		2005F60723F18F5B00A52FC2 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +268,22 @@
 				2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */,
 			);
 			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		266AC21A52F0A799038B4149 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				98FAB6421CAD08A2DAA6B6BC /* StatisticsWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		29FABC1F5799AE6899EB35D3 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				D4B166C394CA3C7C735422A5 /* Statistics+Tests.swift */,
+			);
+			path = Statistics;
 			sourceTree = "<group>";
 		};
 		339E9EA04CA9B08BD721F2F8 /* Modules */ = {
@@ -558,13 +558,6 @@
 				D43CCDEB23F17BAA005F0F31 /* StatisticsRegionDateModel.swift */,
 			);
 			path = Statistics;
-			sourceTree = "<group>";
-		};
-		D43CCDED23F17F61005F0F31 /* request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = request;
 			sourceTree = "<group>";
 		};
 		D43CCDF723F18EC2005F0F31 /* GoogleMapsStyle */ = {
