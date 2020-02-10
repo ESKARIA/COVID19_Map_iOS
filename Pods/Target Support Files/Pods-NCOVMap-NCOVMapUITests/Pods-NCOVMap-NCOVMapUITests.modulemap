@@ -1,6 +1,0 @@
-framework module Pods_NCOVMap_NCOVMapUITests {
-  umbrella header "Pods-NCOVMap-NCOVMapUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
