@@ -35,6 +35,7 @@
 		D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */; };
 		D43CCDD623F14BF7005F0F31 /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD523F14BF7005F0F31 /* DIResolver.swift */; };
 		D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD823F14C2E005F0F31 /* RootViewController.swift */; };
+		D43CCDDE23F16029005F0F31 /* StatisticsJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDDD23F16029005F0F31 /* StatisticsJSONModel.swift */; };
 		E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE182BFC86D996A255804F /* MapInteractor.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		D43CCDD523F14BF7005F0F31 /* DIResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIResolver.swift; sourceTree = "<group>"; };
 		D43CCDD823F14C2E005F0F31 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		D43CCDDD23F16029005F0F31 /* StatisticsJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsJSONModel.swift; sourceTree = "<group>"; };
 		E2DE182BFC86D996A255804F /* MapInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		EEB9458638991B667467141F /* Pods-NCOVMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F57B23087CCC0195FB14850F /* NavigationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
@@ -147,8 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				D43CCDD723F14C1A005F0F31 /* Root */,
-				3E22B7F4C0CC17784BC26B2F /* Map */,
 				D6BD2D98D91D90E1D3FFD748 /* Navigation */,
+				3E22B7F4C0CC17784BC26B2F /* Map */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -289,6 +291,7 @@
 				D43CCDA123F1492C005F0F31 /* Assets.xcassets */,
 				D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */,
 				D43CCDA623F1492C005F0F31 /* Info.plist */,
+				D43CCDDB23F15FF9005F0F31 /* Network Layer */,
 				D43CCDD423F14BEE005F0F31 /* Assembly */,
 				D43CCDC823F14B77005F0F31 /* UI Layer */,
 				339E9EA04CA9B08BD721F2F8 /* Modules */,
@@ -350,6 +353,22 @@
 				D43CCDD823F14C2E005F0F31 /* RootViewController.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		D43CCDDB23F15FF9005F0F31 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDDC23F16005005F0F31 /* responseModel */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		D43CCDDC23F16005005F0F31 /* responseModel */ = {
+			isa = PBXGroup;
+			children = (
+				D43CCDDD23F16029005F0F31 /* StatisticsJSONModel.swift */,
+			);
+			path = responseModel;
 			sourceTree = "<group>";
 		};
 		D6BD2D98D91D90E1D3FFD748 /* Navigation */ = {
@@ -672,6 +691,7 @@
 				D43CCDCF23F14BAD005F0F31 /* BasePresenter.swift in Sources */,
 				A11D4F682D21189DCFC2AEDF /* NavigationViewController.swift in Sources */,
 				0080190ADD74A8A938576F69 /* NavigationPresenter.swift in Sources */,
+				D43CCDDE23F16029005F0F31 /* StatisticsJSONModel.swift in Sources */,
 				1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */,
 				47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */,
 				556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */,
