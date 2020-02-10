@@ -1,0 +1,6 @@
+[submodule "Frameworks/EKNetworking"]
+	path = Frameworks/EKNetworking
+	url = https://github.com/emvakar/EKNetworking.git
+[submodule "Frameworks/DevHelper"]
+	path = Frameworks/DevHelper
+	url = https://github.com/emvakar/DevHelper.git

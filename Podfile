@@ -7,6 +7,8 @@ target 'NCOVMap' do
 
   # Pods for NCOVMap
 pod 'SnapKit', '~> 5.0.0'
+pod 'DevHelper', :path => 'Frameworks/DevHelper'
+pod 'EKNetworking', :path => 'Frameworks/EKNetworking'
 
   target 'NCOVMapTests' do
     inherit! :search_paths
