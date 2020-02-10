@@ -26,6 +26,6 @@ extension MapPresenter: MapPresenterProtocol {
     }
     
     func viewAppeared() {
-        
+        self.wireFrame.presentStatisticsVC(from: view)
     }
 }

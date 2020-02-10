@@ -18,11 +18,6 @@ class DIResolver {
         return controller
     }
     
-    func mainTabBarController() -> UIViewController {
-        let controller = BaseTabBarController(resolver: self)
-        return controller
-    }
-    
     func getThemeManager() -> ThemeManager {
         
         if self.themeMananger != nil {

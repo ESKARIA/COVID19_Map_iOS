@@ -43,9 +43,9 @@ class ThemeManager {
     func mapScreenGetTitleNavigationColor() -> UIColor {
         switch self.mode {
         case .light:
-            return .yellow
+            return .white
         case .dark:
-            return .blue
+            return .gray
         }
     }
 }

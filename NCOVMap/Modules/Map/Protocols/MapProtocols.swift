@@ -10,11 +10,12 @@ import UIKit
 
 // PRESENTER -> VIEW
 protocol MapViewProtocol: class {
-    
 }
 
 // PRESENTER -> WIREFRAME
-protocol MapWireFrameProtocol: class { }
+protocol MapWireFrameProtocol: class {
+    func presentStatisticsVC(from view: MapViewProtocol?)
+}
 
 // VIEW -> PRESENTER
 protocol MapPresenterProtocol: class {
