@@ -16,7 +16,7 @@ protocol MapProtocol {
 extension DIResolver: MapProtocol {
     func presentMapViewController() -> UIViewController {
         let viewController = MapViewController(themeManager: self.getThemeManager())
-        let interactor = MapInteractor()
+        let interactor = MapInteractor(networking: self.getNetworking())
         let wireFrame = MapWireFrame(resolver: self)
         let presenter = MapPresenter(view: viewController, wireFrame: wireFrame, interactor: interactor)
         viewController.presenter = presenter

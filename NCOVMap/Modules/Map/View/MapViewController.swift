@@ -80,4 +80,15 @@ class MapViewController: BaseViewController {
     }
      
 }
-extension MapViewController: MapViewProtocol { }
+extension MapViewController: MapViewProtocol {
+    
+    func showOnMap(model: [StatisticsRegionModel]) {
+        
+        for dotkaOnMap in model {
+            let position = CLLocationCoordinate2D(latitude: dotkaOnMap.coordinates.latitude, longitude: dotkaOnMap.coordinates.longitude)
+            let marker = GMSMarker(position: position)
+            marker.map = mapView
+        }
+    }
+    
+}
