@@ -83,22 +83,17 @@ class MapViewController: BaseViewController {
 }
 extension MapViewController: MapViewProtocol {
     
-    func showOnMap(model: [StatisticsRegionCoordinatesModel]) {
+    func showOnMap(model: [StatisticsCircleViewModel]) {
         mapView.clear()
         for dotkaOnMap in model {
             let position = CLLocationCoordinate2D(latitude: dotkaOnMap.latitude, longitude: dotkaOnMap.longitude)
-            let circle = GMSCircle(position: position, radius: 100000)
-            let mark = GMSMarker(position: position)
+            let circle = GMSCircle(position: position, radius: dotkaOnMap.radius)
+            let color = UIColor.red.withAlphaComponent(CGFloat(dotkaOnMap.alpha / 100))
+            circle.fillColor = color
+            circle.strokeColor = .clear
             circle.map = mapView
-            mark.map = mapView
         }
     }
-    
 }
 
-extension MapViewController: GMSMapViewDelegate {
-    
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        self.presenter.requestPoint()
-    }
-}
+extension MapViewController: GMSMapViewDelegate {}

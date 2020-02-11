@@ -9,11 +9,11 @@ import EKNetworking
 import UIKit
 
 class MapPresenter: BasePresenter {
-
+    
     weak var view: MapViewProtocol?
     private var wireFrame: MapWireFrameProtocol
     private var interactor: MapInteractorProtocol
-
+    
     private var statisticsModel = StatisticsModel()
     
     init(view: MapViewProtocol, wireFrame: MapWireFrameProtocol, interactor: MapInteractorProtocol) {
@@ -44,25 +44,37 @@ extension MapPresenter: MapPresenterProtocol {
         }
     }
     
-    func requestPoint() {
-        var encodedCoordinates = [String]()
+    func requestPoint(zoom: Float = 0) {
+        
+        var result = [StatisticsCircleViewModel]()
         for coordinatesModel in self.statisticsModel.regionsData {
-            let hash = Geohash.encode(latitude: coordinatesModel.coordinates.latitude, longitude: coordinatesModel.coordinates.longitude, precision: .sixHundredThirtyKilometers)
-            encodedCoordinates.append(hash)
-        }
-        
-        encodedCoordinates = Array(Set(encodedCoordinates))
-        let decodedCoordinates = encodedCoordinates.compactMap{Geohash.decode(hash: $0)}
-        
-        var result = [StatisticsRegionCoordinatesModel]()
-        for coordinate in decodedCoordinates {
-            let _coordinate = StatisticsRegionCoordinatesModel()
-            _coordinate.latitude = coordinate.latitude.max - coordinate.latitude.min
-            _coordinate.longitude = coordinate.longitude.max - coordinate.longitude.min
             
+            let totalConfirmed = Double(self.statisticsModel.totalInfo.totalConfirmed)
+            let currentRegionConfirmed = Double(coordinatesModel.dates.last?.confirmed ?? 0)
+            
+            var radius = (currentRegionConfirmed / totalConfirmed) * 1000000
+            
+            if radius < 100000 {
+                radius = 100000
+            }
+            
+            if radius > 1000000 {
+                radius = 1000000
+            }
+            
+            let totalDeath = Double(self.statisticsModel.totalInfo.totalDeath)
+            let currentRegionDeath = Double(coordinatesModel.dates.last?.death ?? 0)
+            
+            var alpha = (currentRegionDeath / totalDeath) * 100
+            
+            if alpha < 28 {
+                alpha = 28
+            }
+            
+            let _coordinate = StatisticsCircleViewModel(longitude: coordinatesModel.coordinates.longitude, latitude: coordinatesModel.coordinates.latitude, radius: radius, alpha: alpha)
+        
             result.append(_coordinate)
         }
-        
         self.view?.showOnMap(model: result)
     }
     
