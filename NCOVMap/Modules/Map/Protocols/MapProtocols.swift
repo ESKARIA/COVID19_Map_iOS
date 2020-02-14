@@ -11,7 +11,7 @@ import EKNetworking
 
 // PRESENTER -> VIEW
 protocol MapViewProtocol: class {
-    func showOnMap(model: [StatisticsRegionModel])
+    func showOnMap(model: [StatisticsCircleViewModel])
 }
 
 // PRESENTER -> WIREFRAME
@@ -23,6 +23,7 @@ protocol MapWireFrameProtocol: class {
 protocol MapPresenterProtocol: class {
     func viewLoaded()
     func viewAppeared()
+    func requestPoint(zoom: Float)
 }
 
 // PRESENTER -> INTERACTOR

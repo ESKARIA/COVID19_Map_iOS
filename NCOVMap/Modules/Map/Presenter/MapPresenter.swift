@@ -9,11 +9,13 @@ import EKNetworking
 import UIKit
 
 class MapPresenter: BasePresenter {
-
+    
     weak var view: MapViewProtocol?
     private var wireFrame: MapWireFrameProtocol
     private var interactor: MapInteractorProtocol
-
+    
+    private var statisticsModel = StatisticsModel()
+    
     init(view: MapViewProtocol, wireFrame: MapWireFrameProtocol, interactor: MapInteractorProtocol) {
         self.view = view
         self.interactor = interactor
@@ -24,7 +26,7 @@ class MapPresenter: BasePresenter {
 extension MapPresenter: MapPresenterProtocol {
     
     func viewLoaded() {
-        
+        self.getStatistics()
     }
     
     func viewAppeared() {
@@ -36,8 +38,44 @@ extension MapPresenter: MapPresenterProtocol {
             if let error = error {
                 return
             }
-            guard let showedData = model?.regionsData else { return }
-            self.view?.showOnMap(model: showedData)
+            guard let model = model else { return }
+            self.statisticsModel = model
+            self.requestPoint()
         }
     }
+    
+    func requestPoint(zoom: Float = 0) {
+        
+        var result = [StatisticsCircleViewModel]()
+        for coordinatesModel in self.statisticsModel.regionsData {
+            
+            let totalConfirmed = Double(self.statisticsModel.totalInfo.totalConfirmed)
+            let currentRegionConfirmed = Double(coordinatesModel.dates.last?.confirmed ?? 0)
+            
+            var radius = (currentRegionConfirmed / totalConfirmed) * 1000000
+            
+            if radius < 100000 {
+                radius = 100000
+            }
+            
+            if radius > 1000000 {
+                radius = 1000000
+            }
+            
+            let totalDeath = Double(self.statisticsModel.totalInfo.totalDeath)
+            let currentRegionDeath = Double(coordinatesModel.dates.last?.death ?? 0)
+            
+            var alpha = (currentRegionDeath / totalDeath) * 100
+            
+            if alpha < 28 {
+                alpha = 28
+            }
+            
+            let _coordinate = StatisticsCircleViewModel(longitude: coordinatesModel.coordinates.longitude, latitude: coordinatesModel.coordinates.latitude, radius: radius, alpha: alpha)
+        
+            result.append(_coordinate)
+        }
+        self.view?.showOnMap(model: result)
+    }
+    
 }
