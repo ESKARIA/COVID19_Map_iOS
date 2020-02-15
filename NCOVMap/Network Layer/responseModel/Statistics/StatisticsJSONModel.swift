@@ -8,50 +8,34 @@
 
 import Foundation
 
-struct StatisticsJSONModel: Codable {
-    
-    var totalConfirmed: Int
-    var totalRecovered: Int
-    var totalDeath: Int
-    var lastUpdateDate: String
-    var data: [StatisticsRegionJSONModel]
-    
+// MARK: - StatisticsJSONModel
+class StatisticsJSONModel: Codable {
+    var totalConfirmed, totalRecovered, totalDeath: Int
+    var data: [StatisticsRegionJSONModel]?
+
     enum CodingKeys: String, CodingKey {
         case totalConfirmed = "total_confirmed"
         case totalRecovered = "total_recovered"
         case totalDeath = "total_death"
-        case lastUpdateDate = "last_update"
-        case data = "data"
+        case data
     }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(totalConfirmed, forKey: .totalConfirmed)
-        try container.encode(totalRecovered, forKey: .totalRecovered)
-        try container.encode(totalDeath, forKey: .totalDeath)
-        try container.encode(lastUpdateDate, forKey: .lastUpdateDate)
-        try container.encode(data, forKey: .data)
 
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.totalConfirmed = try container.decode(Int.self, forKey: .totalConfirmed)
-        self.totalRecovered = try container.decode(Int.self, forKey: .totalRecovered)
-        self.totalDeath = try container.decode(Int.self, forKey: .totalDeath)
-        self.lastUpdateDate = try container.decode(String.self, forKey: .lastUpdateDate)
-        self.data = try container.decode([StatisticsRegionJSONModel].self, forKey: .data)
+    init(totalConfirmed: Int, totalRecovered: Int, totalDeath: Int, data: [StatisticsRegionJSONModel]?) {
+        self.totalConfirmed = totalConfirmed
+        self.totalRecovered = totalRecovered
+        self.totalDeath = totalDeath
+        self.data = data
     }
 }
 
 struct StatisticsRegionJSONModel: Codable {
-    
+
     var state: String
     var country: String
     var lat: String
     var long: String
     var dates: [StatisticsRegionDateJSONModel]
-    
+
     enum CodingKeys: String, CodingKey {
         case state = "Province/State"
         case country = "Country/Region"
@@ -59,7 +43,7 @@ struct StatisticsRegionJSONModel: Codable {
         case long = "Long"
         case dates = "dates"
     }
-    
+
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(state, forKey: .state)
@@ -68,7 +52,7 @@ struct StatisticsRegionJSONModel: Codable {
         try container.encode(long, forKey: .long)
         try container.encode(dates, forKey: .dates)
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.state = try container.decode(String.self, forKey: .state)
@@ -80,19 +64,19 @@ struct StatisticsRegionJSONModel: Codable {
 }
 
 struct StatisticsRegionDateJSONModel: Codable {
-    
+
     var date: String
     var confirmed: Int
     var recovered: Int
     var death: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case date = "date"
         case confirmed = "confirmed"
         case recovered = "recovered"
         case death = "death"
     }
-    
+
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(date, forKey: .date)
@@ -100,7 +84,7 @@ struct StatisticsRegionDateJSONModel: Codable {
         try container.encode(recovered, forKey: .recovered)
         try container.encode(death, forKey: .death)
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.date = try container.decode(String.self, forKey: .date)
@@ -108,5 +92,5 @@ struct StatisticsRegionDateJSONModel: Codable {
         self.recovered = try container.decode(Int.self, forKey: .recovered)
         self.death = try container.decode(Int.self, forKey: .death)
     }
-    
+
 }

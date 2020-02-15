@@ -20,7 +20,7 @@ extension StatisticsModel {
         
         let model = StatisticsModel()
         model.totalInfo = StatisticsTotalModel.convert(apiModel: apiModel)
-        model.regionsData = StatisticsRegionModel.convert(apiModel: apiModel.data)
+        model.regionsData = StatisticsRegionModel.convert(apiModel: apiModel.data ?? [])
         
         return model
     }

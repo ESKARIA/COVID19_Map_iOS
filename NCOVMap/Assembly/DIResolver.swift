@@ -78,7 +78,7 @@ extension DIResolver: DIResolverComponents {
             return accountManager
         }
         
-        let accountManager = AccountManager(environmet: .production, serverPort: 80)
+        let accountManager = AccountManager(environmet: .production, serverPort: 3000)
 
         self.accountManager = accountManager
         return self.accountManager!
