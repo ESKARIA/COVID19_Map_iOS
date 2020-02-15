@@ -36,6 +36,7 @@ extension MapPresenter: MapPresenterProtocol {
     func getStatistics() {
         self.interactor.getStatistics { (model, error) in
             if let error = error {
+                // TODO: - обработать ошибку
                 return
             }
             guard let model = model else { return }
