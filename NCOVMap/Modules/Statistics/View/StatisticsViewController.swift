@@ -46,16 +46,16 @@ class StatisticsViewController: BaseViewController {
     
     private func moveView(state: State) {
         let yPosition = state == .partial ? Constant.partialViewYPosition : Constant.fullViewYPosition
-        view.frame = CGRect(x: 0, y: yPosition, width: view.frame.width, height: view.frame.height)
+        self.view.frame = CGRect(x: 0, y: yPosition, width: self.view.frame.width, height: self.view.frame.height)
     }
 
     private func moveView(panGestureRecognizer recognizer: UIPanGestureRecognizer) {
-        let translation = recognizer.translation(in: view)
-        let minY = view.frame.minY
+        let translation = recognizer.translation(in: self.view)
+        let minY = self.view.frame.minY
         
         if (minY + translation.y >= Constant.fullViewYPosition) && (minY + translation.y <= Constant.partialViewYPosition) {
-            view.frame = CGRect(x: 0, y: minY + translation.y, width: view.frame.width, height: view.frame.height)
-            recognizer.setTranslation(CGPoint.zero, in: view)
+            self.view.frame = CGRect(x: 0, y: minY + translation.y, width: self.view.frame.width, height: self.view.frame.height)
+            recognizer.setTranslation(CGPoint.zero, in: self.view)
         }
     }
     
@@ -71,8 +71,8 @@ class StatisticsViewController: BaseViewController {
     }
     
     func roundViews() {
-        view.layer.cornerRadius = 10
-        view.clipsToBounds = true
+        self.view.layer.cornerRadius = 10
+        self.view.clipsToBounds = true
     }
     
 
