@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  NCOVMap
+
+  Created by Дмитрий Торопкин on 17.02.2020.
+  Copyright © 2020 ESKARIA LLC. All rights reserved.
+*/
+
+"Map_Confirmed_Title"                   =   "Confirmed";
+"Map_Death_Title"                       =   "Death";
+"Map_Recovered_Title"                   =   "Recovered";
+"Map_Confirmed_Snippet"                 =   "Confirmed";
+"Map_Death_Snippet"                     =   "Death";
+"Map_Recovered_Snippet"                 =   "Recovered";

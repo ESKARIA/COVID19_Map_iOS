@@ -42,6 +42,7 @@
 		BF2618D10E9E8C08C9E974C9 /* Pods_NCOVMap_NCOVMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */; };
 		CA104C37033D2EC90116DBDD /* Pods_NCOVMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */; };
 		CD7ECC5244AB970DA0C8DA88 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC22A3C06916B24DDF781B /* MapViewController.swift */; };
+		D400726823FB1B9F008509E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D400726A23FB1B9F008509E9 /* Localizable.strings */; };
 		D43CCD9923F1492A005F0F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCD9823F1492A005F0F31 /* AppDelegate.swift */; };
 		D43CCD9B23F1492A005F0F31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCD9A23F1492A005F0F31 /* SceneDelegate.swift */; };
 		D43CCDA223F1492C005F0F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43CCDA123F1492C005F0F31 /* Assets.xcassets */; };
@@ -126,6 +127,7 @@
 		BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCOVMap_NCOVMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE02A2F3A86DF07494CE6A39 /* MapWireFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapWireFrame.swift; sourceTree = "<group>"; };
 		CEE6BA8BAFAA26665C37DF3F /* Description+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Description+Tests.swift"; sourceTree = "<group>"; };
+		D400726923FB1B9F008509E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D43CCD9523F1492A005F0F31 /* Coronavirus map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coronavirus map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43CCD9823F1492A005F0F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D43CCD9A23F1492A005F0F31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 				D43CCDA123F1492C005F0F31 /* Assets.xcassets */,
 				D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */,
 				D43CCDA623F1492C005F0F31 /* Info.plist */,
+				D400726A23FB1B9F008509E9 /* Localizable.strings */,
 				D47E205E23FB0103002E4059 /* Extension */,
 				D43CCDF723F18EC2005F0F31 /* GoogleMapsStyle */,
 				2005F61123F1974500A52FC2 /* Service Layer */,
@@ -835,6 +838,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43CCDF623F18EBC005F0F31 /* GoogleMapStyleLight.json in Resources */,
+				D400726823FB1B9F008509E9 /* Localizable.strings in Resources */,
 				D43CCDA523F1492C005F0F31 /* LaunchScreen.storyboard in Resources */,
 				D43CCDF423F18E4C005F0F31 /* GoogleMapStyleDark.json in Resources */,
 				20B3E3A823F15A0F00371FC5 /* GoogleService-Info.plist in Resources */,
@@ -1106,6 +1110,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D400726A23FB1B9F008509E9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D400726923FB1B9F008509E9 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

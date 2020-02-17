@@ -78,7 +78,9 @@ extension MapPresenter: MapPresenterProtocol {
                                                         radius: radius,
                                                         alpha: alpha,
                                                         countryName: coordinatesModel.countryName,
-                                                        totalConfirmed: coordinatesModel.dates.last?.confirmed)
+                                                        totalConfirmed: coordinatesModel.dates.last?.confirmed,
+                                                        totalDeath: coordinatesModel.dates.last?.death,
+                                                        totalRecovered: coordinatesModel.dates.last?.recovered)
         
             result.append(_coordinate)
         }

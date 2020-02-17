@@ -146,7 +146,7 @@ class MapViewController: BaseViewController {
         var title = ""
         switch type {
         case .confirmed:
-            title = "Confirmed"
+            title = R.string.localizable.map_Confirmed_Title()
             let separator = self.getSeparator()
             _view.addSubview(separator)
             separator.snp.makeConstraints { (make) in
@@ -156,11 +156,11 @@ class MapViewController: BaseViewController {
             let tap = UITapGestureRecognizer(target: self, action: #selector(didClickConfirmed(_:)))
             _view.addGestureRecognizer(tap)
         case .recovered:
-            title = "Recovered"
+            title = R.string.localizable.map_Recovered_Title()
             let tap = UITapGestureRecognizer(target: self, action: #selector(didClickRecovered(_:)))
             _view.addGestureRecognizer(tap)
         case .death:
-            title = "Death"
+            title = R.string.localizable.map_Death_Title()
             let separator = self.getSeparator()
             _view.addSubview(separator)
             separator.snp.makeConstraints { (make) in
@@ -224,8 +224,11 @@ extension MapViewController: MapViewProtocol {
             marker.icon = UIImage()
             marker.setIconSize(scaledToSize: CGSize(width: 50, height: 30))
             marker.title = dotkaOnMap.countryName
-            if let confirmed = dotkaOnMap.totalConfirmed {
-                marker.snippet = "Confirmed: \(confirmed)"
+            if let confirmed = dotkaOnMap.totalConfirmed, let death = dotkaOnMap.totalDeath, let recovered = dotkaOnMap.totalRecovered {
+                let infoStringConfirmed = "\(R.string.localizable.map_Confirmed_Snippet()) \(confirmed)"
+                let infoStringRecovered = "\(R.string.localizable.map_Recovered_Snippet()) \(recovered)"
+                let infoStringDeath = "\(R.string.localizable.map_Death_Snippet()) \(death)"
+                marker.snippet = "\(infoStringConfirmed)\n\(infoStringRecovered)\n\(infoStringDeath)"
             }
             marker.map = mapView
         }
