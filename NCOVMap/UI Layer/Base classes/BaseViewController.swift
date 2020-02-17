@@ -24,6 +24,12 @@ class BaseViewController: UIViewController {
     init(themeManager: ThemeManager) {
         self.themeManager = themeManager
         super.init(nibName: nil, bundle: nil)
+        
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     required init?(coder: NSCoder) {
@@ -89,6 +95,18 @@ class BaseViewController: UIViewController {
             KRProgressHUD.showWarning(withMessage: message)
         case .info:
             KRProgressHUD.showInfo(withMessage: message)
+        }
+    }
+}
+
+
+extension Swift.Optional where Wrapped == UIColor {
+    
+    func unwrapped() -> UIColor {
+        if let color = self {
+            return color
+        } else {
+            return .clear
         }
     }
 }

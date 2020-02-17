@@ -30,7 +30,7 @@ extension MapPresenter: MapPresenterProtocol {
     }
     
     func viewAppeared() {
-        self.wireFrame.presentStatisticsVC(from: view)
+
     }
     
     func getStatistics() {
@@ -80,4 +80,15 @@ extension MapPresenter: MapPresenterProtocol {
         self.view?.show(count: self.statisticsModel.totalInfo)
     }
     
+    func didClickConfirmed() {
+        self.wireFrame.presentDescriptionViewController(from: self.view, type: .confirmed, model: self.statisticsModel)
+    }
+    
+    func didClickDied() {
+        self.wireFrame.presentDescriptionViewController(from: self.view, type: .died, model: self.statisticsModel)
+    }
+    
+    func didClickCured() {
+        self.wireFrame.presentDescriptionViewController(from: self.view, type: .cured, model: self.statisticsModel)
+    }
 }

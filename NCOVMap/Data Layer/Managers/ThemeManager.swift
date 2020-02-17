@@ -22,17 +22,16 @@ class ThemeManager {
     }
     
     func setLight() {
-        mode = .light
+        self.mode = .light
     }
     
     func setDark() {
-        mode = .dark
+        self.mode = .dark
     }
     
     /// тема гугл карт
     func mapScreenGetGoogleMapsColorMode() -> URL? {
         switch self.mode {
-            
         case .light:
             return Bundle.main.url(forResource: "GoogleMapStyleLight", withExtension: "json")
         case .dark:

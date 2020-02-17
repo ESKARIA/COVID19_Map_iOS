@@ -7,14 +7,9 @@
 //
 
 import UIKit
+import SPStorkController
 
-class MapWireFrame: BaseWireFrame {
-    //func presentSomeViewController(from view: MapViewProtocol) {
-    //    guard let fromView = view as? UIViewController else { return }
-    //    let viewController = self.resolver.someViewController()
-    //    fromView.navigationController?.pushViewController(viewController, animated: true)
-    //}
-}
+class MapWireFrame: BaseWireFrame { }
 
 extension MapWireFrame: MapWireFrameProtocol {
     
@@ -32,5 +27,11 @@ extension MapWireFrame: MapWireFrameProtocol {
         let height = vc.view.frame.height
         let width  = vc.view.frame.width
         bottomSheetVC.view.frame = CGRect(x: 0, y: vc.view.frame.maxY, width: width, height: height)
+    }
+    
+    func presentDescriptionViewController(from view: MapViewProtocol?, type: DescriptionCase, model: StatisticsModel) {
+        guard let fromView = view as? UIViewController else { return }
+        let controller = self.resolver.presentDescriptionViewController(type: type, model: model)
+        fromView.presentAsStork(controller)
     }
 }

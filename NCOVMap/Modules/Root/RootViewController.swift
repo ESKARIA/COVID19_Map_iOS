@@ -18,6 +18,10 @@ class RootViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
