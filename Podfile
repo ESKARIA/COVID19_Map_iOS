@@ -31,7 +31,7 @@ target 'NCOVMap' do
   # Pods for NCOVMap
   pod 'SnapKit', '~> 5.0.0', :inhibit_warnings => true
   pod 'R.swift', :inhibit_warnings => true
-
+  pod 'SPStorkController', '~> 1.7.9', :inhibit_warnings => true
   
   target 'NCOVMapTests' do
     inherit! :search_paths

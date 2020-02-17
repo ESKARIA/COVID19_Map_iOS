@@ -17,6 +17,7 @@ protocol MapViewProtocol: class {
 // PRESENTER -> WIREFRAME
 protocol MapWireFrameProtocol: class {
     func presentStatisticsVC(from view: MapViewProtocol?)
+    func presentDescriptionViewController(from view: MapViewProtocol?, type: DescriptionCase, model: StatisticsModel)
 }
 
 // VIEW -> PRESENTER
@@ -24,6 +25,9 @@ protocol MapPresenterProtocol: class {
     func viewLoaded()
     func viewAppeared()
     func requestPoint(zoom: Float)
+    func didClickConfirmed()
+    func didClickDied()
+    func didClickCured()
 }
 
 // PRESENTER -> INTERACTOR

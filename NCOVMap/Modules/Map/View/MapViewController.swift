@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import GoogleMaps
 import GooglePlaces
+import DevHelper
 
 class MapViewController: BaseViewController {
 
@@ -50,8 +51,28 @@ class MapViewController: BaseViewController {
         mapContainer.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+//        
+//        let confirmedButton = UIButton(type: .custom)
+//        confirmedButton.setTitle("Confirmed", for: .normal)
+//        confirmedButton.addTarget(self, action: #selector(didClickConfirmed(_:)), for: .touchUpInside)
+//        confirmedButton.backgroundColor = .systemBlue
+//        
+//        self.view.addSubview(confirmedButton)
+//        confirmedButton.snp.makeConstraints {
+//            $0.center.equalToSuperview()
+//            $0.height.equalTo(44)
+//            $0.width.equalTo(140)
+//        }
+//        
+        self.setNeedsStatusBarAppearanceUpdate()
     }
 
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
     //map design
     private func setupMaps() {
         do {
@@ -97,3 +118,10 @@ extension MapViewController: MapViewProtocol {
 }
 
 extension MapViewController: GMSMapViewDelegate {}
+
+// MARK: - Private
+extension MapViewController {
+    @objc private func didClickConfirmed(_ sender: UIButton) {
+        self.presenter.didClickConfirmed()
+    }
+}
