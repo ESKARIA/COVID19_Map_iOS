@@ -72,7 +72,12 @@ extension MapPresenter: MapPresenterProtocol {
                 alpha = 28
             }
             
-            let _coordinate = StatisticsCircleViewModel(longitude: coordinatesModel.coordinates.longitude, latitude: coordinatesModel.coordinates.latitude, radius: radius, alpha: alpha)
+            let _coordinate = StatisticsCircleViewModel(longitude: coordinatesModel.coordinates.longitude,
+                                                        latitude: coordinatesModel.coordinates.latitude,
+                                                        radius: radius,
+                                                        alpha: alpha,
+                                                        countryName: coordinatesModel.countryName,
+                                                        totalConfirmed: coordinatesModel.dates.last?.confirmed)
         
             result.append(_coordinate)
         }

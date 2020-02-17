@@ -110,9 +110,17 @@ class MapViewController: BaseViewController {
     private func createStackView() -> UIStackView {
 
         self.confirmedCountLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
+        self.confirmedCountLabel.adjustsFontSizeToFitWidth = true
+        self.confirmedCountLabel.numberOfLines = 1
+        
         self.recoveredCOuntLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
+        self.recoveredCOuntLabel.adjustsFontSizeToFitWidth = true
+        self.recoveredCOuntLabel.numberOfLines = 1
+        
         self.deathCountLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
-
+        self.deathCountLabel.adjustsFontSizeToFitWidth = true
+        self.deathCountLabel.numberOfLines = 1
+        
         self.confirmedCountLabel.text = "0"
         self.recoveredCOuntLabel.text = "0"
         self.deathCountLabel.text = "0"
@@ -181,6 +189,12 @@ class MapViewController: BaseViewController {
             make.height.equalTo(28)
             make.bottom.equalToSuperview()
         }
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.numberOfLines = 1
+        titleLabel.sizeToFit()
+        
+        titleLabel.layoutIfNeeded()
+        
 
         _view.bringSubviewToFront(titleLabel)
         return _view
@@ -204,6 +218,16 @@ extension MapViewController: MapViewProtocol {
             circle.fillColor = color
             circle.strokeColor = .clear
             circle.map = mapView
+            
+            let marker = GMSMarker(position: position)
+            marker.opacity = 0
+            marker.icon = UIImage()
+            marker.setIconSize(scaledToSize: CGSize(width: 50, height: 30))
+            marker.title = dotkaOnMap.countryName
+            if let confirmed = dotkaOnMap.totalConfirmed {
+                marker.snippet = "Confirmed: \(confirmed)"
+            }
+            marker.map = mapView
         }
     }
 
@@ -223,11 +247,17 @@ extension MapViewController: MapViewProtocol {
                     label.text = "\(i)"
                 }
             }
+            DispatchQueue.main.async {
+                label.sizeToFit()
+                label.layoutIfNeeded()
+            }
         }
     }
 }
 
-extension MapViewController: GMSMapViewDelegate { }
+extension MapViewController: GMSMapViewDelegate {
+   
+}
 
 // MARK: - Private
 extension MapViewController {
