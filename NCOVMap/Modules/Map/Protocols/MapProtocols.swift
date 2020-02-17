@@ -12,6 +12,7 @@ import EKNetworking
 // PRESENTER -> VIEW
 protocol MapViewProtocol: class {
     func showOnMap(model: [StatisticsCircleViewModel])
+    func show(count: StatisticsTotalModel)
 }
 
 // PRESENTER -> WIREFRAME

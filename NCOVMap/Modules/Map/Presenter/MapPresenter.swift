@@ -77,6 +77,7 @@ extension MapPresenter: MapPresenterProtocol {
             result.append(_coordinate)
         }
         self.view?.showOnMap(model: result)
+        self.view?.show(count: self.statisticsModel.totalInfo)
     }
     
 }
