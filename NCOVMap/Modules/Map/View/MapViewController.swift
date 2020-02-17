@@ -103,8 +103,16 @@ class MapViewController: BaseViewController {
     private func createStackView() -> UIStackView {
         
         self.confirmedCountLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
+        self.confirmedCountLabel.adjustsFontSizeToFitWidth = true
+        self.confirmedCountLabel.numberOfLines = 1
+        
         self.recoveredCOuntLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
+        self.recoveredCOuntLabel.adjustsFontSizeToFitWidth = true
+        self.recoveredCOuntLabel.numberOfLines = 1
+        
         self.deathCountLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
+        self.deathCountLabel.adjustsFontSizeToFitWidth = true
+        self.deathCountLabel.numberOfLines = 1
         
         self.confirmedCountLabel.text = "0"
         self.recoveredCOuntLabel.text = "0"
@@ -168,6 +176,11 @@ class MapViewController: BaseViewController {
             make.height.equalTo(28)
             make.bottom.equalToSuperview()
         }
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.numberOfLines = 1
+        titleLabel.sizeToFit()
+        
+        titleLabel.layoutIfNeeded()
         
         return _view
     }
@@ -208,6 +221,10 @@ extension MapViewController: MapViewProtocol {
                 DispatchQueue.main.async {
                     label.text = "\(i)"
                 }
+            }
+            DispatchQueue.main.async {
+                label.sizeToFit()
+                label.layoutIfNeeded()
             }
         }
     }
