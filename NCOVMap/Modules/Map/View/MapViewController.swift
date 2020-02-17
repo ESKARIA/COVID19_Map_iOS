@@ -223,8 +223,10 @@ extension MapViewController: MapViewProtocol {
             marker.opacity = 0
             marker.icon = UIImage()
             marker.setIconSize(scaledToSize: CGSize(width: 50, height: 30))
-            marker.title = "test"
-            marker.snippet = "snipper"
+            marker.title = dotkaOnMap.countryName
+            if let confirmed = dotkaOnMap.totalConfirmed {
+                marker.snippet = "Confirmed: \(confirmed)"
+            }
             marker.map = mapView
         }
     }
