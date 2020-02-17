@@ -68,6 +68,7 @@ extension MapPresenter: MapPresenterProtocol {
             
             var alpha = (currentRegionDeath / totalDeath) * 100
             
+            alpha = alpha * 0.7
             if alpha < 28 {
                 alpha = 28
             }
