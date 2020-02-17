@@ -218,6 +218,14 @@ extension MapViewController: MapViewProtocol {
             circle.fillColor = color
             circle.strokeColor = .clear
             circle.map = mapView
+            
+            let marker = GMSMarker(position: position)
+            marker.opacity = 0
+            marker.icon = UIImage()
+            marker.setIconSize(scaledToSize: CGSize(width: 50, height: 30))
+            marker.title = "test"
+            marker.snippet = "snipper"
+            marker.map = mapView
         }
     }
 
@@ -245,7 +253,9 @@ extension MapViewController: MapViewProtocol {
     }
 }
 
-extension MapViewController: GMSMapViewDelegate { }
+extension MapViewController: GMSMapViewDelegate {
+   
+}
 
 // MARK: - Private
 extension MapViewController {

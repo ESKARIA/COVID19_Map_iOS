@@ -64,6 +64,7 @@
 		D43CCDF623F18EBC005F0F31 /* GoogleMapStyleLight.json in Resources */ = {isa = PBXBuildFile; fileRef = D43CCDF523F18EBC005F0F31 /* GoogleMapStyleLight.json */; };
 		D43CCDFA23F1905B005F0F31 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDF923F1905B005F0F31 /* ThemeManager.swift */; };
 		D45CC75A23F2953100BA4138 /* StatisticsCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45CC75923F2953100BA4138 /* StatisticsCircleViewModel.swift */; };
+		D47E206023FB0111002E4059 /* GMSMarker+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E205F23FB0111002E4059 /* GMSMarker+Extension.swift */; };
 		D4B186DE23F1D39A00592D43 /* Geohash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B186DD23F1D39A00592D43 /* Geohash.swift */; };
 		E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE182BFC86D996A255804F /* MapInteractor.swift */; };
 		F643CCCC8E3EF6B60E3A1B38 /* DescriptionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A28B3A1A8434468F395E31E /* DescriptionProtocols.swift */; };
@@ -155,6 +156,7 @@
 		D43CCDF523F18EBC005F0F31 /* GoogleMapStyleLight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleMapStyleLight.json; sourceTree = "<group>"; };
 		D43CCDF923F1905B005F0F31 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		D45CC75923F2953100BA4138 /* StatisticsCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCircleViewModel.swift; sourceTree = "<group>"; };
+		D47E205F23FB0111002E4059 /* GMSMarker+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSMarker+Extension.swift"; sourceTree = "<group>"; };
 		D4B166C394CA3C7C735422A5 /* Statistics+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Statistics+Tests.swift"; sourceTree = "<group>"; };
 		D4B186DD23F1D39A00592D43 /* Geohash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geohash.swift; sourceTree = "<group>"; };
 		E2DE182BFC86D996A255804F /* MapInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				D43CCDA323F1492C005F0F31 /* LaunchScreen.storyboard */,
 				D43CCDA623F1492C005F0F31 /* Info.plist */,
 				D4B186DD23F1D39A00592D43 /* Geohash.swift */,
+				D47E205E23FB0103002E4059 /* Extension */,
 				D43CCDF723F18EC2005F0F31 /* GoogleMapsStyle */,
 				2005F61123F1974500A52FC2 /* Service Layer */,
 				D43CCDDF23F166C7005F0F31 /* Data Layer */,
@@ -666,6 +669,14 @@
 				D45CC75923F2953100BA4138 /* StatisticsCircleViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D47E205E23FB0103002E4059 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D47E205F23FB0111002E4059 /* GMSMarker+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D6BD2D98D91D90E1D3FFD748 /* Navigation */ = {
@@ -1017,6 +1028,7 @@
 				D43CCD9923F1492A005F0F31 /* AppDelegate.swift in Sources */,
 				D45CC75A23F2953100BA4138 /* StatisticsCircleViewModel.swift in Sources */,
 				D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */,
+				D47E206023FB0111002E4059 /* GMSMarker+Extension.swift in Sources */,
 				D43CCD9B23F1492A005F0F31 /* SceneDelegate.swift in Sources */,
 				D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */,
 				CD7ECC5244AB970DA0C8DA88 /* MapViewController.swift in Sources */,
