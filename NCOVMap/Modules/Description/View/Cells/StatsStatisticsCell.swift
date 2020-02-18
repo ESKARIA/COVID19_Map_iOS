@@ -51,9 +51,10 @@ final class StatsStatisticsCell: BaseTableCell {
             for country in model.mergeCountries().sorted(by: { $0.stats.confirmed > $1.stats.confirmed }) {
                 let container = UIView()
                 let view = ParamValueView(configuration: self.getConfig())
-                view.labelParam.text = country.countryName
+                view.labelParam.text = country.countryName.replaceChina()
                 view.labelValue.text = "\(country.stats.confirmed)"
                 view.labelValue.textAlignment = .left
+
                 container.addSubview(view)
                 let separator = UIView()
                 container.addSubview(separator)
@@ -67,7 +68,13 @@ final class StatsStatisticsCell: BaseTableCell {
                     $0.height.equalTo(1)
                 }
                 separator.backgroundColor = R.color.appBattleshipGrey()?.withAlphaComponent(0.25)
-                self.sv_stats.addArrangedSubview(container)
+                if let fromCountry = model.fromCountry, country.countryName.contains(fromCountry) {
+                    view.labelValue.textColor = R.color.appRed()
+                    view.labelParam.textColor = R.color.appRed()
+                    self.sv_stats.insertArrangedSubview(container, at: 0)
+                } else {
+                    self.sv_stats.addArrangedSubview(container)
+                }
             }
         case .died:
             self.hideStats(hidden: true)

@@ -13,10 +13,14 @@ class StatisticsModel {
     var totalInfo = StatisticsTotalModel()
     var regionsData = [StatisticsRegionModel]()
     
+    // optional
+    var fromCountry: String?
+    
     func copy() -> StatisticsModel {
         let newValue = StatisticsModel()
         newValue.totalInfo = self.totalInfo.copy()
         newValue.regionsData = self.regionsData.compactMap({ $0.copy() })
+        newValue.fromCountry = self.fromCountry
         return newValue
     }
 }

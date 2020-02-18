@@ -20,4 +20,11 @@ extension String {
             return placeholder
         }
     }
+    
+    func replaceChina() -> String {
+        if self.contains("Mainland China") {
+            return "China"
+        }
+        return self
+    }
 }

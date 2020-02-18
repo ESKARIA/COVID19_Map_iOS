@@ -33,4 +33,5 @@ protocol MapPresenterProtocol: class {
 // PRESENTER -> INTERACTOR
 protocol MapInteractorProtocol: class {
     func getStatistics(completion: @escaping (StatisticsModel?, EKNetworkError?) -> Void)
+    func getLocation(completion: @escaping (IPPlaceJSONModel?, EKNetworkError?) -> Void)
 }

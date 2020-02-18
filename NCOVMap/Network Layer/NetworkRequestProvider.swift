@@ -33,11 +33,14 @@ class NetworkRequestProvider {
 
     internal func runRequest(_ request: EKNetworkRequest, progressResult: ((Double) -> Void)?, completion: @escaping(_ statusCode: Int, _ requestData: Data?, _ error: EKNetworkError?) -> Void) {
 
-        let baseUrl = self.accountManager.getBaseUrl()
+        var baseUrl = self.accountManager.getBaseUrl()
         var tokenString: String?
         let token = accountManager.getUserToken()
         if !token.isEmpty {
             tokenString = "Bearer " + accountManager.getUserToken()
+        }
+        if request is IPPlaceApiRequest {
+            baseUrl = "http://ip-api.com"
         }
 
         self.networkWrapper.runRequest(request, baseURL: baseUrl, authToken: tokenString, progressResult: progressResult) { (statusCode, data, error) in
