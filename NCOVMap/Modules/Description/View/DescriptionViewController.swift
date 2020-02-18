@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import DevHelper
+import SPStorkController
 
 class DescriptionViewController: BaseViewController {
 
@@ -21,7 +22,6 @@ class DescriptionViewController: BaseViewController {
     private var lbl_stats_counter_title: UILabel = UILabel.makeLabel(size: 17, weight: .bold, color: R.color.appMarineBlue().unwrapped())
     private var sv_stats: UIStackView = DHUIBuilder.make.stackView(orientation: .vertical, distribution: .equalSpacing, spacing: 0)
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createUI()
@@ -30,14 +30,29 @@ class DescriptionViewController: BaseViewController {
 
     private func createUI() {
 
+        let scrollView = UIScrollView()
+        let contentView = UIView()
+        scrollView.delegate = self
+        
+        self.view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        scrollView.addSubview(contentView)
+        contentView.snp.makeConstraints {
+            $0.width.height.top.bottom.equalToSuperview()
+            $0.left.right.equalTo(self.view)
+        }
+        
         self.view.backgroundColor = .white
 
-        self.view.addSubview(self.img_icon)
-        self.view.addSubview(self.lbl_title)
-        self.view.addSubview(self.lbl_count)
-        self.view.addSubview(self.lbl_description)
-        self.view.addSubview(self.lbl_stats_counter_title)
-        self.view.addSubview(self.sv_stats)
+        contentView.addSubview(self.img_icon)
+        contentView.addSubview(self.lbl_title)
+        contentView.addSubview(self.lbl_count)
+        contentView.addSubview(self.lbl_description)
+        contentView.addSubview(self.lbl_stats_counter_title)
+        contentView.addSubview(self.sv_stats)
 
         self.img_icon.snp.makeConstraints {
             $0.top.equalToSuperview().offset(30)
@@ -48,7 +63,7 @@ class DescriptionViewController: BaseViewController {
         let separatorLine = UIView()
         separatorLine.backgroundColor = R.color.appRed()
 
-        self.view.addSubview(separatorLine)
+        contentView.addSubview(separatorLine)
         separatorLine.snp.makeConstraints {
             $0.bottom.equalTo(self.img_icon)
             $0.left.equalTo(self.img_icon.snp.right).offset(12)
@@ -87,6 +102,7 @@ class DescriptionViewController: BaseViewController {
             $0.top.equalTo(self.lbl_stats_counter_title.snp.bottom).offset(15)
             $0.left.equalTo(self.img_icon)
             $0.right.equalTo(separatorLine)
+//            $0.bottom.equalToSuperview().offset(-30)
         }
     }
 }
@@ -153,5 +169,12 @@ extension DescriptionViewController: DescriptionViewProtocol {
             self.hideStats(hidden: true)
             self.lbl_count.text = "\(model.totalInfo.totalRecovered)"
         }
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+extension DescriptionViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        SPStorkController.scrollViewDidScroll(scrollView)
     }
 }

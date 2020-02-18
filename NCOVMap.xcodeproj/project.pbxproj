@@ -25,8 +25,6 @@
 		27690D9B536083481CAF5F77 /* Navigation+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72A4FCA822B14CE9A8921D /* Navigation+Tests.swift */; };
 		2D0E6EAAF2B60F7429E0D0B0 /* Description+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C46EDAD5574EE6E48BEE75 /* Description+DIResolver.swift */; };
 		311580300A0159B7EBC7D17E /* DescriptionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A55CBF939F3FEB4662100 /* DescriptionInteractor.swift */; };
-		34D95971F31FC4EADD6242C5 /* StatisticsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FAB6421CAD08A2DAA6B6BC /* StatisticsWireFrame.swift */; };
-		42324B92B0478491844C3FE6 /* Statistics+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A4BF21FCB288D325C525C /* Statistics+DIResolver.swift */; };
 		47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAFBF8B6D0BE0AE89A7B46F /* NavigationProtocols.swift */; };
 		4C66E4EAAECDA00315C44974 /* DescriptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E2C425846E03329AD4370 /* DescriptionPresenter.swift */; };
 		556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B46ACB5599D8B932C690653 /* NavigationWireFrame.swift */; };
@@ -38,9 +36,6 @@
 		932AAE40101AE6BAC3D20EBA /* Map+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E287B7C9ED4F2FBE9E8C441 /* Map+Tests.swift */; };
 		9802F087B50FF8900AA32B45 /* MapProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E9F9B45E3AC1496093145 /* MapProtocols.swift */; };
 		A11D4F682D21189DCFC2AEDF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEAC687ECE419A872B0623B /* NavigationViewController.swift */; };
-		A55651B76E8E5DEF1DF039F2 /* StatisticsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F587817F53E7A7B9CD666D08 /* StatisticsProtocols.swift */; };
-		B5D0FF82E8C68EA38C545E8F /* StatisticsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A037B25A458CFF342856AC0 /* StatisticsInteractor.swift */; };
-		B930FF81E974013B4A42B00E /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD761BE650641B7935843696 /* StatisticsViewController.swift */; };
 		BF2618D10E9E8C08C9E974C9 /* Pods_NCOVMap_NCOVMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */; };
 		CA104C37033D2EC90116DBDD /* Pods_NCOVMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */; };
 		CD7ECC5244AB970DA0C8DA88 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC22A3C06916B24DDF781B /* MapViewController.swift */; };
@@ -70,7 +65,6 @@
 		D47E206023FB0111002E4059 /* GMSMarker+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E205F23FB0111002E4059 /* GMSMarker+Extension.swift */; };
 		E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE182BFC86D996A255804F /* MapInteractor.swift */; };
 		F643CCCC8E3EF6B60E3A1B38 /* DescriptionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A28B3A1A8434468F395E31E /* DescriptionProtocols.swift */; };
-		FF886E61CC474912C8329BD7 /* StatisticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4D569A5CB55DE07651471 /* StatisticsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +104,6 @@
 		20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		35C46EDAD5574EE6E48BEE75 /* Description+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Description+DIResolver.swift"; path = "../Modules/Description/Description+DIResolver.swift"; sourceTree = "<group>"; };
-		3A037B25A458CFF342856AC0 /* StatisticsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatisticsInteractor.swift; sourceTree = "<group>"; };
 		3F5246AB131557365BC863A0 /* NavigationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationPresenter.swift; sourceTree = "<group>"; };
 		525AA315E86B8660139E1761 /* Map+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Map+DIResolver.swift"; sourceTree = "<group>"; };
 		5B9E9F9B45E3AC1496093145 /* MapProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapProtocols.swift; sourceTree = "<group>"; };
@@ -122,12 +115,9 @@
 		87458307E57DF300FE259B71 /* Pods-NCOVMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMap.release.xcconfig"; path = "Target Support Files/Pods-NCOVMap/Pods-NCOVMap.release.xcconfig"; sourceTree = "<group>"; };
 		8C2A55CBF939F3FEB4662100 /* DescriptionInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DescriptionInteractor.swift; sourceTree = "<group>"; };
 		8E287B7C9ED4F2FBE9E8C441 /* Map+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Map+Tests.swift"; sourceTree = "<group>"; };
-		976A4BF21FCB288D325C525C /* Statistics+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Statistics+DIResolver.swift"; path = "../Modules/Statistics/Statistics+DIResolver.swift"; sourceTree = "<group>"; };
-		98FAB6421CAD08A2DAA6B6BC /* StatisticsWireFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatisticsWireFrame.swift; sourceTree = "<group>"; };
 		9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCOVMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F15F208A1F3CC58EC61295 /* DescriptionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		BD71CC7D3EAB71E3830DADB9 /* Pods_NCOVMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCOVMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD761BE650641B7935843696 /* StatisticsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NCOVMap_NCOVMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE02A2F3A86DF07494CE6A39 /* MapWireFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapWireFrame.swift; sourceTree = "<group>"; };
 		CEE6BA8BAFAA26665C37DF3F /* Description+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Description+Tests.swift"; sourceTree = "<group>"; };
@@ -167,8 +157,6 @@
 		EEB9458638991B667467141F /* Pods-NCOVMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.debug.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F43CF82A6C973EA838B8D6F4 /* TabBar+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TabBar+Tests.swift"; sourceTree = "<group>"; };
 		F57B23087CCC0195FB14850F /* NavigationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
-		F587817F53E7A7B9CD666D08 /* StatisticsProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatisticsProtocols.swift; sourceTree = "<group>"; };
-		FFA4D569A5CB55DE07651471 /* StatisticsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatisticsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,26 +193,6 @@
 				3F5246AB131557365BC863A0 /* NavigationPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		121B464C71176D308726C6EF /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				FFA4D569A5CB55DE07651471 /* StatisticsPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		14A6CD78BF7F8CC0466AA0EF /* Statistics */ = {
-			isa = PBXGroup;
-			children = (
-				EC05B392391AF1F2224CC744 /* View */,
-				121B464C71176D308726C6EF /* Presenter */,
-				4FC412878C90D4A51BD01570 /* Interactor */,
-				5DDCF790EF874E35CF8A6A12 /* Protocols */,
-				266AC21A52F0A799038B4149 /* WireFrame */,
-			);
-			path = Statistics;
 			sourceTree = "<group>";
 		};
 		1B4C265FFEE29EA3459A8833 /* Map */ = {
@@ -294,14 +262,6 @@
 			path = "Network Layer";
 			sourceTree = "<group>";
 		};
-		266AC21A52F0A799038B4149 /* WireFrame */ = {
-			isa = PBXGroup;
-			children = (
-				98FAB6421CAD08A2DAA6B6BC /* StatisticsWireFrame.swift */,
-			);
-			path = WireFrame;
-			sourceTree = "<group>";
-		};
 		29FABC1F5799AE6899EB35D3 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,7 +276,6 @@
 				D43CCDD723F14C1A005F0F31 /* Root */,
 				D6BD2D98D91D90E1D3FFD748 /* Navigation */,
 				3E22B7F4C0CC17784BC26B2F /* Map */,
-				14A6CD78BF7F8CC0466AA0EF /* Statistics */,
 				506A0387BDF19DF01183FE61 /* Description */,
 			);
 			path = Modules;
@@ -356,14 +315,6 @@
 			path = Description;
 			sourceTree = "<group>";
 		};
-		4FC412878C90D4A51BD01570 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				3A037B25A458CFF342856AC0 /* StatisticsInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		506A0387BDF19DF01183FE61 /* Description */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,14 +341,6 @@
 				F43CF82A6C973EA838B8D6F4 /* TabBar+Tests.swift */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		5DDCF790EF874E35CF8A6A12 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				F587817F53E7A7B9CD666D08 /* StatisticsProtocols.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		602195E98CC6AAC072575960 /* WireFrame */ = {
@@ -598,7 +541,6 @@
 			isa = PBXGroup;
 			children = (
 				35C46EDAD5574EE6E48BEE75 /* Description+DIResolver.swift */,
-				976A4BF21FCB288D325C525C /* Statistics+DIResolver.swift */,
 				525AA315E86B8660139E1761 /* Map+DIResolver.swift */,
 				12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */,
 				D43CCDD523F14BF7005F0F31 /* DIResolver.swift */,
@@ -713,14 +655,6 @@
 				9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EC05B392391AF1F2224CC744 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BD761BE650641B7935843696 /* StatisticsViewController.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F23A72E1AB2118BC3B8BAC34 /* Interactor */ = {
@@ -1063,12 +997,6 @@
 				D43CCDEC23F17BAA005F0F31 /* StatisticsRegionDateModel.swift in Sources */,
 				1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */,
 				D43CCDFA23F1905B005F0F31 /* ThemeManager.swift in Sources */,
-				B930FF81E974013B4A42B00E /* StatisticsViewController.swift in Sources */,
-				FF886E61CC474912C8329BD7 /* StatisticsPresenter.swift in Sources */,
-				B5D0FF82E8C68EA38C545E8F /* StatisticsInteractor.swift in Sources */,
-				A55651B76E8E5DEF1DF039F2 /* StatisticsProtocols.swift in Sources */,
-				34D95971F31FC4EADD6242C5 /* StatisticsWireFrame.swift in Sources */,
-				42324B92B0478491844C3FE6 /* Statistics+DIResolver.swift in Sources */,
 				2005F60423F18DBD00A52FC2 /* Network+Statistics.swift in Sources */,
 				204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */,
 				2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */,
