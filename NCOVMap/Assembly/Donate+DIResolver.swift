@@ -15,7 +15,7 @@ protocol DonateProtocol {
 
 extension DIResolver: DonateProtocol {
     func presentDonateViewController() -> UIViewController {
-        let viewController = DonateViewController()
+        let viewController = DonateViewController(themeManager: self.getThemeManager())
         let interactor = DonateInteractor()
         let wireFrame = DonateWireFrame(resolver: self)
         let presenter = DonatePresenter(view: viewController, wireFrame: wireFrame, interactor: interactor)
