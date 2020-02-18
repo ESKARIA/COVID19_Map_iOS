@@ -15,7 +15,7 @@ class DescriptionViewController: BaseViewController {
 
     private var lbl_title: UILabel = UILabel.makeLabel(size: 14, weight: .regular, color: R.color.appBattleshipGrey().unwrapped())
     private var lbl_count: UILabel = UILabel.makeLabel(size: 34, weight: .heavy, color: R.color.appMarineBlue().unwrapped())
-    private var img_icon: UIImageView = UIImageView(image: R.image.confirmed())
+    private var img_icon: UIImageView = UIImageView(image: R.image.confirmed_icon())
 
     private var lbl_description: UILabel = UILabel.makeLabel(size: 10, weight: .regular, color: R.color.appDark().unwrapped())
 
@@ -32,6 +32,7 @@ class DescriptionViewController: BaseViewController {
         self.view.addSubview(self.img_icon)
         self.view.addSubview(self.lbl_title)
         self.view.addSubview(self.lbl_count)
+        self.view.addSubview(self.lbl_description)
 
         self.img_icon.snp.makeConstraints {
             $0.top.equalToSuperview().offset(30)
@@ -60,6 +61,14 @@ class DescriptionViewController: BaseViewController {
             $0.bottom.equalTo(self.lbl_count.snp.top).offset(-1)
             $0.left.right.equalTo(separatorLine)
         }
+        
+        self.lbl_description.snp.makeConstraints {
+            $0.top.equalTo(separatorLine.snp.bottom).offset(24)
+            $0.left.equalTo(self.img_icon)
+            $0.right.equalTo(separatorLine)
+            $0.height.greaterThanOrEqualTo(100)
+        }
+        self.lbl_description.numberOfLines = 0
     }
 }
 
@@ -69,13 +78,13 @@ extension DescriptionViewController: DescriptionViewProtocol {
 
         self.img_icon.image = type.icon
         self.lbl_title.text = type.title
-
+        self.lbl_description.text = type.description
         switch type {
         case .confirmed:
             self.lbl_count.text = "\(model.totalInfo.totalConfirmed)"
         case .died:
             self.lbl_count.text = "\(model.totalInfo.totalDeath)"
-        case .cured:
+        case .recovered:
             self.lbl_count.text = "\(model.totalInfo.totalRecovered)"
         }
     }

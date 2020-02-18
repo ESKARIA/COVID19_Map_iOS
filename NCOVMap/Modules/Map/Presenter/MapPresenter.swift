@@ -97,6 +97,6 @@ extension MapPresenter: MapPresenterProtocol {
     }
     
     func didClickCured() {
-        self.wireFrame.presentDescriptionViewController(from: self.view, type: .cured, model: self.statisticsModel)
+        self.wireFrame.presentDescriptionViewController(from: self.view, type: .recovered, model: self.statisticsModel)
     }
 }

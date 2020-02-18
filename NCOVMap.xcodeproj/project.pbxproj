@@ -321,7 +321,7 @@
 		3E22B7F4C0CC17784BC26B2F /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				D45CC75723F2951700BA4138 /*  SupportingFiles */,
+				D45CC75723F2951700BA4138 /* SupportingFiles */,
 				DB8C61620C643B2091C3DEA9 /* View */,
 				7DD88715676DC4AC14B1C7BB /* Presenter */,
 				69346D01E9AF250DA56FBC1A /* Interactor */,
@@ -655,12 +655,12 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		D45CC75723F2951700BA4138 /*  SupportingFiles */ = {
+		D45CC75723F2951700BA4138 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				D45CC75823F2952200BA4138 /* ViewModel */,
 			);
-			path = " SupportingFiles";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		D45CC75823F2952200BA4138 /* ViewModel */ = {
