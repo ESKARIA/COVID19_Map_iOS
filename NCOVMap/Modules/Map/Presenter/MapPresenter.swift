@@ -35,13 +35,21 @@ extension MapPresenter: MapPresenterProtocol {
     
     func getStatistics() {
         self.interactor.getStatistics { (model, error) in
-            if let error = error {
+            if error != nil {
                 // TODO: - обработать ошибку
                 return
             }
             guard let model = model else { return }
             self.statisticsModel = model
             self.requestPoint()
+            
+            self.interactor.getLocation { (place, error) in
+                if error != nil {
+                    // TODO: - обработать ошибку
+                    return
+                }
+                self.statisticsModel.fromCountry = place?.country
+            }
         }
     }
     
@@ -97,6 +105,6 @@ extension MapPresenter: MapPresenterProtocol {
     }
     
     func didClickCured() {
-        self.wireFrame.presentDescriptionViewController(from: self.view, type: .cured, model: self.statisticsModel)
+        self.wireFrame.presentDescriptionViewController(from: self.view, type: .recovered, model: self.statisticsModel)
     }
 }

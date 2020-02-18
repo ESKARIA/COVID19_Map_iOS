@@ -8,16 +8,14 @@
 
 import UIKit
 import SnapKit
+import SPStorkController
 
-class DescriptionViewController: BaseViewController {
+final class DescriptionViewController: BaseViewController {
 
     var presenter: DescriptionPresenterProtocol!
 
-    private var lbl_title: UILabel = UILabel.makeLabel(size: 14, weight: .regular, color: R.color.appBattleshipGrey().unwrapped())
-    private var lbl_count: UILabel = UILabel.makeLabel(size: 34, weight: .heavy, color: R.color.appMarineBlue().unwrapped())
-    private var img_icon: UIImageView = UIImageView(image: R.image.confirmed())
-
-    private var lbl_description: UILabel = UILabel.makeLabel(size: 10, weight: .regular, color: R.color.appDark().unwrapped())
+    private var tableView = UITableView()
+    private var dataSource = DescriptionDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,56 +25,46 @@ class DescriptionViewController: BaseViewController {
 
     private func createUI() {
 
-        self.view.backgroundColor = .white
+        self.tableView.register(StatsTitleCell.self, forCellReuseIdentifier: StatsTitleCell.identifier)
+        self.tableView.register(StatsTextCell.self, forCellReuseIdentifier: StatsTextCell.identifier)
+        self.tableView.register(StatsStatisticsCell.self, forCellReuseIdentifier: StatsStatisticsCell.identifier)
 
-        self.view.addSubview(self.img_icon)
-        self.view.addSubview(self.lbl_title)
-        self.view.addSubview(self.lbl_count)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
 
-        self.img_icon.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(30)
-            $0.left.equalToSuperview().offset(16)
-            $0.width.height.equalTo(59)
+        self.view.addSubview(self.tableView)
+        self.tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
 
-        let separatorLine = UIView()
-        separatorLine.backgroundColor = R.color.appRed()
+        self.tableView.separatorStyle = .none
+        self.tableView.tableFooterView = UIView()
+    }
+}
 
-        self.view.addSubview(separatorLine)
-        separatorLine.snp.makeConstraints {
-            $0.bottom.equalTo(self.img_icon)
-            $0.left.equalTo(self.img_icon.snp.right).offset(12)
-            $0.right.equalToSuperview().offset(-16)
-            $0.height.equalTo(1)
-        }
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension DescriptionViewController: UITableViewDataSource, UITableViewDelegate {
 
-        self.lbl_count.snp.makeConstraints {
-            $0.bottom.equalTo(separatorLine.snp.top).offset(-4)
-            $0.left.right.equalTo(separatorLine)
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSource.numberOfRows(in: section)
+    }
 
-        self.lbl_title.snp.makeConstraints {
-            $0.top.equalTo(self.img_icon)
-            $0.bottom.equalTo(self.lbl_count.snp.top).offset(-1)
-            $0.left.right.equalTo(separatorLine)
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return self.dataSource.tableView(tableView, cellForRowAt: indexPath)
     }
 }
 
 extension DescriptionViewController: DescriptionViewProtocol {
 
     func setContent(_ type: DescriptionCase, model: StatisticsModel) {
+        self.dataSource.type = type
+        self.dataSource.model = model
+    }
+}
 
-        self.img_icon.image = type.icon
-        self.lbl_title.text = type.title
-
-        switch type {
-        case .confirmed:
-            self.lbl_count.text = "\(model.totalInfo.totalConfirmed)"
-        case .died:
-            self.lbl_count.text = "\(model.totalInfo.totalDeath)"
-        case .cured:
-            self.lbl_count.text = "\(model.totalInfo.totalRecovered)"
-        }
+// MARK: - UIScrollViewDelegate
+extension DescriptionViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        SPStorkController.scrollViewDidScroll(scrollView)
     }
 }

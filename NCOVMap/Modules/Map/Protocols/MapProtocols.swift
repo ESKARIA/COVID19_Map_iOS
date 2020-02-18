@@ -17,7 +17,6 @@ protocol MapViewProtocol: class {
 
 // PRESENTER -> WIREFRAME
 protocol MapWireFrameProtocol: class {
-    func presentStatisticsVC(from view: MapViewProtocol?)
     func presentDescriptionViewController(from view: MapViewProtocol?, type: DescriptionCase, model: StatisticsModel)
 }
 
@@ -34,4 +33,5 @@ protocol MapPresenterProtocol: class {
 // PRESENTER -> INTERACTOR
 protocol MapInteractorProtocol: class {
     func getStatistics(completion: @escaping (StatisticsModel?, EKNetworkError?) -> Void)
+    func getLocation(completion: @escaping (IPPlaceJSONModel?, EKNetworkError?) -> Void)
 }

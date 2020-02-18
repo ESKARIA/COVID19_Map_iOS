@@ -1,14 +1,37 @@
-/* 
-  Localizable.strings
-  NCOVMap
+"Map_Confirmed_Title" = "Confirmed";
+"Map_Death_Title" = "Death";
+"Map_Recovered_Title" = "Recovered";
+"Map_Confirmed_Snippet" = "Confirmed";
+"Map_Death_Snippet" = "Death";
+"Map_Recovered_Snippet" = "Recovered";
 
-  Created by Дмитрий Торопкин on 17.02.2020.
-  Copyright © 2020 ESKARIA LLC. All rights reserved.
-*/
+// Description Module
+"Descript_Confirmed_text" = "As if by coincidence, an outbreak of coronavirus was discovered in Wuhan, a densely populated city in the center of China, with a population of 12 million. The point here is not even a large crowd of people, but a subtropical humid climate, which in the warm winter of 2020 is an ideal environment for the spread of bacteria.\
+\
+The main source of contagion is the food markets in China. Seafood, meat, vegetables, eggs - all this contributes to the spread of coronavirus. It is enough for an infected person to sneeze in the area of ​​shopping arcades, and the infection spreads to hundreds of other visitors. Plus, local unsanitary conditions make themselves felt.";
+"Descript_Recovered_text" = "The World Health Organization emphasizes:\
+today there is no antiviral drug\
+with proven effectiveness that can handle\
+with COVID-2019.\
+\
+There is evidence that several drugs are being tested in China, which, based on their mechanisms of action, previously obtained data on the use of other viral infections and the characteristics of the COVID-2019 virus, could have an effect on it, a professor at the Higher School of Health Management told KP Sechenovskiy University Artem Gil. - Firstly, it is an antiretroviral drug (it is used to treat HIV) based on two active substances: lopinavir and ritonavir.\
+\
+The second drug is remdesivir. More precisely, officially this is not a medicine yet, but a patented active substance (the manufacturer and holder of the patent is a large American biotechnological company). Initially, the drug was tested in the fight against Ebola virus, and infections caused by other RNA viruses (for example, respiratory syncytial virus that causes respiratory diseases). And against them showed signs of antiviral efficacy. Moreover, in preclinical trials on animals, remdesivir \"shot\" against a new type of coronavirus. Therefore, China took this drug for testing, the expert explains.\
+\
+Russian antiviral agents, including arbidol, ingavirin, kagocel, as well as the Yekaterinburg development of triazavirin, do not have an adequate evidence base that would confirm their effectiveness according to international standards of evidence-based medicine, emphasizes Professor Gil. There are only studies performed at a low methodological level, often on small or very small patient samples. In a word, the “golden” formula for confirming the effectiveness of drugs is not respected. It sounds like a “double-blind, randomized, multicenter, placebo-controlled study,” which should also be properly planned and conducted.\
+\
+“Therefore, it is extremely doubtful that the Chinese health authorities took any of the Russian antiviral agents for official testing,” the expert notes. - Perhaps, some scientific laboratory, research group in private will decide to try something. However, it is unlikely that the Chinese authorities will test development on their patients without at least preliminary evidence of effectiveness. ”\
+\
+How are patients with coronavirus infection treated now? Symptomatic therapy is used - depending on the manifestations of the disease, doctors explain. It can be anti-inflammatory, antipyretic drugs, drugs to maintain pressure, respiratory function, etc. \"There is evidence that plasmapheresis can work effectively in patients with a severe form of the disease. That is, blood purification from toxic products of viral infection, ”explains Artem Gil.";
+"Descript_Died_text" = "Scientists have proposed to separate the deaths from coronavirus in mainland China and beyond and evaluate the data separately.\
+\
+The media reports that the death rate in the world is about 2% (divide the number of deaths by the number of infected). Scientists argue that this calculation does not take into account many factors.\
+\
+It is emphasized that due to overcrowding in Chinese hospitals, only severe cases are included in the statistics, but outside it, the virus is detected more often.\
+\
+According to the study, with a probability of up to 95%, the mortality rate of the infection is 0.4-4% of all infected. If the virus is fixed in humans within 14 days, then the average figure is 0.9%, and if this period is half as long as 0.8%. This figure is significantly higher than in seasonal flu (0.1%), but significantly lower than that of other SARS and MERS coronaviruses.";
+"Descript_deaths_title" = "Died";
+"Descript_recovered_title" = "Recovered";
+"Descript_confirmed_title" = "Sick";
+"Descript_enjured_title" = "The number of cases of Chinese coronavirus";
 
-"Map_Confirmed_Title"                   =   "Confirmed";
-"Map_Death_Title"                       =   "Death";
-"Map_Recovered_Title"                   =   "Recovered";
-"Map_Confirmed_Snippet"                 =   "Confirmed";
-"Map_Death_Snippet"                     =   "Death";
-"Map_Recovered_Snippet"                 =   "Recovered";
