@@ -7,6 +7,7 @@
 //
 import EKNetworking
 import UIKit
+import EKIPLocation
 
 class MapPresenter: BasePresenter {
     
@@ -35,6 +36,9 @@ extension MapPresenter: MapPresenterProtocol {
     
     func getStatistics() {
         self.interactor.getStatistics { (model, error) in
+            EKIPLocationManager.shared.fetchLocation { (place) in
+                self.statisticsModel.fromCountry = place?.country
+            }
             if error != nil {
                 // TODO: - обработать ошибку
                 return
@@ -42,14 +46,6 @@ extension MapPresenter: MapPresenterProtocol {
             guard let model = model else { return }
             self.statisticsModel = model
             self.requestPoint()
-            
-            self.interactor.getLocation { (place, error) in
-                if error != nil {
-                    // TODO: - обработать ошибку
-                    return
-                }
-                self.statisticsModel.fromCountry = place?.country
-            }
         }
     }
     
