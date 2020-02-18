@@ -17,7 +17,6 @@ protocol MapViewProtocol: class {
 
 // PRESENTER -> WIREFRAME
 protocol MapWireFrameProtocol: class {
-    func presentStatisticsVC(from view: MapViewProtocol?)
     func presentDescriptionViewController(from view: MapViewProtocol?, type: DescriptionCase, model: StatisticsModel)
 }
 

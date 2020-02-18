@@ -16,6 +16,11 @@
 		2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */; };
 		2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */; };
 		2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60F23F1974200A52FC2 /* AccountManager.swift */; };
+		20160CF023FBF07200187C5A /* DescriptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CEF23FBF07200187C5A /* DescriptionDataSource.swift */; };
+		20160CF223FBF37500187C5A /* StatsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CF123FBF37500187C5A /* StatsTitleCell.swift */; };
+		20160CF423FBF38500187C5A /* StatsTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CF323FBF38500187C5A /* StatsTextCell.swift */; };
+		20160CF623FBF39D00187C5A /* StatsStatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CF523FBF39D00187C5A /* StatsStatisticsCell.swift */; };
+		20160CF823FBF3EC00187C5A /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CF723FBF3EC00187C5A /* BaseTableCell.swift */; };
 		203507B623FBD9BD00A31A58 /* ParamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B523FBD9BD00A31A58 /* ParamView.swift */; };
 		203507B823FBDA1E00A31A58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B723FBDA1E00A31A58 /* String+Extension.swift */; };
 		204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */; };
@@ -98,6 +103,11 @@
 		2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsJSONModel.swift; sourceTree = "<group>"; };
 		2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsApiRequest.swift; sourceTree = "<group>"; };
 		2005F60F23F1974200A52FC2 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		20160CEF23FBF07200187C5A /* DescriptionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionDataSource.swift; sourceTree = "<group>"; };
+		20160CF123FBF37500187C5A /* StatsTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTitleCell.swift; sourceTree = "<group>"; };
+		20160CF323FBF38500187C5A /* StatsTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTextCell.swift; sourceTree = "<group>"; };
+		20160CF523FBF39D00187C5A /* StatsStatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsStatisticsCell.swift; sourceTree = "<group>"; };
+		20160CF723FBF3EC00187C5A /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		203507B523FBD9BD00A31A58 /* ParamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamView.swift; sourceTree = "<group>"; };
 		203507B723FBDA1E00A31A58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
@@ -249,6 +259,16 @@
 				2005F60F23F1974200A52FC2 /* AccountManager.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		20160CF923FBF6AA00187C5A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				20160CF123FBF37500187C5A /* StatsTitleCell.swift */,
+				20160CF323FBF38500187C5A /* StatsTextCell.swift */,
+				20160CF523FBF39D00187C5A /* StatsStatisticsCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		204A26D723F17DF0005DC46B /* Network Layer */ = {
@@ -447,6 +467,8 @@
 			isa = PBXGroup;
 			children = (
 				A0F15F208A1F3CC58EC61295 /* DescriptionViewController.swift */,
+				20160CEF23FBF07200187C5A /* DescriptionDataSource.swift */,
+				20160CF923FBF6AA00187C5A /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -533,6 +555,7 @@
 				D43CCDCE23F14BAD005F0F31 /* BasePresenter.swift */,
 				D43CCDD023F14BC9005F0F31 /* BaseViewController.swift */,
 				D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */,
+				20160CF723FBF3EC00187C5A /* BaseTableCell.swift */,
 			);
 			path = "Base classes";
 			sourceTree = "<group>";
@@ -964,12 +987,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20160CF223FBF37500187C5A /* StatsTitleCell.swift in Sources */,
 				D43CCDCD23F14B9E005F0F31 /* BaseInteractor.swift in Sources */,
 				D43CCDEA23F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift in Sources */,
 				D43CCD9923F1492A005F0F31 /* AppDelegate.swift in Sources */,
 				D45CC75A23F2953100BA4138 /* StatisticsCircleViewModel.swift in Sources */,
 				D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */,
 				D47E206023FB0111002E4059 /* GMSMarker+Extension.swift in Sources */,
+				20160CF023FBF07200187C5A /* DescriptionDataSource.swift in Sources */,
 				203507B623FBD9BD00A31A58 /* ParamView.swift in Sources */,
 				D43CCD9B23F1492A005F0F31 /* SceneDelegate.swift in Sources */,
 				D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */,
@@ -977,8 +1002,10 @@
 				D43CCDD123F14BC9005F0F31 /* BaseViewController.swift in Sources */,
 				10AE3493D7752C2860D9C38C /* MapPresenter.swift in Sources */,
 				E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */,
+				20160CF623FBF39D00187C5A /* StatsStatisticsCell.swift in Sources */,
 				D43CCDE623F1675A005F0F31 /* StatisticsTotalModel.swift in Sources */,
 				9802F087B50FF8900AA32B45 /* MapProtocols.swift in Sources */,
+				20160CF823FBF3EC00187C5A /* BaseTableCell.swift in Sources */,
 				5B0DE34987B7DC93CCBFF8C0 /* MapWireFrame.swift in Sources */,
 				1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */,
 				D43CCDF223F18AC5005F0F31 /* R.generated.swift in Sources */,
@@ -987,6 +1014,7 @@
 				A11D4F682D21189DCFC2AEDF /* NavigationViewController.swift in Sources */,
 				0080190ADD74A8A938576F69 /* NavigationPresenter.swift in Sources */,
 				D43CCDE423F166F4005F0F31 /* StatisticsModel.swift in Sources */,
+				20160CF423FBF38500187C5A /* StatsTextCell.swift in Sources */,
 				1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */,
 				47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */,
 				2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */,
