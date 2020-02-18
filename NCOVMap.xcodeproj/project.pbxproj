@@ -16,6 +16,8 @@
 		2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */; };
 		2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */; };
 		2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60F23F1974200A52FC2 /* AccountManager.swift */; };
+		203507B623FBD9BD00A31A58 /* ParamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B523FBD9BD00A31A58 /* ParamView.swift */; };
+		203507B823FBDA1E00A31A58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B723FBDA1E00A31A58 /* String+Extension.swift */; };
 		204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */; };
 		20B3E3A823F15A0F00371FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */; };
 		21D8B45A3754F4CE92ACCB86 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F15F208A1F3CC58EC61295 /* DescriptionViewController.swift */; };
@@ -102,6 +104,8 @@
 		2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsJSONModel.swift; sourceTree = "<group>"; };
 		2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsApiRequest.swift; sourceTree = "<group>"; };
 		2005F60F23F1974200A52FC2 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		203507B523FBD9BD00A31A58 /* ParamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamView.swift; sourceTree = "<group>"; };
+		203507B723FBDA1E00A31A58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
 		20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -573,6 +577,7 @@
 		D43CCDC823F14B77005F0F31 /* UI Layer */ = {
 			isa = PBXGroup;
 			children = (
+				203507B523FBD9BD00A31A58 /* ParamView.swift */,
 				D43CCDC923F14B7C005F0F31 /* Base classes */,
 			);
 			path = "UI Layer";
@@ -675,6 +680,7 @@
 			isa = PBXGroup;
 			children = (
 				D47E205F23FB0111002E4059 /* GMSMarker+Extension.swift */,
+				203507B723FBDA1E00A31A58 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1030,6 +1036,7 @@
 				D45CC75A23F2953100BA4138 /* StatisticsCircleViewModel.swift in Sources */,
 				D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */,
 				D47E206023FB0111002E4059 /* GMSMarker+Extension.swift in Sources */,
+				203507B623FBD9BD00A31A58 /* ParamView.swift in Sources */,
 				D43CCD9B23F1492A005F0F31 /* SceneDelegate.swift in Sources */,
 				D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */,
 				CD7ECC5244AB970DA0C8DA88 /* MapViewController.swift in Sources */,
@@ -1051,6 +1058,7 @@
 				2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */,
 				2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */,
 				556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */,
+				203507B823FBDA1E00A31A58 /* String+Extension.swift in Sources */,
 				D43CCDE823F16855005F0F31 /* StatisticsRegionModel.swift in Sources */,
 				D43CCDEC23F17BAA005F0F31 /* StatisticsRegionDateModel.swift in Sources */,
 				1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */,

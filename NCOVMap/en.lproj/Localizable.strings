@@ -33,3 +33,5 @@ According to the study, with a probability of up to 95%, the mortality rate of t
 "Descript_deaths_title" = "Died";
 "Descript_recovered_title" = "Recovered";
 "Descript_confirmed_title" = "Sick";
+"Descript_enjured_title" = "The number of cases of Chinese coronavirus";
+
