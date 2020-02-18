@@ -20,7 +20,7 @@ def modules
   
   pod 'DevHelper', :path => 'Frameworks/DevHelper', :inhibit_warnings => true
   pod 'EKNetworking', :path => 'Frameworks/EKNetworking', :inhibit_warnings => true
-  
+  pod 'DTPurchase', :path => 'Frameworks/DTPurchase', :inhibit_warnings => true
 end
 
 target 'NCOVMap' do

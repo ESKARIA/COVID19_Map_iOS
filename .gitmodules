@@ -4,3 +4,6 @@
 [submodule "Frameworks/DevHelper"]
 	path = Frameworks/DevHelper
 	url = https://github.com/emvakar/DevHelper.git
+[submodule "Frameworks/DTPurchase"]
+	path = Frameworks/DTPurchase
+	url = https://github.com/DmitriyTor/DTPurchase.git
