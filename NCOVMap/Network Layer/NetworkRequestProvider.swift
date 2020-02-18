@@ -33,7 +33,7 @@ class NetworkRequestProvider {
 
     internal func runRequest(_ request: EKNetworkRequest, progressResult: ((Double) -> Void)?, completion: @escaping(_ statusCode: Int, _ requestData: Data?, _ error: EKNetworkError?) -> Void) {
 
-        var baseUrl = self.accountManager.getBaseUrl()
+        let baseUrl = self.accountManager.getBaseUrl()
         var tokenString: String?
         let token = accountManager.getUserToken()
         if !token.isEmpty {

@@ -35,3 +35,9 @@ According to the study, with a probability of up to 95%, the mortality rate of t
 "Descript_confirmed_title" = "Sick";
 "Descript_enjured_title" = "The number of cases of Chinese coronavirus";
 
+"donate_title" = "Contribute\nto application development";
+"donate_description" = "If you liked the application,\nplease help promote our startup";
+"donate_donnateButton_title" = "Donate";
+"donate_thank_you" = "Thanks you";
+"donate_donated" ="You donated";
+
