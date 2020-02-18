@@ -12,4 +12,8 @@ class BaseTableCell: UITableViewCell {
     static var identifier: String {
         return String(describing: self)
     }
+    
+    func createUI() {
+        self.selectionStyle = .none
+    }
 }

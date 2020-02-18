@@ -22,8 +22,4 @@ extension MapInteractor: MapInteractorProtocol {
     func getStatistics(completion: @escaping (StatisticsModel?, EKNetworkError?) -> Void) {
         self.networking.getStatistics(completion)
     }
-    
-    func getLocation(completion: @escaping (IPPlaceJSONModel?, EKNetworkError?) -> Void) {
-        self.networking.getLocation(completion)
-    }
 }

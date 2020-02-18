@@ -23,7 +23,8 @@ final class StatsTextCell: BaseTableCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func createUI() {
+    internal override func createUI() {
+        super.createUI()
         self.lbl_description.numberOfLines = 0
         self.contentView.addSubview(self.lbl_description)
         self.lbl_description.snp.makeConstraints {

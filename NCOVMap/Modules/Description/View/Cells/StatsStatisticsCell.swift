@@ -24,7 +24,8 @@ final class StatsStatisticsCell: BaseTableCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func createUI() {
+    internal override func createUI() {
+        super.createUI()
         self.contentView.addSubview(self.lbl_stats_counter_title)
         self.contentView.addSubview(self.sv_stats)
 

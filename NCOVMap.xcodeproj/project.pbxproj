@@ -21,8 +21,6 @@
 		20160CF423FBF38500187C5A /* StatsTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CF323FBF38500187C5A /* StatsTextCell.swift */; };
 		20160CF623FBF39D00187C5A /* StatsStatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CF523FBF39D00187C5A /* StatsStatisticsCell.swift */; };
 		20160CF823FBF3EC00187C5A /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CF723FBF3EC00187C5A /* BaseTableCell.swift */; };
-		20160CFD23FBFF8B00187C5A /* IPPlaceJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CFC23FBFF8B00187C5A /* IPPlaceJSONModel.swift */; };
-		20160CFF23FC000800187C5A /* IPPlaceApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CFE23FC000800187C5A /* IPPlaceApiRequest.swift */; };
 		203507B623FBD9BD00A31A58 /* ParamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B523FBD9BD00A31A58 /* ParamView.swift */; };
 		203507B823FBDA1E00A31A58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B723FBDA1E00A31A58 /* String+Extension.swift */; };
 		204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */; };
@@ -110,8 +108,6 @@
 		20160CF323FBF38500187C5A /* StatsTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTextCell.swift; sourceTree = "<group>"; };
 		20160CF523FBF39D00187C5A /* StatsStatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsStatisticsCell.swift; sourceTree = "<group>"; };
 		20160CF723FBF3EC00187C5A /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
-		20160CFC23FBFF8B00187C5A /* IPPlaceJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPPlaceJSONModel.swift; sourceTree = "<group>"; };
-		20160CFE23FC000800187C5A /* IPPlaceApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPPlaceApiRequest.swift; sourceTree = "<group>"; };
 		203507B523FBD9BD00A31A58 /* ParamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamView.swift; sourceTree = "<group>"; };
 		203507B723FBDA1E00A31A58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
@@ -229,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				2005F60923F1905300A52FC2 /* Statistics */,
-				20160CFC23FBFF8B00187C5A /* IPPlaceJSONModel.swift */,
 			);
 			path = responseModel;
 			sourceTree = "<group>";
@@ -246,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */,
-				20160CFE23FC000800187C5A /* IPPlaceApiRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -708,6 +702,7 @@
 				D43CCD9323F1492A005F0F31 /* Resources */,
 				DDC9438759028029DCDB8E3F /* [CP] Embed Pods Frameworks */,
 				0E8D2139C90ACECE168E96CE /* [CP] Copy Pods Resources */,
+				20FB84C723FC1B0800611DD6 /* Firebase Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -871,6 +866,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NCOVMap/Pods-NCOVMap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		20FB84C723FC1B0800611DD6 /* Firebase Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			name = "Firebase Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		8CC7DAB4A1787DE2F7BD822B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1006,7 +1020,6 @@
 				D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */,
 				CD7ECC5244AB970DA0C8DA88 /* MapViewController.swift in Sources */,
 				D43CCDD123F14BC9005F0F31 /* BaseViewController.swift in Sources */,
-				20160CFF23FC000800187C5A /* IPPlaceApiRequest.swift in Sources */,
 				10AE3493D7752C2860D9C38C /* MapPresenter.swift in Sources */,
 				E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */,
 				20160CF623FBF39D00187C5A /* StatsStatisticsCell.swift in Sources */,
@@ -1032,7 +1045,6 @@
 				D43CCDEC23F17BAA005F0F31 /* StatisticsRegionDateModel.swift in Sources */,
 				1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */,
 				D43CCDFA23F1905B005F0F31 /* ThemeManager.swift in Sources */,
-				20160CFD23FBFF8B00187C5A /* IPPlaceJSONModel.swift in Sources */,
 				2005F60423F18DBD00A52FC2 /* Network+Statistics.swift in Sources */,
 				204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */,
 				2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */,
@@ -1261,7 +1273,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EEB9458638991B667467141F /* Pods-NCOVMapTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V93MRMNEKV;
@@ -1284,7 +1296,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V93MRMNEKV;
@@ -1307,7 +1319,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1217F991A013B715536BA4C3 /* Pods-NCOVMap-NCOVMapUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V93MRMNEKV;
 				INFOPLIST_FILE = NCOVMapUITests/Info.plist;
@@ -1328,7 +1340,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6187E2F7995FCE6129909EB8 /* Pods-NCOVMap-NCOVMapUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V93MRMNEKV;
 				INFOPLIST_FILE = NCOVMapUITests/Info.plist;

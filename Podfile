@@ -10,6 +10,7 @@ def firebase
   pod 'Firebase/Auth', :inhibit_warnings => true
   pod 'Firebase/Messaging', :inhibit_warnings => true
   pod 'Firebase/Performance', :inhibit_warnings => true
+  pod 'Firebase/Crashlytics', :inhibit_warnings => true
   
   pod 'GoogleMaps', :inhibit_warnings => true
   pod 'GooglePlaces', :inhibit_warnings => true
