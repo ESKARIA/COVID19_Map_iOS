@@ -68,6 +68,7 @@ extension MapPresenter: MapPresenterProtocol {
             
             var alpha = (currentRegionDeath / totalDeath) * 100
             
+            alpha = alpha * 0.7
             if alpha < 28 {
                 alpha = 28
             }
@@ -77,7 +78,9 @@ extension MapPresenter: MapPresenterProtocol {
                                                         radius: radius,
                                                         alpha: alpha,
                                                         countryName: coordinatesModel.countryName,
-                                                        totalConfirmed: coordinatesModel.dates.last?.confirmed)
+                                                        totalConfirmed: coordinatesModel.dates.last?.confirmed,
+                                                        totalDeath: coordinatesModel.dates.last?.death,
+                                                        totalRecovered: coordinatesModel.dates.last?.recovered)
         
             result.append(_coordinate)
         }

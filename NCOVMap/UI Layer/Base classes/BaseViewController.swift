@@ -20,6 +20,7 @@ enum LoadingResult {
 class BaseViewController: UIViewController {
     
     var themeManager: ThemeManager
+    private var currentMode: UIUserInterfaceStyle!
     
     init(themeManager: ThemeManager) {
         self.themeManager = themeManager
@@ -37,11 +38,17 @@ class BaseViewController: UIViewController {
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+  
+        self.currentMode = self.traitCollection.userInterfaceStyle
         guard let previousMode = previousTraitCollection?.userInterfaceStyle else { return }
-        if previousMode == .light {
+        
+        if previousMode == .light, previousMode != currentMode {
             self.userActivatedDarkMode()
-        } else {
+            self.currentMode = .light
+        } else if previousMode == .dark, previousMode != currentMode {
             self.userActivateLightMode()
+            self.currentMode = .dark
         }
     }
     
