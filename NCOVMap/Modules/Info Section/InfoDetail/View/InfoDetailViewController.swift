@@ -23,8 +23,6 @@ class InfoDetailViewController: BaseViewController {
         super.viewWillAppear(animated)
 
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = R.color.appDark()
     }
 
     private func createUI() {
@@ -32,6 +30,7 @@ class InfoDetailViewController: BaseViewController {
 
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = R.color.appDark()
+        self.navigationController?.navigationBar.tintColor = R.color.appLightGray()
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 
