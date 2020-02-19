@@ -12,7 +12,7 @@ import SnapKit
 class InfoViewController: BaseViewController {
 
     var presenter: InfoPresenterProtocol!
-    
+
     private var tableView = UITableView()
     private var dataSource = InfoDataSource()
 
@@ -29,20 +29,24 @@ class InfoViewController: BaseViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 
         self.customNavigationTitle(title: R.string.localizable.info_title())
-        
+
         self.tableView.register(InfoTableCell.self, forCellReuseIdentifier: InfoTableCell.identifier)
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
+        self.tableView.backgroundColor = R.color.appDark()
+
         self.view.addSubview(self.tableView)
         self.tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(self.lbl_title.snp.bottom).offset(4)
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+            $0.left.right.equalToSuperview()
         }
 
         self.tableView.separatorStyle = .none
         self.tableView.tableFooterView = UIView()
-        
+
     }
 
 }

@@ -9,8 +9,30 @@
 import UIKit
 
 enum InfoRow: CaseIterable {
+
     case coronavirus
     case danger
+    case can
+    case canTransfer
+    case medicine
+    case protect
+
+    var title: String {
+        switch self {
+        case .coronavirus:
+            return R.string.localizable.inforow_coronavirus()
+        case .danger:
+            return R.string.localizable.inforow_danger()
+        case .can:
+            return R.string.localizable.inforow_can()
+        case .canTransfer:
+            return R.string.localizable.inforow_canTransfer()
+        case .medicine:
+            return R.string.localizable.inforow_medicine()
+        case .protect:
+            return R.string.localizable.inforow_protect()
+        }
+    }
 }
 
 final class InfoDataSource {

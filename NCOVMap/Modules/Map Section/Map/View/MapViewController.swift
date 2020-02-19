@@ -65,9 +65,9 @@ class MapViewController: BaseViewController {
         }
 
         stackView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(15)
             make.left.equalTo(15)
             make.right.equalTo(-15)
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(15)
             make.height.equalTo(56)
         }
         self.setNeedsStatusBarAppearanceUpdate()
@@ -125,13 +125,15 @@ class MapViewController: BaseViewController {
         self.recoveredCOuntLabel.text = "0"
         self.deathCountLabel.text = "0"
 
-        let views = [self.createViewForStack(type: .confirmed, valueLabel: self.confirmedCountLabel),
+        let views = [
             self.createViewForStack(type: .recovered, valueLabel: self.recoveredCOuntLabel),
-            self.createViewForStack(type: .death, valueLabel: self.deathCountLabel)]
+            self.createViewForStack(type: .confirmed, valueLabel: self.confirmedCountLabel),
+            self.createViewForStack(type: .death, valueLabel: self.deathCountLabel)
+        ]
 
         let stackView = UIStackView()
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .leading
         views.forEach { stackView.addArrangedSubview($0) }
 
         return stackView
@@ -141,23 +143,23 @@ class MapViewController: BaseViewController {
         let _view = UIView()
         _view.backgroundColor = .clear
 
-        let titleLabel = UILabel.makeLabel(size: 18, weight: .regular, color: .gray)
+        let titleLabel = UILabel.makeLabel(size: 14, weight: .regular, color: R.color.appBattleshipGrey().unwrapped())
 
         var title = ""
         switch type {
-        case .confirmed:
-            title = R.string.localizable.map_Confirmed_Title()
+        case .recovered:
+            title = R.string.localizable.map_Recovered_Title()
             let separator = self.getSeparator()
             _view.addSubview(separator)
             separator.snp.makeConstraints { (make) in
                 make.width.equalTo(1)
                 make.top.bottom.right.equalToSuperview()
             }
-            let tap = UITapGestureRecognizer(target: self, action: #selector(didClickConfirmed(_:)))
-            _view.addGestureRecognizer(tap)
-        case .recovered:
-            title = R.string.localizable.map_Recovered_Title()
             let tap = UITapGestureRecognizer(target: self, action: #selector(didClickRecovered(_:)))
+            _view.addGestureRecognizer(tap)
+        case .confirmed:
+            title = R.string.localizable.map_Confirmed_Title()
+            let tap = UITapGestureRecognizer(target: self, action: #selector(didClickConfirmed(_:)))
             _view.addGestureRecognizer(tap)
         case .death:
             title = R.string.localizable.map_Death_Title()

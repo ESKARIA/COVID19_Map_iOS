@@ -22,6 +22,8 @@ class BaseViewController: UIViewController {
     var themeManager: ThemeManager
     private var currentMode: UIUserInterfaceStyle!
     
+    public let lbl_title: UILabel = UILabel.makeLabel(size: 22, weight: .bold, color: .white)
+    
     init(themeManager: ThemeManager) {
         self.themeManager = themeManager
         super.init(nibName: nil, bundle: nil)
@@ -106,7 +108,7 @@ class BaseViewController: UIViewController {
     }
     
     func customNavigationTitle(title: String) {
-        let lbl_title: UILabel = UILabel.makeLabel(size: 22, weight: .bold, color: .white)
+        
         self.view.addSubview(lbl_title)
         lbl_title.numberOfLines = 0
         lbl_title.snp.makeConstraints {

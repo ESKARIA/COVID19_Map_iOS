@@ -48,3 +48,20 @@ According to the study, with a probability of up to 95%, the mortality rate of t
 "info_title" = "FAQ";
 "infoDetail_title" = "infoDetail_title";
 
+/// info row
+/*
+ case coronavirus
+ case danger
+ case can
+ case canTransfer
+ case medicine
+ case protect
+ */
+
+"inforow_coronavirus" = "";
+"inforow_danger" = "";
+"inforow_can" = "";
+"inforow_canTransfer" = "";
+"inforow_medicine" = "";
+"inforow_protect" = "";
+
