@@ -47,7 +47,7 @@ class DonateViewController: BaseViewController {
         self.view.addSubview(bearHead)
         self.view.addSubview(lightContainer)
         lightContainer.snp.makeConstraints {
-            $0.bottom.equalToSuperview().offset(10)
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(10)
             $0.left.right.equalToSuperview()
             $0.top.equalTo(self.view.snp.centerY).offset(-100)
         }
