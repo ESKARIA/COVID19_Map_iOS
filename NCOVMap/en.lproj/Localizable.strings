@@ -33,10 +33,12 @@ According to the study, with a probability of up to 95%, the mortality rate of t
 "Descript_deaths_title" = "Died";
 "Descript_recovered_title" = "Recovered";
 "Descript_confirmed_title" = "Sick";
-"Descript_enjured_title" = "The number of cases of Chinese coronavirus";
+"Descript_enjured_title" = "The number of cases\
+of Chinese coronavirus";
 
 "donate_title" = "Contribute\nto application development";
-"donate_description" = "If you liked the application,\nplease help promote our startup";
+"donate_description" = "If you liked the application,\
+please help promote our startup";
 "donate_donnateButton_title" = "Donate";
 "donate_thank_you" = "Thanks you";
 "donate_donated" ="You donated";
@@ -48,16 +50,7 @@ According to the study, with a probability of up to 95%, the mortality rate of t
 "info_title" = "FAQ";
 "infoDetail_title" = "infoDetail_title";
 
-/// info row
-/*
- case coronavirus
- case danger
- case can
- case canTransfer
- case medicine
- case protect
- */
-
+/// info
 "inforow_coronavirus" = "";
 "inforow_danger" = "";
 "inforow_can" = "";
@@ -65,3 +58,11 @@ According to the study, with a probability of up to 95%, the mortality rate of t
 "inforow_medicine" = "";
 "inforow_protect" = "";
 
+
+/// info detail
+"info_coronavirus" = "";
+"info_danger" = "";
+"info_can" = "";
+"info_canTransfer" = "";
+"info_medicine" = "";
+"info_protect" = "";
