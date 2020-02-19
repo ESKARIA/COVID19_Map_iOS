@@ -39,27 +39,36 @@ class BaseTabBarController: UITabBarController {
 extension BaseTabBarController {
 
     private func createUI() {
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = R.color.appDark()
         self.tabBar.tintColor = UIColor.RGB(r: 16, g: 23, b: 36)
+        self.tabBar.isTranslucent = false
     }
 
     private func getControllers() -> [UIViewController] {
 
-        let selectedColor = UIColor.RGB(r: 62, g: 81, b: 97)
+        let selectedColor: UIColor = .white
 
         let mapController = self.resolver.presentNavigationViewController(rootController: self.resolver.presentMapViewController())
+        let infoController = self.resolver.presentNavigationViewController(rootController: self.resolver.presentInfoViewController())
+        let donateController = self.resolver.presentNavigationViewController(rootController: self.resolver.presentDonateViewController())
     
-        let mapButton = UITabBarItem.init(title: "Map", image: R.image.map(), selectedImage: R.image.mapSelect())
+        let mapButton = UITabBarItem.init(title: R.string.localizable.tabbar_map_title(), image: R.image.map()?.withRenderingMode(.alwaysOriginal), selectedImage: R.image.mapSelect()?.withRenderingMode(.alwaysOriginal))
         mapButton.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: UIControl.State.selected)
         mapButton.tag = 1
         mapController.tabBarItem = mapButton
+        
+        
+        let infoButton = UITabBarItem.init(title: R.string.localizable.tabbar_info_title(), image: R.image.info()?.withRenderingMode(.alwaysOriginal), selectedImage: R.image.infoSelect()?.withRenderingMode(.alwaysOriginal))
+        infoButton.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: UIControl.State.selected)
+        infoButton.tag = 2
+        infoController.tabBarItem = infoButton
 
-        let donateController = self.resolver.presentNavigationViewController(rootController: self.resolver.presentDonateViewController())
-        let donateButton = UITabBarItem.init(title: "Donate", image: R.image.donate(), selectedImage: R.image.donateSelect())
+        
+        let donateButton = UITabBarItem.init(title: R.string.localizable.tabbar_donate_title(), image: R.image.donate()?.withRenderingMode(.alwaysOriginal), selectedImage: R.image.donateSelect()?.withRenderingMode(.alwaysOriginal))
         donateButton.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: UIControl.State.selected)
-        donateButton.tag = 2
+        donateButton.tag = 3
         donateController.tabBarItem = donateButton
 
-        return [mapController, donateController]
+        return [mapController, infoController, donateController]
     }
 }
