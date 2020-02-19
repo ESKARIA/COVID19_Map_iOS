@@ -11,7 +11,7 @@ class InfoDetailPresenter: BasePresenter {
     weak var view: InfoDetailViewProtocol?
     private var wireFrame: InfoDetailWireFrameProtocol
     private var interactor: InfoDetailInteractorProtocol
-    
+
     private var type: InfoRow
 
     init(view: InfoDetailViewProtocol, wireFrame: InfoDetailWireFrameProtocol, interactor: InfoDetailInteractorProtocol, type: InfoRow) {
@@ -22,4 +22,9 @@ class InfoDetailPresenter: BasePresenter {
     }
 }
 
-extension InfoDetailPresenter: InfoDetailPresenterProtocol { }
+extension InfoDetailPresenter: InfoDetailPresenterProtocol {
+
+    func viewDidLoad() {
+        self.view?.setDetails(self.type.description)
+    }
+}

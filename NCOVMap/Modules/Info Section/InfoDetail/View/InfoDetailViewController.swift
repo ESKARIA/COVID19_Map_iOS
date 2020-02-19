@@ -35,4 +35,8 @@ class InfoDetailViewController: BaseViewController {
     }
 
 }
-extension InfoDetailViewController: InfoDetailViewProtocol { }
+extension InfoDetailViewController: InfoDetailViewProtocol {
+    func setDetails(_ text: String) {
+        
+    }
+}

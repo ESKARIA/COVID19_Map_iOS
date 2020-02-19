@@ -9,13 +9,17 @@
 import UIKit
 
 // PRESENTER -> VIEW
-protocol InfoDetailViewProtocol: class { }
+protocol InfoDetailViewProtocol: class {
+    func setDetails(_ text: String)
+}
 
 // PRESENTER -> WIREFRAME
 protocol InfoDetailWireFrameProtocol: class { }
 
 // VIEW -> PRESENTER
-protocol InfoDetailPresenterProtocol: class { }
+protocol InfoDetailPresenterProtocol: class {
+    func viewDidLoad()
+}
 
 // PRESENTER -> INTERACTOR
 protocol InfoDetailInteractorProtocol: class { }
