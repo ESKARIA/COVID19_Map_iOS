@@ -33,6 +33,23 @@ enum InfoRow: CaseIterable {
             return R.string.localizable.inforow_protect()
         }
     }
+    
+    var description: String {
+           switch self {
+           case .coronavirus:
+               return R.string.localizable.info_coronavirus()
+           case .danger:
+               return R.string.localizable.info_danger()
+           case .can:
+               return R.string.localizable.info_can()
+           case .canTransfer:
+               return R.string.localizable.info_canTransfer()
+           case .medicine:
+               return R.string.localizable.info_medicine()
+           case .protect:
+               return R.string.localizable.info_protect()
+           }
+       }
 }
 
 final class InfoDataSource {
