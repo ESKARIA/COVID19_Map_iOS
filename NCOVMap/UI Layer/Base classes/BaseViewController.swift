@@ -112,7 +112,7 @@ class BaseViewController: UIViewController {
         self.view.addSubview(lbl_title)
         lbl_title.numberOfLines = 0
         lbl_title.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaInsets.top).offset(34)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(24)
             $0.left.equalToSuperview().offset(16)
             $0.right.equalToSuperview().offset(-16)
         }
