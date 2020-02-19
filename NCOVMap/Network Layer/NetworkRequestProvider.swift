@@ -39,7 +39,6 @@ class NetworkRequestProvider {
         if !token.isEmpty {
             tokenString = "Bearer " + accountManager.getUserToken()
         }
-
         self.networkWrapper.runRequest(request, baseURL: baseUrl, authToken: tokenString, progressResult: progressResult) { (statusCode, data, error) in
 
             guard let error = error else {

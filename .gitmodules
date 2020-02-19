@@ -4,3 +4,10 @@
 [submodule "Frameworks/DevHelper"]
 	path = Frameworks/DevHelper
 	url = https://github.com/emvakar/DevHelper.git
+[submodule "Frameworks/EKIPLocation"]
+	path = Frameworks/EKIPLocation
+	url = https://github.com/emvakar/EKIPLocation.git
+[submodule "Frameworks/DTPurchase"]
+	path = Frameworks/DTPurchase
+	url = https://github.com/DmitriyTor/DTPurchase.git
+

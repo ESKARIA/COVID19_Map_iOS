@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DTPurchase
 import EKNetworking
 
 protocol DIResolverComponents {
@@ -22,16 +23,43 @@ class DIResolver {
 
     private var networking: NetworkRequestProvider?
     private var accountManager: EKAccountManagerProtocol?
-
+    private var purchaseManager: DTIAPProvider
+    
+    init(purchaseManager: DTIAPProvider) {
+        self.purchaseManager = purchaseManager
+    }
+    private var themeMananger: ThemeManager?
+    
     func rootViewController() -> UIViewController {
 
         let controller = RootViewController(resolver: self)
         return controller
     }
-
-    func mainTabBarController() -> UIViewController {
-        let controller = BaseTabBarController(resolver: self)
-        return controller
+    
+    func getPurchaseManager() -> DTIAPProvider {
+        return self.purchaseManager
+    }
+    
+    func getThemeManager() -> ThemeManager {
+        
+        if self.themeMananger != nil {
+            return self.themeMananger!
+        }
+        
+        guard let mode = UIApplication.shared.windows.first?.overrideUserInterfaceStyle else {
+            self.themeMananger = ThemeManager(mode: .light)
+            return self.themeMananger!
+        }
+        
+        if mode == .light || mode == .unspecified {
+            self.themeMananger = ThemeManager(mode: .light)
+        }
+        
+        if mode == .dark {
+            self.themeMananger = ThemeManager(mode: .dark)
+        }
+        
+        return self.themeMananger!
     }
 }
 
@@ -58,7 +86,7 @@ extension DIResolver: DIResolverComponents {
             return accountManager
         }
         
-        let accountManager = AccountManager(environmet: .production, serverPort: 80)
+        let accountManager = AccountManager(environmet: .production, serverPort: 3000)
 
         self.accountManager = accountManager
         return self.accountManager!

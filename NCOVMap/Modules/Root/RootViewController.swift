@@ -18,6 +18,10 @@ class RootViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -28,11 +32,11 @@ class RootViewController: UIViewController {
     }
     
     private func showMapScreen() {
-        let new = self.resolver.mainTabBarController()
-        self.addChild(new)
-        self.view.addSubview(new.view)
-        new.didMove(toParent: self)
+        let vc = BaseTabBarController(resolver: self.resolver)
+        self.addChild(vc)
+        self.view.addSubview(vc.view)
+        vc.didMove(toParent: self)
         
-        self.current = new
+        self.current = vc
     }
 }
