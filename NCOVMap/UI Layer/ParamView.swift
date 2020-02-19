@@ -35,6 +35,8 @@ public struct ParamValueViewConfiguration {
     public var insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     public var unwrapPlaceholderParam = "-"
     public var unwrapPlaceholderValue = "-"
+    public var paramAligment: NSTextAlignment = .left
+    public var valueAligment: NSTextAlignment = .right
 
     public init() {
         self.compressionMode = .paramDominates
@@ -42,6 +44,7 @@ public struct ParamValueViewConfiguration {
         self.verticalAlighnmentValue = .middle
         self.colorParam = UIColor.black
         self.colorValue = UIColor.black
+        
     }
 }
 
@@ -76,11 +79,12 @@ public class ParamValueView: UIView {
         self.labelParam.translatesAutoresizingMaskIntoConstraints = false
         self.labelParam.font = configuration.fontParam
         self.labelParam.textColor = configuration.colorParam
+        self.labelValue.textAlignment = configuration.paramAligment
         self.labelParam.backgroundColor = UIColor.clear
         self.labelValue.translatesAutoresizingMaskIntoConstraints = false
         self.labelValue.font = configuration.fontValue
         self.labelValue.textColor = configuration.colorValue
-        self.labelValue.textAlignment = .right
+        self.labelValue.textAlignment = configuration.valueAligment
         self.labelParam.backgroundColor = UIColor.clear
 
         self.labelParam.setContentHuggingPriority(.defaultLow, for: .vertical)

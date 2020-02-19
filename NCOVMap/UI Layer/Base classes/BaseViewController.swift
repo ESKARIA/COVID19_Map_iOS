@@ -22,6 +22,8 @@ class BaseViewController: UIViewController {
     var themeManager: ThemeManager
     private var currentMode: UIUserInterfaceStyle!
     
+    public let lbl_title: UILabel = UILabel.makeLabel(size: 22, weight: .bold, color: .white)
+    
     init(themeManager: ThemeManager) {
         self.themeManager = themeManager
         super.init(nibName: nil, bundle: nil)
@@ -103,6 +105,19 @@ class BaseViewController: UIViewController {
         case .info:
             KRProgressHUD.showInfo(withMessage: message)
         }
+    }
+    
+    func customNavigationTitle(title: String) {
+        
+        self.view.addSubview(lbl_title)
+        lbl_title.numberOfLines = 0
+        lbl_title.snp.makeConstraints {
+            $0.top.equalTo(self.view.safeAreaInsets.top).offset(34)
+            $0.left.equalToSuperview().offset(16)
+            $0.right.equalToSuperview().offset(-16)
+        }
+
+        lbl_title.text = title
     }
 }
 
