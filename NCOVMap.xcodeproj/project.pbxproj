@@ -72,6 +72,7 @@
 		D43CCDF423F18E4C005F0F31 /* GoogleMapStyleDark.json in Resources */ = {isa = PBXBuildFile; fileRef = D43CCDF323F18E4C005F0F31 /* GoogleMapStyleDark.json */; };
 		D43CCDF623F18EBC005F0F31 /* GoogleMapStyleLight.json in Resources */ = {isa = PBXBuildFile; fileRef = D43CCDF523F18EBC005F0F31 /* GoogleMapStyleLight.json */; };
 		D43CCDFA23F1905B005F0F31 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDF923F1905B005F0F31 /* ThemeManager.swift */; };
+		D45493DE23FD72C000C7A9FF /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45493DD23FD72C000C7A9FF /* BaseTabBar.swift */; };
 		D45CC75A23F2953100BA4138 /* StatisticsCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45CC75923F2953100BA4138 /* StatisticsCircleViewModel.swift */; };
 		D47E206023FB0111002E4059 /* GMSMarker+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E205F23FB0111002E4059 /* GMSMarker+Extension.swift */; };
 		E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE182BFC86D996A255804F /* MapInteractor.swift */; };
@@ -174,6 +175,7 @@
 		D43CCDF323F18E4C005F0F31 /* GoogleMapStyleDark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleMapStyleDark.json; sourceTree = "<group>"; };
 		D43CCDF523F18EBC005F0F31 /* GoogleMapStyleLight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleMapStyleLight.json; sourceTree = "<group>"; };
 		D43CCDF923F1905B005F0F31 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		D45493DD23FD72C000C7A9FF /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
 		D45CC75923F2953100BA4138 /* StatisticsCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCircleViewModel.swift; sourceTree = "<group>"; };
 		D47E205F23FB0111002E4059 /* GMSMarker+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSMarker+Extension.swift"; sourceTree = "<group>"; };
 		D4B166C394CA3C7C735422A5 /* Statistics+Tests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Statistics+Tests.swift"; sourceTree = "<group>"; };
@@ -627,6 +629,7 @@
 				D43CCDD023F14BC9005F0F31 /* BaseViewController.swift */,
 				D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */,
 				20160CF723FBF3EC00187C5A /* BaseTableCell.swift */,
+				D45493DD23FD72C000C7A9FF /* BaseTabBar.swift */,
 			);
 			path = "Base classes";
 			sourceTree = "<group>";
@@ -1090,6 +1093,7 @@
 			files = (
 				20160CF223FBF37500187C5A /* StatsTitleCell.swift in Sources */,
 				D43CCDCD23F14B9E005F0F31 /* BaseInteractor.swift in Sources */,
+				D45493DE23FD72C000C7A9FF /* BaseTabBar.swift in Sources */,
 				D43CCDEA23F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift in Sources */,
 				D43CCD9923F1492A005F0F31 /* AppDelegate.swift in Sources */,
 				D45CC75A23F2953100BA4138 /* StatisticsCircleViewModel.swift in Sources */,
