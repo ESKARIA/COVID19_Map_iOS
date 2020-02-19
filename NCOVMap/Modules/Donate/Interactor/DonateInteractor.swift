@@ -6,6 +6,24 @@
 //  Copyright © 2020 ESKARIA. All rights reserved.
 //
 
-class DonateInteractor: BaseInteractor { }
+import DTPurchase
 
-extension DonateInteractor: DonateInteractorProtocol { }
+class DonateInteractor: BaseInteractor {
+    
+    var purchaseProvider: DTIAPProvider
+    
+    init(purchaseProvider: DTIAPProvider) {
+        self.purchaseProvider = purchaseProvider
+    }
+}
+
+extension DonateInteractor: DonateInteractorProtocol {
+    
+    func getProducts(completion: @escaping ([DTIAPProduct]) -> Void) {
+        self.purchaseProvider.getAvailableItem(completion: completion)
+    }
+    
+    func purchase(product: DTIAPProduct, completion: @escaping (DTPurchaseStatus) -> Void) {
+        self.purchaseProvider.purchaseProduct(product: product, completion: completion)
+    }
+}

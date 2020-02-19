@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DTPurchase
 import EKNetworking
 
 protocol DIResolverComponents {
@@ -22,14 +23,21 @@ class DIResolver {
 
     private var networking: NetworkRequestProvider?
     private var accountManager: EKAccountManagerProtocol?
-
+    private var purchaseManager: DTIAPProvider
     
+    init(purchaseManager: DTIAPProvider) {
+        self.purchaseManager = purchaseManager
+    }
     private var themeMananger: ThemeManager?
     
     func rootViewController() -> UIViewController {
 
         let controller = RootViewController(resolver: self)
         return controller
+    }
+    
+    func getPurchaseManager() -> DTIAPProvider {
+        return self.purchaseManager
     }
     
     func getThemeManager() -> ThemeManager {

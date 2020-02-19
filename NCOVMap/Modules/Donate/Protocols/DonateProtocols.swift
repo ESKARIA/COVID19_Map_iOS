@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DTPurchase
 
 // PRESENTER -> VIEW
 protocol DonateViewProtocol: class { }
@@ -18,4 +19,7 @@ protocol DonateWireFrameProtocol: class { }
 protocol DonatePresenterProtocol: class { }
 
 // PRESENTER -> INTERACTOR
-protocol DonateInteractorProtocol: class { }
+protocol DonateInteractorProtocol: class {
+    func getProducts(completion: @escaping ([DTIAPProduct]) -> Void)
+    func purchase(product: DTIAPProduct, completion: @escaping (DTPurchaseStatus) -> Void)
+}
