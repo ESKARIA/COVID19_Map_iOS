@@ -26,6 +26,7 @@
 		203507B823FBDA1E00A31A58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B723FBDA1E00A31A58 /* String+Extension.swift */; };
 		204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */; };
 		20B3E3A823F15A0F00371FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */; };
+		20BA2BCD23FC53EF00B56E3F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BA2BCC23FC53EF00B56E3F /* StoreKit.framework */; };
 		21D8B45A3754F4CE92ACCB86 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F15F208A1F3CC58EC61295 /* DescriptionViewController.swift */; };
 		249C7ADCE30F0333660F12BF /* TabBar+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43CF82A6C973EA838B8D6F4 /* TabBar+Tests.swift */; };
 		27690D9B536083481CAF5F77 /* Navigation+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72A4FCA822B14CE9A8921D /* Navigation+Tests.swift */; };
@@ -120,6 +121,7 @@
 		203507B723FBDA1E00A31A58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
 		20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		20BA2BCC23FC53EF00B56E3F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3330402A70E2DAB0C10686F5 /* Pods-NCOVMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NCOVMapTests.release.xcconfig"; path = "Target Support Files/Pods-NCOVMapTests/Pods-NCOVMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		35C46EDAD5574EE6E48BEE75 /* Description+DIResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Description+DIResolver.swift"; path = "../Modules/Description/Description+DIResolver.swift"; sourceTree = "<group>"; };
 		38FBB85707A6AB8A5EF01004 /* DonateWireFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DonateWireFrame.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C6CE030292538C16EEF4630 /* Pods_NCOVMap.framework in Frameworks */,
+				20BA2BCD23FC53EF00B56E3F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +745,7 @@
 		E9DA6BAE8A2AE1A907C54EE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20BA2BCC23FC53EF00B56E3F /* StoreKit.framework */,
 				BD71CC7D3EAB71E3830DADB9 /* Pods_NCOVMap.framework */,
 				BEDF6F728B7346D11937F68C /* Pods_NCOVMap_NCOVMapUITests.framework */,
 				9A3E4C9B00537071C15FBABE /* Pods_NCOVMapTests.framework */,
