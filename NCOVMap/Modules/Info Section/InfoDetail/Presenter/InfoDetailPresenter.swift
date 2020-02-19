@@ -25,6 +25,6 @@ class InfoDetailPresenter: BasePresenter {
 extension InfoDetailPresenter: InfoDetailPresenterProtocol {
 
     func viewDidLoad() {
-        self.view?.setDetails(self.type.description)
+        self.view?.setDetails(self.type)
     }
 }

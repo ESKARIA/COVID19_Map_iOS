@@ -10,7 +10,7 @@ import UIKit
 
 // PRESENTER -> VIEW
 protocol InfoDetailViewProtocol: class {
-    func setDetails(_ text: String)
+    func setDetails(_ text: InfoRow)
 }
 
 // PRESENTER -> WIREFRAME
