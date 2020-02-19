@@ -17,5 +17,11 @@ class InfoWireFrame: BaseWireFrame {
 }
 
 extension InfoWireFrame: InfoWireFrameProtocol {
+    func presentInfoDetail(from view: InfoViewProtocol?, with type: InfoRow) {
+        guard let fromView = view as? UIViewController else { return }
+        let viewController = self.resolver.presentInfoDetailViewController(type: type)
+        fromView.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 
 }

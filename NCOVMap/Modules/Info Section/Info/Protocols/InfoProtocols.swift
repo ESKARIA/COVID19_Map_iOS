@@ -12,10 +12,14 @@ import UIKit
 protocol InfoViewProtocol: class { }
 
 // PRESENTER -> WIREFRAME
-protocol InfoWireFrameProtocol: class { }
+protocol InfoWireFrameProtocol: class {
+    func presentInfoDetail(from view: InfoViewProtocol?, with type: InfoRow)
+}
 
 // VIEW -> PRESENTER
-protocol InfoPresenterProtocol: class { }
+protocol InfoPresenterProtocol: class {
+    func didClick(on item: InfoRow)
+}
 
 // PRESENTER -> INTERACTOR
 protocol InfoInteractorProtocol: class { }

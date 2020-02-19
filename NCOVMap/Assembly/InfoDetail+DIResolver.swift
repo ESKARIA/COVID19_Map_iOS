@@ -10,15 +10,15 @@ import UIKit
 
 // MARK: - InfoDetail
 protocol InfoDetailProtocol {
-    func presentInfoDetailViewController() -> UIViewController
+    func presentInfoDetailViewController(type: InfoRow) -> UIViewController
 }
 
 extension DIResolver: InfoDetailProtocol {
-    func presentInfoDetailViewController() -> UIViewController {
+    func presentInfoDetailViewController(type: InfoRow) -> UIViewController {
         let viewController = InfoDetailViewController(themeManager: self.getThemeManager())
         let interactor = InfoDetailInteractor()
         let wireFrame = InfoDetailWireFrame(resolver: self)
-        let presenter = InfoDetailPresenter(view: viewController, wireFrame: wireFrame, interactor: interactor)
+        let presenter = InfoDetailPresenter(view: viewController, wireFrame: wireFrame, interactor: interactor, type: type)
         viewController.presenter = presenter
         return viewController
     }

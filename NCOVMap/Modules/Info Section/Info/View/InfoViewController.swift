@@ -16,6 +16,11 @@ class InfoViewController: BaseViewController {
     private var tableView = UITableView()
     private var dataSource = InfoDataSource()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +55,8 @@ class InfoViewController: BaseViewController {
     }
 
 }
+
+
 extension InfoViewController: InfoViewProtocol { }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
@@ -61,5 +68,10 @@ extension InfoViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return self.dataSource.tableView(tableView, cellForRowAt: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = self.dataSource.item(at: indexPath)
+        self.presenter.didClick(on: item)
     }
 }

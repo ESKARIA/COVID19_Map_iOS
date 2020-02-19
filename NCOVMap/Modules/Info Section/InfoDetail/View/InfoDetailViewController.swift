@@ -19,10 +19,20 @@ class InfoDetailViewController: BaseViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = R.color.appDark()
+    }
+
     private func createUI() {
         self.view.backgroundColor = R.color.appDark()
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        
+
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = R.color.appDark()
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 
 }

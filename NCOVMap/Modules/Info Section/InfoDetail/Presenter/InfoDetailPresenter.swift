@@ -11,11 +11,14 @@ class InfoDetailPresenter: BasePresenter {
     weak var view: InfoDetailViewProtocol?
     private var wireFrame: InfoDetailWireFrameProtocol
     private var interactor: InfoDetailInteractorProtocol
+    
+    private var type: InfoRow
 
-    init(view: InfoDetailViewProtocol, wireFrame: InfoDetailWireFrameProtocol, interactor: InfoDetailInteractorProtocol) {
+    init(view: InfoDetailViewProtocol, wireFrame: InfoDetailWireFrameProtocol, interactor: InfoDetailInteractorProtocol, type: InfoRow) {
         self.view = view
         self.interactor = interactor
         self.wireFrame = wireFrame
+        self.type = type
     }
 }
 

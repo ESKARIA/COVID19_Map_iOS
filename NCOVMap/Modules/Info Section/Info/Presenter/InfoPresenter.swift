@@ -19,4 +19,8 @@ class InfoPresenter: BasePresenter {
     }
 }
 
-extension InfoPresenter: InfoPresenterProtocol { }
+extension InfoPresenter: InfoPresenterProtocol {
+    func didClick(on item: InfoRow) {
+        self.wireFrame.presentInfoDetail(from: self.view, with: item)
+    }
+}
