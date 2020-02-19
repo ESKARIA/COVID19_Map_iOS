@@ -21,14 +21,9 @@ class InfoViewController: BaseViewController {
 
     private func createUI() {
         self.view.backgroundColor = R.color.appDark()
-
-        let label = UILabel.makeLabel(size: 36, weight: .medium, color: .white)
-        label.text = "Info"
-
-        self.view.addSubview(label)
-        label.snp.makeConstraints {
-            $0.center.equalToSuperview()
-        }
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        self.customNavigationTitle(title: R.string.localizable.info_title())
     }
 
 }

@@ -41,7 +41,7 @@ class MapViewController: BaseViewController {
 
     private func createUI() {
 
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = R.color.appDark()
 
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 

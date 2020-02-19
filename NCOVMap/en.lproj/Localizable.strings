@@ -44,3 +44,7 @@ According to the study, with a probability of up to 95%, the mortality rate of t
 "tabbar_map_title" = "Map";
 "tabbar_info_title" = "Info";
 "tabbar_donate_title" = "Donate";
+
+"info_title" = "FAQ";
+"infoDetail_title" = "infoDetail_title";
+

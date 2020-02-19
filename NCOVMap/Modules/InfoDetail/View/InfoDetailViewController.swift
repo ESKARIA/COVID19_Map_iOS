@@ -21,14 +21,8 @@ class InfoDetailViewController: BaseViewController {
 
     private func createUI() {
         self.view.backgroundColor = R.color.appDark()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         
-        let label = UILabel.makeLabel(size: 36, weight: .medium, color: .white)
-        label.text = "InfoDetail"
-
-        self.view.addSubview(label)
-        label.snp.makeConstraints {
-            $0.center.equalToSuperview()
-        }
     }
 
 }

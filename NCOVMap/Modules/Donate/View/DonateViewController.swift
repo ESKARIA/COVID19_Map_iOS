@@ -14,8 +14,6 @@ class DonateViewController: BaseViewController {
 
     var presenter: DonatePresenterProtocol!
 
-    private var lbl_title: UILabel = UILabel.makeLabel(size: 22, weight: .bold, color: .white)
-    
     private var lbl_counter: UILabel = UILabel.makeLabel(size: 58, weight: .bold, color: R.color.appMarineBlue().unwrapped())
     
     override func viewDidLoad() {
@@ -29,15 +27,7 @@ class DonateViewController: BaseViewController {
         self.view.backgroundColor = R.color.appDark()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 
-        self.view.addSubview(self.lbl_title)
-        self.lbl_title.numberOfLines = 0
-        self.lbl_title.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaInsets.top).offset(34)
-            $0.left.equalToSuperview().offset(16)
-            $0.right.equalToSuperview().offset(-16)
-        }
-
-        self.lbl_title.text = R.string.localizable.donate_title()
+        self.customNavigationTitle(title: R.string.localizable.donate_title())
 
         let lightContainer = UIView()
         lightContainer.backgroundColor = .white
