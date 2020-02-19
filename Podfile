@@ -10,6 +10,7 @@ def firebase
   pod 'Firebase/Auth', :inhibit_warnings => true
   pod 'Firebase/Messaging', :inhibit_warnings => true
   pod 'Firebase/Performance', :inhibit_warnings => true
+  pod 'Firebase/Crashlytics', :inhibit_warnings => true
   
   pod 'GoogleMaps', :inhibit_warnings => true
   pod 'GooglePlaces', :inhibit_warnings => true
@@ -20,7 +21,10 @@ def modules
   
   pod 'DevHelper', :path => 'Frameworks/DevHelper', :inhibit_warnings => true
   pod 'EKNetworking', :path => 'Frameworks/EKNetworking', :inhibit_warnings => true
+
+  pod 'EKIPLocation', :path => 'Frameworks/EKIPLocation', :inhibit_warnings => true
   pod 'DTPurchase', :path => 'Frameworks/DTPurchase', :inhibit_warnings => true
+
 end
 
 target 'NCOVMap' do

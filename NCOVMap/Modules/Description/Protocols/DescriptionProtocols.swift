@@ -12,21 +12,29 @@ enum DescriptionCase {
 
     case confirmed
     case died
-    case cured
+    case recovered
 
     var icon: UIImage? {
         switch self {
-        case .confirmed: return R.image.confirmed()
-        case .cured: return R.image.cured()
-        case .died: return R.image.died()
+        case .confirmed: return R.image.confirmed_icon()
+        case .recovered: return R.image.recovered_icon()
+        case .died: return R.image.died_icon()
         }
     }
 
     var title: String? {
         switch self {
-        case .confirmed: return "Заболело"
-        case .cured: return "Вылечено"
-        case .died: return "Погибло"
+        case .confirmed: return R.string.localizable.descript_confirmed_title()
+        case .recovered: return R.string.localizable.descript_recovered_title()
+        case .died: return R.string.localizable.descript_deaths_title()
+        }
+    }
+    
+    var description: String? {
+        switch self {
+        case .confirmed: return R.string.localizable.descript_Confirmed_text()
+        case .recovered: return R.string.localizable.descript_Recovered_text()
+        case .died: return R.string.localizable.descript_Died_text()
         }
     }
 }

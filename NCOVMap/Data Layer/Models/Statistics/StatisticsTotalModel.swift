@@ -14,6 +14,13 @@ class StatisticsTotalModel {
     var totalRecovered: Int = 0
     var totalDeath: Int = 0
 
+    func copy() -> StatisticsTotalModel {
+        let newValue = StatisticsTotalModel()
+        newValue.totalDeath = self.totalDeath
+        newValue.totalConfirmed = self.totalConfirmed
+        newValue.totalRecovered = self.totalRecovered
+        return newValue
+    }
 }
 
 extension StatisticsTotalModel {
