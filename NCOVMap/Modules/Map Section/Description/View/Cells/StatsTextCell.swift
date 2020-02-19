@@ -13,16 +13,6 @@ final class StatsTextCell: BaseTableCell {
 
     private var lbl_description: UILabel = UILabel.makeLabel(size: 10, weight: .regular, color: R.color.appDark().unwrapped())
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createUI()
-
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     internal override func createUI() {
         super.createUI()
         self.lbl_description.numberOfLines = 0

@@ -14,16 +14,6 @@ final class StatsStatisticsCell: BaseTableCell {
     private var lbl_stats_counter_title: UILabel = UILabel.makeLabel(size: 17, weight: .bold, color: R.color.appMarineBlue().unwrapped())
     private var sv_stats: UIStackView = DHUIBuilder.make.stackView(orientation: .vertical, distribution: .equalSpacing, spacing: 0)
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createUI()
-
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     internal override func createUI() {
         super.createUI()
         self.contentView.addSubview(self.lbl_stats_counter_title)
@@ -56,16 +46,22 @@ final class StatsStatisticsCell: BaseTableCell {
                 view.labelValue.text = "\(country.stats.confirmed)"
                 view.labelValue.textAlignment = .left
 
-                container.addSubview(view)
                 let separator = UIView()
+                container.addSubview(view)
                 container.addSubview(separator)
+                
+                let rightOffset = UIScreen.main.bounds.width / 3
+                
                 view.snp.makeConstraints {
-                    $0.edges.equalToSuperview()
+                    $0.top.bottom.equalToSuperview()
+                    $0.left.equalToSuperview()
+                    $0.right.equalToSuperview()//.offset(-(rightOffset + 77))
                     $0.height.equalTo(31)
                 }
                 separator.snp.makeConstraints {
                     $0.bottom.equalToSuperview()
-                    $0.left.right.equalToSuperview()
+                    $0.left.equalToSuperview()
+                    $0.right.equalToSuperview().offset(-rightOffset)
                     $0.height.equalTo(1)
                 }
                 separator.backgroundColor = R.color.appBattleshipGrey()?.withAlphaComponent(0.25)
@@ -92,7 +88,8 @@ final class StatsStatisticsCell: BaseTableCell {
         configuration.colorValue = R.color.appBattleshipGrey().unwrapped()
         configuration.verticalAlighnmentValue = VerticalAlignmentMode.middle
         configuration.verticalAlighnmentParam = VerticalAlignmentMode.middle
-        configuration.compressionMode = .paramDominates
+        configuration.compressionMode = .fixedParamWidth(width: 100)
+        configuration.valueAligment = .left
         return configuration
     }
 

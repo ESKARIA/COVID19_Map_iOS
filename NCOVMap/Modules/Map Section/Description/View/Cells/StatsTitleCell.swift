@@ -15,15 +15,6 @@ final class StatsTitleCell: BaseTableCell {
     private var lbl_count: UILabel = UILabel.makeLabel(size: 34, weight: .heavy, color: R.color.appMarineBlue().unwrapped())
     private var img_icon: UIImageView = UIImageView(image: R.image.confirmed_icon())
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.createUI()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     internal override func createUI() {
         super.createUI()
         self.contentView.addSubview(self.img_icon)

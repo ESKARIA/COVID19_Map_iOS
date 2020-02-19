@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "logo.pdf",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "iconDark.pdf"
     }
   ],
   "info" : {
