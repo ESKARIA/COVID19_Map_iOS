@@ -124,10 +124,10 @@ extension DonateViewController: DonateViewProtocol {
         self.view.addSubview(cheerView)
         cheerView.config.particle = .confetti(allowedShapes: Particle.ConfettiShape.all)
         cheerView.start()
-        UIView.animate(withDuration: 0.4) {
-            self.lbl_title.text = R.string.localizable.donate_Bought_Success()
-        }
         
+        self.lbl_counter.text = R.string.localizable.donate_Bought_Success()
+        self.lbl_counter.sizeToFit()
+    
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             cheerView.stop()
             self.donateSlider.setValue(0, animated: true)
