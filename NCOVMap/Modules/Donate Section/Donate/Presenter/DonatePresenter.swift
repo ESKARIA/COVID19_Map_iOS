@@ -14,8 +14,6 @@ class DonatePresenter: BasePresenter {
     private var wireFrame: DonateWireFrameProtocol
     private var interactor: DonateInteractorProtocol
     
-    private var products = [DTIAPProduct]()
-    
     init(view: DonateViewProtocol, wireFrame: DonateWireFrameProtocol, interactor: DonateInteractorProtocol) {
         self.view = view
         self.interactor = interactor
@@ -24,7 +22,7 @@ class DonatePresenter: BasePresenter {
     
     private func getProducts() {
         self.interactor.getProducts { (products) in
-            self.products = products
+            self.view?.insert(products: products)
         }
     }
 }
@@ -35,37 +33,15 @@ extension DonatePresenter: DonatePresenterProtocol {
         self.getProducts()
     }
     
-    func didClickDonate(value: DonatePrice) {
+    func didClickDonate(product: DTIAPProduct) {
         self.view?.showLoading()
-        var product: DTIAPProduct?
-        switch value {
-            
-        case .ninetyNineCents:
-            product = products.filter{ $0.productIdentifier == "com.eskaria.ncov.ios.donate.1" }.first
-            
-        case .fiveDollars:
-            product = products.filter{ $0.productIdentifier == "com.eskaria.ncov.ios.donate.2" }.first
-        case .tenDollats:
-            product = products.filter{ $0.productIdentifier == "com.eskaria.ncov.ios.donate.3" }.first
-        case .twentyFiveDollars:
-            product = products.filter{ $0.productIdentifier == "com.eskaria.ncov.ios.donate.4" }.first
-        case .fiftyDollars:
-            product = products.filter{ $0.productIdentifier == "com.eskaria.ncov.ios.donate.5" }.first
-        case .oneHundredDollars:
-            product = products.filter{ $0.productIdentifier == "com.eskaria.ncov.ios.donate.6" }.first
-        }
-        if let _product = product {
-            self.interactor.purchase(product: _product) { (status) in
-                self.view?.hideLoading()
-                if status == .purchased {
-                    self.view?.showSuccess()
-                } else {
-                    self.view?.showOkAlert(with: R.string.localizable.donate_Bought_Error(), description: R.string.localizable.donate_Bought_Error_Description())
-                }
+        self.interactor.purchase(product: product) { (status) in
+            self.view?.hideLoading()
+            if status == .purchased {
+                self.view?.showSuccess()
+            } else {
+                self.view?.showOkAlert(with: R.string.localizable.donate_Bought_Error(), description: R.string.localizable.donate_Bought_Error_Description())
             }
-        } else {
-            //ошибка при получении покупки
-            self.view?.showOkAlert(with: R.string.localizable.donate_Bought_Error(), description: R.string.localizable.donate_Bought_Error_Description())
         }
     }
 }

@@ -15,6 +15,7 @@ protocol DonateViewProtocol: class {
     func showOkAlert(with title: String, description: String?)
     func showLoading()
     func hideLoading()
+    func insert(products: [DTIAPProduct])
 }
 
 // PRESENTER -> WIREFRAME
@@ -22,7 +23,7 @@ protocol DonateWireFrameProtocol: class { }
 
 // VIEW -> PRESENTER
 protocol DonatePresenterProtocol: class {
-    func didClickDonate(value: DonatePrice)
+    func didClickDonate(product: DTIAPProduct)
     func viewLoaded()
 }
 

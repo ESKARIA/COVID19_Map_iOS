@@ -10,20 +10,14 @@ import UIKit
 import SnapKit
 import DevHelper
 import Cheers
-
-enum DonatePrice: String {
-    
-    case ninetyNineCents = "0.99$"
-    case fiveDollars = "5$"
-    case tenDollats = "10$"
-    case twentyFiveDollars = "25$"
-    case fiftyDollars = "50$"
-    case oneHundredDollars = "100$"
-}
+import DTPurchase
 
 class DonateViewController: BaseViewController {
     
     var presenter: DonatePresenterProtocol!
+    
+    private var products = [DTIAPProduct]()
+    private var selectedProduct: DTIAPProduct?
     
     private var lbl_counter: UILabel = UILabel.makeLabel(size: 58, weight: .bold, color: R.color.appMarineBlue().unwrapped())
     private var donateSlider = UISlider()
@@ -100,7 +94,7 @@ class DonateViewController: BaseViewController {
         }
         
         self.lbl_counter.textAlignment = .right
-        self.lbl_counter.text = "0.99$"
+        self.lbl_counter.text = "0"
         
         self.donateSlider.tintColor = R.color.appRed()
         self.donateSlider.maximumValue = 100
@@ -126,12 +120,13 @@ extension DonateViewController: DonateViewProtocol {
         cheerView.start()
         
         self.lbl_counter.text = R.string.localizable.donate_Bought_Success()
-        self.lbl_counter.sizeToFit()
-    
+       
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             cheerView.stop()
             self.donateSlider.setValue(0, animated: true)
-            self.lbl_counter.text = DonatePrice.ninetyNineCents.rawValue
+            if self.products.count > 0 {
+                self.lbl_counter.text = self.products[0].priceLocale
+            }
         }
     }
     
@@ -145,6 +140,13 @@ extension DonateViewController: DonateViewProtocol {
     
     func hideLoading() {
         self.hideBaseLoading()
+    }
+    
+    func insert(products: [DTIAPProduct]) {
+        self.products = products
+        if self.products.count > 0 {
+            self.lbl_counter.text = self.products[0].priceLocale
+        }
     }
 }
 
@@ -174,45 +176,54 @@ extension DonateViewController {
     }
     
     @objc private func didClickDonate() {
-        guard let text = self.lbl_counter.text, let donate = DonatePrice.init(rawValue: text) else {
-            return
+        if let product = self.selectedProduct {
+            self.presenter.didClickDonate(product: product)
         }
-        self.presenter.didClickDonate(value: donate)
     }
     
     @objc private func changeValue(_ slider: UISlider) {
         
         let intValue = Int(slider.value)
-        //0.99, 5, 10, 25, 50, 100
-        if (1...17).contains(intValue) {
-            self.lbl_counter.text = DonatePrice.ninetyNineCents.rawValue
-        } else if (17...34).contains(intValue) {
-            self.lbl_counter.text = DonatePrice.fiveDollars.rawValue
-        } else if (34...51).contains(intValue) {
-            self.lbl_counter.text = DonatePrice.tenDollats.rawValue
-        } else if (51...68).contains(intValue) {
-            self.lbl_counter.text = DonatePrice.twentyFiveDollars.rawValue
-        } else if (68...85).contains(intValue) {
-            self.lbl_counter.text = DonatePrice.fiftyDollars.rawValue
-        } else if (85...100).contains(intValue) {
-            self.lbl_counter.text = DonatePrice.oneHundredDollars.rawValue
+        if self.products.count >= 6 {
+            //0.99, 5, 10, 25, 50, 100
+            if (1...17).contains(intValue) {
+                self.lbl_counter.text = products[0].priceLocale
+            } else if (17...34).contains(intValue) {
+                self.lbl_counter.text = products[1].priceLocale
+            } else if (34...51).contains(intValue) {
+                self.lbl_counter.text = products[2].priceLocale
+            } else if (51...68).contains(intValue) {
+                self.lbl_counter.text = products[3].priceLocale
+            } else if (68...85).contains(intValue) {
+                self.lbl_counter.text = products[4].priceLocale
+            } else if (85...100).contains(intValue) {
+                self.lbl_counter.text = products[5].priceLocale
+            }
         }
     }
     
     @objc private func changeDidEnd(_ slider: UISlider) {
         let intValue = Int(slider.value)
-        if (1...17).contains(intValue) {
-            self.donateSlider.setValue(Float(0), animated: true)
-        } else if (17...34).contains(intValue) {
-            self.donateSlider.setValue(Float(25), animated: true)
-        } else if (34...51).contains(intValue) {
-            self.donateSlider.setValue(Float(42), animated: true)
-        } else if (51...68).contains(intValue) {
-            self.donateSlider.setValue(Float(59), animated: true)
-        } else if (68...85).contains(intValue) {
-            self.donateSlider.setValue(Float(76), animated: true)
-        } else if (85...100).contains(intValue) {
-            self.donateSlider.setValue(Float(100), animated: true)
+        if self.products.count >= 6 {
+            if (1...17).contains(intValue) {
+                self.donateSlider.setValue(Float(0), animated: true)
+                self.selectedProduct = self.products[0]
+            } else if (17...34).contains(intValue) {
+                self.donateSlider.setValue(Float(25), animated: true)
+                self.selectedProduct = self.products[1]
+            } else if (34...51).contains(intValue) {
+                self.donateSlider.setValue(Float(42), animated: true)
+                self.selectedProduct = self.products[2]
+            } else if (51...68).contains(intValue) {
+                self.donateSlider.setValue(Float(59), animated: true)
+                self.selectedProduct = self.products[3]
+            } else if (68...85).contains(intValue) {
+                self.donateSlider.setValue(Float(76), animated: true)
+                self.selectedProduct = self.products[4]
+            } else if (85...100).contains(intValue) {
+                self.donateSlider.setValue(Float(100), animated: true)
+                self.selectedProduct = self.products[5]
+            }
         }
     }
 }
