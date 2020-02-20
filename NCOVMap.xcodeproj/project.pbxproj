@@ -975,6 +975,7 @@
 				DDC9438759028029DCDB8E3F /* [CP] Embed Pods Frameworks */,
 				0E8D2139C90ACECE168E96CE /* [CP] Copy Pods Resources */,
 				20FB84C723FC1B0800611DD6 /* Firebase Crashlytics */,
+				20484B2323FEF5030088CFF5 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -1137,6 +1138,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NCOVMap/Pods-NCOVMap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		20484B2323FEF5030088CFF5 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Fabric;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 45626f711615a88cfb4916943cab2c3a0e9c100c 51df7727a742716ab44e59089c38dc38fba833ac6a1a70aa76adb30fb396a947\n";
 		};
 		20FB84C723FC1B0800611DD6 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
