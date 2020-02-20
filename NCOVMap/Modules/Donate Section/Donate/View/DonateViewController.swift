@@ -89,7 +89,7 @@ class DonateViewController: BaseViewController {
         }
         
         self.lbl_counter.textAlignment = .right
-        self.lbl_counter.text = "1$"
+        self.lbl_counter.text = "0.99$"
         
         self.donateSlider.tintColor = R.color.appRed()
         self.donateSlider.maximumValue = 100
