@@ -15,6 +15,7 @@ class DonateViewController: BaseViewController {
     var presenter: DonatePresenterProtocol!
 
     private var lbl_counter: UILabel = UILabel.makeLabel(size: 58, weight: .bold, color: R.color.appMarineBlue().unwrapped())
+    private var donateSlider = UISlider()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +89,18 @@ class DonateViewController: BaseViewController {
         }
         
         self.lbl_counter.textAlignment = .right
-        self.lbl_counter.text = "0.99$"
+        self.lbl_counter.text = "1$"
+        
+        self.donateSlider.tintColor = R.color.appRed()
+        self.donateSlider.maximumValue = 50
+        self.donateSlider.minimumValue = 1
+        self.donateSlider.addTarget(self, action: #selector(self.changeValue(_:)), for: .valueChanged)
+        self.view.addSubview(self.donateSlider)
+        self.donateSlider.snp.makeConstraints { (make) in
+            make.top.equalTo(self.lbl_counter.snp.bottom).offset(50)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+        }
     }
 }
 
@@ -115,5 +127,10 @@ extension DonateViewController {
         }
 
         return button
+    }
+    
+    @objc private func changeValue(_ slider: UISlider) {
+        let intValue = Int(slider.value)
+        self.lbl_counter.text = "\(intValue)$"
     }
 }
