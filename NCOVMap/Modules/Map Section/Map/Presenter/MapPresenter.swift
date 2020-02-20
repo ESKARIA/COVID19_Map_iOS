@@ -39,6 +39,9 @@ extension MapPresenter: MapPresenterProtocol {
         self.interactor.getStatistics { (model, error) in
             EKIPLocationManager.shared.fetchLocation { (place) in
                 self.statisticsModel.fromCountry = place?.country
+                if let place = place {
+                    self.view?.centerOnPlace(place)
+                }
             }
             if error != nil {
                 // TODO: - обработать ошибку

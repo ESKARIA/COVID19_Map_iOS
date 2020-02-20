@@ -8,11 +8,13 @@
 
 import UIKit
 import EKNetworking
+import EKIPLocation
 
 // PRESENTER -> VIEW
 protocol MapViewProtocol: class {
     func showOnMap(model: [StatisticsCircleViewModel])
     func show(count: StatisticsTotalModel)
+    func centerOnPlace(_ place: EKPlaceModel)
 }
 
 // PRESENTER -> WIREFRAME
