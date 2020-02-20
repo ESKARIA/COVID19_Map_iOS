@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import DevHelper
+import Cheers
 
 enum DonatePrice: String {
     
@@ -30,7 +31,7 @@ class DonateViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createUI()
-        
+        self.presenter.viewLoaded()
     }
     
     private func createUI() {
@@ -116,7 +117,36 @@ class DonateViewController: BaseViewController {
     }
 }
 
-extension DonateViewController: DonateViewProtocol { }
+extension DonateViewController: DonateViewProtocol {
+    
+    func showSuccess() {
+        let cheerView = CheerView()
+        self.view.addSubview(cheerView)
+        cheerView.config.particle = .confetti(allowedShapes: Particle.ConfettiShape.all)
+        cheerView.start()
+        UIView.animate(withDuration: 0.4) {
+            self.lbl_title.text = R.string.localizable.donate_Bought_Success()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            cheerView.stop()
+            self.donateSlider.setValue(0, animated: true)
+            self.lbl_counter.text = DonatePrice.ninetyNineCents.rawValue
+        }
+    }
+    
+    func showOkAlert(with title: String, description: String?) {
+        self.showBaseOkAlertController(title: title, message: description)
+    }
+    
+    func showLoading() {
+        self.showBaseLoading(with: R.string.localizable.donate_Bought_Loading())
+    }
+    
+    func hideLoading() {
+        self.hideBaseLoading()
+    }
+}
 
 // MARK: - Private
 extension DonateViewController {

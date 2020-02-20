@@ -63,6 +63,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate: DTPurchaseDelegate {
     
     func getProductIDs() -> [String] {
-        ["com.eskaria.ncov.ios.donate.1"]
+        ["com.eskaria.ncov.ios.donate.1",
+        "com.eskaria.ncov.ios.donate.2",
+        "com.eskaria.ncov.ios.donate.3",
+        "com.eskaria.ncov.ios.donate.4",
+        "com.eskaria.ncov.ios.donate.5",
+        "com.eskaria.ncov.ios.donate.6"]
     }
 }

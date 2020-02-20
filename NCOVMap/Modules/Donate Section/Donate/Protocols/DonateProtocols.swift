@@ -10,7 +10,12 @@ import UIKit
 import DTPurchase
 
 // PRESENTER -> VIEW
-protocol DonateViewProtocol: class { }
+protocol DonateViewProtocol: class {
+    func showSuccess()
+    func showOkAlert(with title: String, description: String?)
+    func showLoading()
+    func hideLoading()
+}
 
 // PRESENTER -> WIREFRAME
 protocol DonateWireFrameProtocol: class { }
@@ -18,6 +23,7 @@ protocol DonateWireFrameProtocol: class { }
 // VIEW -> PRESENTER
 protocol DonatePresenterProtocol: class {
     func didClickDonate(value: DonatePrice)
+    func viewLoaded()
 }
 
 // PRESENTER -> INTERACTOR
