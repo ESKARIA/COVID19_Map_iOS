@@ -143,3 +143,7 @@ iOSInjectionProject/
 # End of https://www.gitignore.io/api/xcode,macos,swift,cocoapods
 
 NCOVMap.xcodeproj/xcshareddata/xcschemes/NCOVMap.xcscheme
+
+fastlane/Appfile
+
+fastlane/Fastfile

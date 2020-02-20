@@ -4,6 +4,10 @@
 "Map_Confirmed_Snippet" = "Confirmed";
 "Map_Death_Snippet" = "Death";
 "Map_Recovered_Snippet" = "Recovered";
+"Donate_Bought_Error" =  "Error!";
+"Donate_Bought_Error_Description" =  "We cant provide purchase(!";
+"Donate_Bought_Success" =  "Thank you!";
+"Donate_Bought_Loading" =  "Loading";
 
 // Description Module
 "Descript_Confirmed_text" = "As if by coincidence, an outbreak of coronavirus was discovered in Wuhan, a densely populated city in the center of China, with a population of 12 million. The point here is not even a large crowd of people, but a subtropical humid climate, which in the warm winter of 2020 is an ideal environment for the spread of bacteria.\

@@ -15,6 +15,8 @@ def firebase
   pod 'GoogleMaps', :inhibit_warnings => true
   pod 'GooglePlaces', :inhibit_warnings => true
   
+  pod 'Cheers', :inhibit_warnings => true
+  
 end
 
 def modules

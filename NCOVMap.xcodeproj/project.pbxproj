@@ -139,6 +139,8 @@
 		20484B1B23FDD15D0088CFF5 /* InfoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDataSource.swift; sourceTree = "<group>"; };
 		20484B1D23FDD38F0088CFF5 /* InfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableCell.swift; sourceTree = "<group>"; };
 		20484B1F23FDD4E70088CFF5 /* Description+DIResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Description+DIResolver.swift"; sourceTree = "<group>"; };
+		20484B2123FE04230088CFF5 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		20484B2223FE04240088CFF5 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		204A26D523F17DEA005DC46B /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
 		2074DFCD069CD3FC9C177C16 /* InfoDetailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InfoDetailInteractor.swift; sourceTree = "<group>"; };
 		20B3E3A723F15A0F00371FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -715,6 +717,8 @@
 		D43CCD8C23F1492A005F0F31 = {
 			isa = PBXGroup;
 			children = (
+				20484B2223FE04240088CFF5 /* fastlane */,
+				20484B2123FE04230088CFF5 /* Gemfile */,
 				2005F60523F18E1F00A52FC2 /* .gitignore */,
 				D43CCD9723F1492A005F0F31 /* NCOVMap */,
 				D43CCDAE23F1492C005F0F31 /* NCOVMapTests */,
@@ -1525,6 +1529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V93MRMNEKV;
 				INFOPLIST_FILE = NCOVMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1537,6 +1542,7 @@
 				PRODUCT_NAME = "Coronavirus map";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1546,6 +1552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V93MRMNEKV;
 				INFOPLIST_FILE = NCOVMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1558,6 +1565,7 @@
 				PRODUCT_NAME = "Coronavirus map";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
