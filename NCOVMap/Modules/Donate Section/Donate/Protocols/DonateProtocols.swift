@@ -16,7 +16,9 @@ protocol DonateViewProtocol: class { }
 protocol DonateWireFrameProtocol: class { }
 
 // VIEW -> PRESENTER
-protocol DonatePresenterProtocol: class { }
+protocol DonatePresenterProtocol: class {
+    func didClickDonate(value: DonatePrice)
+}
 
 // PRESENTER -> INTERACTOR
 protocol DonateInteractorProtocol: class {

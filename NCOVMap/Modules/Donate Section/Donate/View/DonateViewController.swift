@@ -10,6 +10,16 @@ import UIKit
 import SnapKit
 import DevHelper
 
+enum DonatePrice: String {
+    
+    case ninetyNineCents = "0.99$"
+    case fiveDollars = "5$"
+    case tenDollats = "10$"
+    case twentyFiveDollars = "25$"
+    case fiftyDollars = "50$"
+    case oneHundredDollars = "100$"
+}
+
 class DonateViewController: BaseViewController {
     
     var presenter: DonatePresenterProtocol!
@@ -123,6 +133,8 @@ extension DonateViewController {
         button.layer.cornerRadius = 10
         button.setTitle(R.string.localizable.donate_donnateButton_title(), for: .normal)
         
+        button.addTarget(self, action: #selector(self.didClickDonate), for: .touchUpInside)
+        
         button.snp.makeConstraints { (make) in
             make.height.equalTo(44)
             make.width.equalTo(140).priority(700)
@@ -131,22 +143,29 @@ extension DonateViewController {
         return button
     }
     
+    @objc private func didClickDonate() {
+        guard let text = self.lbl_counter.text, let donate = DonatePrice.init(rawValue: text) else {
+            return
+        }
+        self.presenter.didClickDonate(value: donate)
+    }
+    
     @objc private func changeValue(_ slider: UISlider) {
         
         let intValue = Int(slider.value)
         //0.99, 5, 10, 25, 50, 100
         if (1...17).contains(intValue) {
-            self.lbl_counter.text = "0.99$"
+            self.lbl_counter.text = DonatePrice.ninetyNineCents.rawValue
         } else if (17...34).contains(intValue) {
-            self.lbl_counter.text = "5$"
+            self.lbl_counter.text = DonatePrice.fiveDollars.rawValue
         } else if (34...51).contains(intValue) {
-            self.lbl_counter.text = "10$"
+            self.lbl_counter.text = DonatePrice.tenDollats.rawValue
         } else if (51...68).contains(intValue) {
-            self.lbl_counter.text = "25$"
+            self.lbl_counter.text = DonatePrice.twentyFiveDollars.rawValue
         } else if (68...85).contains(intValue) {
-            self.lbl_counter.text = "50$"
+            self.lbl_counter.text = DonatePrice.fiftyDollars.rawValue
         } else if (85...100).contains(intValue) {
-            self.lbl_counter.text = "100$"
+            self.lbl_counter.text = DonatePrice.oneHundredDollars.rawValue
         }
     }
     

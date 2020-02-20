@@ -19,4 +19,9 @@ class DonatePresenter: BasePresenter {
     }
 }
 
-extension DonatePresenter: DonatePresenterProtocol { }
+extension DonatePresenter: DonatePresenterProtocol {
+    
+    func didClickDonate(value: DonatePrice) {
+        
+    }
+}
