@@ -976,6 +976,7 @@
 				0E8D2139C90ACECE168E96CE /* [CP] Copy Pods Resources */,
 				20FB84C723FC1B0800611DD6 /* Firebase Crashlytics */,
 				20484B2323FEF5030088CFF5 /* Fabric */,
+				20484B2423FFDECA0088CFF5 /* uploader dsym */,
 			);
 			buildRules = (
 			);
@@ -1157,6 +1158,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 45626f711615a88cfb4916943cab2c3a0e9c100c 51df7727a742716ab44e59089c38dc38fba833ac6a1a70aa76adb30fb396a947\n";
+		};
+		20484B2423FFDECA0088CFF5 /* uploader dsym */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "uploader dsym";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/upload-symbols\" -gsp \"${PROJECT_DIR}/NCOVMap/GoogleService-Info.plist\" -p ios \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
 		};
 		20FB84C723FC1B0800611DD6 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
