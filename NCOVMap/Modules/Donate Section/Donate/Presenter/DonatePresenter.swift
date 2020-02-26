@@ -35,9 +35,9 @@ extension DonatePresenter: DonatePresenterProtocol {
     
     func didClickDonate(product: DTIAPProduct) {
         self.view?.showLoading()
-        self.interactor.purchase(product: product) { (status) in
+        self.interactor.purchase(product: product) { (result) in
             self.view?.hideLoading()
-            if status == .purchased {
+            if result.status == .purchased {
                 self.view?.showSuccess()
             } else {
                 self.view?.showOkAlert(with: R.string.localizable.donate_Bought_Error(), description: R.string.localizable.donate_Bought_Error_Description())
