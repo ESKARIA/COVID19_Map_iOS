@@ -12,7 +12,7 @@ import EKNetworking
 struct StatisticsApiRequest: EKNetworkRequest {
 
     var path: String {
-        return "/cases"
+        return "/countries"
     }
 
     var method: EKRequestHTTPMethod {

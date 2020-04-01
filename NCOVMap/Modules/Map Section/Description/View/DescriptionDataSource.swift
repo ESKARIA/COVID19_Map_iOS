@@ -39,7 +39,8 @@ final class DescriptionDataSource {
         }
     }
 
-    var model: StatisticsModel!
+    var models: [ModelCountry] = []
+    var fromCountry: String?
 
 
     func numberOfRows(in section: Int) -> Int {
@@ -57,11 +58,11 @@ final class DescriptionDataSource {
         }
 
         if let cell = cell as? StatsTitleCell {
-            cell.display(self.type, model: model)
+            cell.display(self.type, models: self.models)
         } else if let cell = cell as? StatsTextCell {
-            cell.display(self.type, model: model)
+            cell.display(self.type, models: self.models)
         } else if let cell = cell as? StatsStatisticsCell {
-            cell.display(self.type, model: model)
+            cell.display(self.type, models: self.models, fromCountry: self.fromCountry)
         }
 
         return cell

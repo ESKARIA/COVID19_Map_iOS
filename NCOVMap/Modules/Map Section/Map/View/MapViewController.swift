@@ -249,16 +249,27 @@ extension MapViewController: MapViewProtocol {
         }
     }
 
-    func show(count: StatisticsTotalModel) {
-        self.incrementLabel(to: count.totalConfirmed, in: self.confirmedCountLabel)
-        self.incrementLabel(to: count.totalRecovered, in: self.recoveredCOuntLabel)
-        self.incrementLabel(to: count.totalDeath, in: self.deathCountLabel)
+    func show(count: [ModelCountry]) {
+        
+        var totalCases = 0
+        var totalDeaths = 0
+        var totalRecovered = 0
+        
+        count.forEach {
+            totalCases += $0.cases
+            totalDeaths += $0.deaths
+            totalRecovered += $0.recovered
+        }
+        
+        self.incrementLabel(to: totalCases, in: self.confirmedCountLabel)
+        self.incrementLabel(to: totalDeaths, in: self.recoveredCOuntLabel)
+        self.incrementLabel(to: totalRecovered, in: self.deathCountLabel)
     }
 
     func incrementLabel(to endValue: Int, in label: UILabel) {
         let duration: Double = 2.0 //seconds
         DispatchQueue.global().async {
-            for i in 0 ..< (endValue + 1) {
+            for i in 0...endValue {
                 let sleepTime = UInt32(duration / Double(endValue) * 1000000.0)
                 usleep(sleepTime)
                 DispatchQueue.main.async {

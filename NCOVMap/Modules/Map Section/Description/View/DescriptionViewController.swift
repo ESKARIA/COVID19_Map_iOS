@@ -56,9 +56,9 @@ extension DescriptionViewController: UITableViewDataSource, UITableViewDelegate 
 
 extension DescriptionViewController: DescriptionViewProtocol {
 
-    func setContent(_ type: DescriptionCase, model: StatisticsModel) {
+    func setContent(_ type: DescriptionCase, models: [ModelCountry]) {
         self.dataSource.type = type
-        self.dataSource.model = model
+        self.dataSource.models = models
     }
 }
 

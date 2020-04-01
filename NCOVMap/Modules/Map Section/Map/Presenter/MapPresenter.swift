@@ -16,7 +16,8 @@ class MapPresenter: BasePresenter {
     private var wireFrame: MapWireFrameProtocol
     private var interactor: MapInteractorProtocol
 
-    private var statisticsModel = StatisticsModel()
+    private var countries = [ModelCountry]()
+    private var fromCountry: String?
 
     init(view: MapViewProtocol, wireFrame: MapWireFrameProtocol, interactor: MapInteractorProtocol) {
         self.view = view
@@ -36,30 +37,48 @@ extension MapPresenter: MapPresenterProtocol {
     }
 
     func getStatistics() {
-        self.interactor.getStatistics { (model, error) in
+        self.interactor.getStatistics { (models, error) in
+
+            if let error = error {
+                print(error.localizedDescription)
+            }
+
             EKIPLocationManager.shared.fetchLocation { (place) in
-                self.statisticsModel.fromCountry = place?.country
+                guard let models = models else { return }
+                models.forEach {
+                    $0.fromCountry = place?.country
+                }
+                self.fromCountry = place?.country
                 if let place = place {
                     self.view?.centerOnPlace(place)
                 }
+                
+                if error != nil {
+                    // TODO: - обработать ошибку
+                    return
+                }
+                self.countries = models
+                self.requestPoint()
             }
-            if error != nil {
-                // TODO: - обработать ошибку
-                return
-            }
-            guard let model = model else { return }
-            self.statisticsModel = model
-            self.requestPoint()
+            
         }
     }
 
     func requestPoint(zoom: Float = 0) {
 
         var result = [StatisticsCircleViewModel]()
-        for coordinatesModel in self.statisticsModel.regionsData {
 
-            let totalConfirmed = Double(self.statisticsModel.totalInfo.totalConfirmed)
-            let currentRegionConfirmed = Double(coordinatesModel.dates.last?.confirmed ?? 0)
+        var totalConfirmed: Double = 0
+        var totalDeath: Double = 0
+
+        self.countries.forEach {
+            totalConfirmed += Double($0.cases)
+            totalDeath += Double($0.deaths)
+        }
+
+        for countryModel in self.countries {
+
+            let currentRegionConfirmed = Double(countryModel.cases)
 
             var radius = (currentRegionConfirmed / totalConfirmed) * 1000000
 
@@ -71,8 +90,7 @@ extension MapPresenter: MapPresenterProtocol {
                 radius = 1000000
             }
 
-            let totalDeath = Double(self.statisticsModel.totalInfo.totalDeath)
-            let currentRegionDeath = Double(coordinatesModel.dates.last?.death ?? 0)
+            let currentRegionDeath = Double(countryModel.deaths)
 
             var alpha = (currentRegionDeath / totalDeath) * 100
 
@@ -81,30 +99,30 @@ extension MapPresenter: MapPresenterProtocol {
                 alpha = 28
             }
 
-            let _coordinate = StatisticsCircleViewModel(longitude: coordinatesModel.coordinates.longitude,
-                latitude: coordinatesModel.coordinates.latitude,
-                radius: radius,
-                alpha: alpha,
-                countryName: coordinatesModel.countryName,
-                totalConfirmed: coordinatesModel.dates.last?.confirmed,
-                totalDeath: coordinatesModel.dates.last?.death,
-                totalRecovered: coordinatesModel.dates.last?.recovered)
+            let _coordinate = StatisticsCircleViewModel(longitude: countryModel.countryInfo?.long ?? 0,
+                                                        latitude: countryModel.countryInfo?.lat ?? 0,
+                                                        radius: radius,
+                                                        alpha: alpha,
+                                                        countryName: countryModel.country,
+                                                        totalConfirmed: countryModel.cases,
+                                                        totalDeath: countryModel.deaths,
+                                                        totalRecovered: countryModel.recovered)
 
             result.append(_coordinate)
         }
         self.view?.showOnMap(model: result)
-        self.view?.show(count: self.statisticsModel.totalInfo)
+        self.view?.show(count: self.countries)
     }
 
     func didClickConfirmed() {
-        self.wireFrame.presentDescriptionViewController(from: self.view, type: .confirmed, model: self.statisticsModel)
+        self.wireFrame.presentDescriptionViewController(from: self.view, type: .confirmed, models: self.countries)
     }
 
     func didClickDied() {
-        self.wireFrame.presentDescriptionViewController(from: self.view, type: .died, model: self.statisticsModel)
+        self.wireFrame.presentDescriptionViewController(from: self.view, type: .died, models: self.countries)
     }
 
     func didClickCured() {
-        self.wireFrame.presentDescriptionViewController(from: self.view, type: .recovered, model: self.statisticsModel)
+        self.wireFrame.presentDescriptionViewController(from: self.view, type: .recovered, models: self.countries)
     }
 }

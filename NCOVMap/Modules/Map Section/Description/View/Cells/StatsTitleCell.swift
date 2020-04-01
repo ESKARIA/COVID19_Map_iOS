@@ -51,14 +51,22 @@ final class StatsTitleCell: BaseTableCell {
         }
     }
 
-    func display(_ type: DescriptionCase, model: StatisticsModel) {
+    func display(_ type: DescriptionCase, models: [ModelCountry]) {
         self.img_icon.image = type.icon
         self.lbl_title.text = type.title
+        var totalConfirmed = 0
+        var totalDeath = 0
+        var totalRecovered = 0
 
+        models.forEach {
+            totalConfirmed += $0.cases
+            totalDeath += $0.deaths
+            totalRecovered += $0.recovered
+        }
         switch type {
-        case .confirmed: self.lbl_count.text = "\(model.totalInfo.totalConfirmed)"
-        case .died: self.lbl_count.text = "\(model.totalInfo.totalDeath)"
-        case .recovered: self.lbl_count.text = "\(model.totalInfo.totalRecovered)"
+        case .confirmed: self.lbl_count.text = "\(totalConfirmed)"
+        case .died: self.lbl_count.text = "\(totalDeath)"
+        case .recovered: self.lbl_count.text = "\(totalRecovered)"
         }
     }
 }

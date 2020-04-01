@@ -48,8 +48,8 @@ extension AccountManager: EKAccountManagerProtocol {
 
     func getBaseUrl() -> String {
         switch environmet {
-        case .production: return "http://api.ncov.eskaria.com\(serverPort)\(self.apiPath)"
-        default: return ""
+        case .production: return "https://corona.lmao.ninja"
+        default: return "https://corona.lmao.ninja"
         }
     }
 

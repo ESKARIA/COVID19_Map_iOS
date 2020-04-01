@@ -13,9 +13,9 @@ class MapWireFrame: BaseWireFrame { }
 
 extension MapWireFrame: MapWireFrameProtocol {
 
-    func presentDescriptionViewController(from view: MapViewProtocol?, type: DescriptionCase, model: StatisticsModel) {
+    func presentDescriptionViewController(from view: MapViewProtocol?, type: DescriptionCase, models: [ModelCountry]) {
         guard let fromView = view as? UIViewController else { return }
-        let controller = self.resolver.presentDescriptionViewController(type: type, model: model)
+        let controller = self.resolver.presentDescriptionViewController(type: type, models: models)
         fromView.presentAsStork(controller)
     }
 }
