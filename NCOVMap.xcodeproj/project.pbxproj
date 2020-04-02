@@ -14,7 +14,6 @@
 		1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DEBEE5B78EF5EE9ED12979 /* Navigation+DIResolver.swift */; };
 		1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57B23087CCC0195FB14850F /* NavigationInteractor.swift */; };
 		2005F60423F18DBD00A52FC2 /* Network+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */; };
-		2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */; };
 		2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */; };
 		2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005F60F23F1974200A52FC2 /* AccountManager.swift */; };
 		20160CF023FBF07200187C5A /* DescriptionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CEF23FBF07200187C5A /* DescriptionDataSource.swift */; };
@@ -24,6 +23,10 @@
 		20160CF823FBF3EC00187C5A /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20160CF723FBF3EC00187C5A /* BaseTableCell.swift */; };
 		203507B623FBD9BD00A31A58 /* ParamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B523FBD9BD00A31A58 /* ParamView.swift */; };
 		203507B823FBDA1E00A31A58 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203507B723FBDA1E00A31A58 /* String+Extension.swift */; };
+		20443E7B24351C9000F04CFF /* JSONCountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20443E7924351C9000F04CFF /* JSONCountryInfo.swift */; };
+		20443E7C24351C9000F04CFF /* JSONCountryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20443E7A24351C9000F04CFF /* JSONCountryBase.swift */; };
+		20443E7F2435214800F04CFF /* ModelCountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20443E7D2435214800F04CFF /* ModelCountryInfo.swift */; };
+		20443E802435214800F04CFF /* ModelCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20443E7E2435214800F04CFF /* ModelCountry.swift */; };
 		20484B1C23FDD15D0088CFF5 /* InfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20484B1B23FDD15D0088CFF5 /* InfoDataSource.swift */; };
 		20484B1E23FDD38F0088CFF5 /* InfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20484B1D23FDD38F0088CFF5 /* InfoTableCell.swift */; };
 		20484B2023FDD4E70088CFF5 /* Description+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20484B1F23FDD4E70088CFF5 /* Description+DIResolver.swift */; };
@@ -77,11 +80,6 @@
 		D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD223F14BDE005F0F31 /* BaseWireframe.swift */; };
 		D43CCDD623F14BF7005F0F31 /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD523F14BF7005F0F31 /* DIResolver.swift */; };
 		D43CCDD923F14C2E005F0F31 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDD823F14C2E005F0F31 /* RootViewController.swift */; };
-		D43CCDE423F166F4005F0F31 /* StatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE323F166F4005F0F31 /* StatisticsModel.swift */; };
-		D43CCDE623F1675A005F0F31 /* StatisticsTotalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE523F1675A005F0F31 /* StatisticsTotalModel.swift */; };
-		D43CCDE823F16855005F0F31 /* StatisticsRegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE723F16855005F0F31 /* StatisticsRegionModel.swift */; };
-		D43CCDEA23F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDE923F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift */; };
-		D43CCDEC23F17BAA005F0F31 /* StatisticsRegionDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDEB23F17BAA005F0F31 /* StatisticsRegionDateModel.swift */; };
 		D43CCDF223F18AC5005F0F31 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43CCDF123F18AC5005F0F31 /* R.generated.swift */; };
 		D43CCDF423F18E4C005F0F31 /* GoogleMapStyleDark.json in Resources */ = {isa = PBXBuildFile; fileRef = D43CCDF323F18E4C005F0F31 /* GoogleMapStyleDark.json */; };
 		D43CCDF623F18EBC005F0F31 /* GoogleMapStyleLight.json in Resources */ = {isa = PBXBuildFile; fileRef = D43CCDF523F18EBC005F0F31 /* GoogleMapStyleLight.json */; };
@@ -126,7 +124,6 @@
 		1A28B3A1A8434468F395E31E /* DescriptionProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DescriptionProtocols.swift; sourceTree = "<group>"; };
 		2005F60323F18DBD00A52FC2 /* Network+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Statistics.swift"; sourceTree = "<group>"; };
 		2005F60523F18E1F00A52FC2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsJSONModel.swift; sourceTree = "<group>"; };
 		2005F60D23F1947500A52FC2 /* StatisticsApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsApiRequest.swift; sourceTree = "<group>"; };
 		2005F60F23F1974200A52FC2 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
 		20160CEF23FBF07200187C5A /* DescriptionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionDataSource.swift; sourceTree = "<group>"; };
@@ -136,6 +133,10 @@
 		20160CF723FBF3EC00187C5A /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		203507B523FBD9BD00A31A58 /* ParamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamView.swift; sourceTree = "<group>"; };
 		203507B723FBDA1E00A31A58 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		20443E7924351C9000F04CFF /* JSONCountryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCountryInfo.swift; sourceTree = "<group>"; };
+		20443E7A24351C9000F04CFF /* JSONCountryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCountryBase.swift; sourceTree = "<group>"; };
+		20443E7D2435214800F04CFF /* ModelCountryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCountryInfo.swift; sourceTree = "<group>"; };
+		20443E7E2435214800F04CFF /* ModelCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCountry.swift; sourceTree = "<group>"; };
 		20484B1B23FDD15D0088CFF5 /* InfoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDataSource.swift; sourceTree = "<group>"; };
 		20484B1D23FDD38F0088CFF5 /* InfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableCell.swift; sourceTree = "<group>"; };
 		20484B1F23FDD4E70088CFF5 /* Description+DIResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Description+DIResolver.swift"; sourceTree = "<group>"; };
@@ -197,11 +198,6 @@
 		D43CCDD523F14BF7005F0F31 /* DIResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIResolver.swift; sourceTree = "<group>"; };
 		D43CCDD823F14C2E005F0F31 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D43CCDDD23F16029005F0F31 /* StatisticsJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsJSONModel.swift; sourceTree = "<group>"; };
-		D43CCDE323F166F4005F0F31 /* StatisticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsModel.swift; sourceTree = "<group>"; };
-		D43CCDE523F1675A005F0F31 /* StatisticsTotalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTotalModel.swift; sourceTree = "<group>"; };
-		D43CCDE723F16855005F0F31 /* StatisticsRegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsRegionModel.swift; sourceTree = "<group>"; };
-		D43CCDE923F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsRegionCoordinatesModel.swift; sourceTree = "<group>"; };
-		D43CCDEB23F17BAA005F0F31 /* StatisticsRegionDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsRegionDateModel.swift; sourceTree = "<group>"; };
 		D43CCDF123F18AC5005F0F31 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D43CCDF323F18E4C005F0F31 /* GoogleMapStyleDark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleMapStyleDark.json; sourceTree = "<group>"; };
 		D43CCDF523F18EBC005F0F31 /* GoogleMapStyleLight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleMapStyleLight.json; sourceTree = "<group>"; };
@@ -309,7 +305,8 @@
 		2005F60923F1905300A52FC2 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				2005F60A23F1905300A52FC2 /* StatisticsJSONModel.swift */,
+				20443E7A24351C9000F04CFF /* JSONCountryBase.swift */,
+				20443E7924351C9000F04CFF /* JSONCountryInfo.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -846,11 +843,8 @@
 		D43CCDE223F166DF005F0F31 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				D43CCDE323F166F4005F0F31 /* StatisticsModel.swift */,
-				D43CCDE523F1675A005F0F31 /* StatisticsTotalModel.swift */,
-				D43CCDE723F16855005F0F31 /* StatisticsRegionModel.swift */,
-				D43CCDE923F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift */,
-				D43CCDEB23F17BAA005F0F31 /* StatisticsRegionDateModel.swift */,
+				20443E7E2435214800F04CFF /* ModelCountry.swift */,
+				20443E7D2435214800F04CFF /* ModelCountryInfo.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -975,6 +969,8 @@
 				DDC9438759028029DCDB8E3F /* [CP] Embed Pods Frameworks */,
 				0E8D2139C90ACECE168E96CE /* [CP] Copy Pods Resources */,
 				20FB84C723FC1B0800611DD6 /* Firebase Crashlytics */,
+				20484B2323FEF5030088CFF5 /* Fabric */,
+				20484B2423FFDECA0088CFF5 /* uploader dsym */,
 			);
 			buildRules = (
 			);
@@ -1138,6 +1134,43 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NCOVMap/Pods-NCOVMap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		20484B2323FEF5030088CFF5 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Fabric;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 45626f711615a88cfb4916943cab2c3a0e9c100c 51df7727a742716ab44e59089c38dc38fba833ac6a1a70aa76adb30fb396a947\n";
+		};
+		20484B2423FFDECA0088CFF5 /* uploader dsym */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "uploader dsym";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/upload-symbols\" -a 45626f711615a88cfb4916943cab2c3a0e9c100c -p ios \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
+		};
 		20FB84C723FC1B0800611DD6 /* Firebase Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1282,8 +1315,8 @@
 				20160CF223FBF37500187C5A /* StatsTitleCell.swift in Sources */,
 				D43CCDCD23F14B9E005F0F31 /* BaseInteractor.swift in Sources */,
 				D45493DE23FD72C000C7A9FF /* BaseTabBar.swift in Sources */,
-				D43CCDEA23F17943005F0F31 /* StatisticsRegionCoordinatesModel.swift in Sources */,
 				D43CCD9923F1492A005F0F31 /* AppDelegate.swift in Sources */,
+				20443E7C24351C9000F04CFF /* JSONCountryBase.swift in Sources */,
 				D45CC75A23F2953100BA4138 /* StatisticsCircleViewModel.swift in Sources */,
 				D43CCDD323F14BDE005F0F31 /* BaseWireframe.swift in Sources */,
 				D47E206023FB0111002E4059 /* GMSMarker+Extension.swift in Sources */,
@@ -1296,32 +1329,29 @@
 				10AE3493D7752C2860D9C38C /* MapPresenter.swift in Sources */,
 				E3723A1756BD274645AF8E9A /* MapInteractor.swift in Sources */,
 				20160CF623FBF39D00187C5A /* StatsStatisticsCell.swift in Sources */,
-				D43CCDE623F1675A005F0F31 /* StatisticsTotalModel.swift in Sources */,
 				9802F087B50FF8900AA32B45 /* MapProtocols.swift in Sources */,
 				20160CF823FBF3EC00187C5A /* BaseTableCell.swift in Sources */,
 				5B0DE34987B7DC93CCBFF8C0 /* MapWireFrame.swift in Sources */,
 				1850834368A198FD5E08A727 /* Map+DIResolver.swift in Sources */,
 				D43CCDF223F18AC5005F0F31 /* R.generated.swift in Sources */,
+				20443E7B24351C9000F04CFF /* JSONCountryInfo.swift in Sources */,
 				D43CCDD623F14BF7005F0F31 /* DIResolver.swift in Sources */,
 				D43CCDCF23F14BAD005F0F31 /* BasePresenter.swift in Sources */,
 				A11D4F682D21189DCFC2AEDF /* NavigationViewController.swift in Sources */,
 				0080190ADD74A8A938576F69 /* NavigationPresenter.swift in Sources */,
-				D43CCDE423F166F4005F0F31 /* StatisticsModel.swift in Sources */,
 				20160CF423FBF38500187C5A /* StatsTextCell.swift in Sources */,
 				1F91274A8A6FC7117B61DB10 /* NavigationInteractor.swift in Sources */,
 				20484B1E23FDD38F0088CFF5 /* InfoTableCell.swift in Sources */,
 				47D76BF6D0A5AB82F482F88F /* NavigationProtocols.swift in Sources */,
+				20443E7F2435214800F04CFF /* ModelCountryInfo.swift in Sources */,
 				2005F61023F1974200A52FC2 /* AccountManager.swift in Sources */,
 				2005F60E23F1947500A52FC2 /* StatisticsApiRequest.swift in Sources */,
 				556875985197DCADAF086766 /* NavigationWireFrame.swift in Sources */,
 				203507B823FBDA1E00A31A58 /* String+Extension.swift in Sources */,
-				D43CCDE823F16855005F0F31 /* StatisticsRegionModel.swift in Sources */,
-				D43CCDEC23F17BAA005F0F31 /* StatisticsRegionDateModel.swift in Sources */,
 				1E25E558F767E1D3265B0D89 /* Navigation+DIResolver.swift in Sources */,
 				D43CCDFA23F1905B005F0F31 /* ThemeManager.swift in Sources */,
 				2005F60423F18DBD00A52FC2 /* Network+Statistics.swift in Sources */,
 				204A26D623F17DEA005DC46B /* NetworkRequestProvider.swift in Sources */,
-				2005F60B23F1905300A52FC2 /* StatisticsJSONModel.swift in Sources */,
 				21D8B45A3754F4CE92ACCB86 /* DescriptionViewController.swift in Sources */,
 				4C66E4EAAECDA00315C44974 /* DescriptionPresenter.swift in Sources */,
 				20484B2023FDD4E70088CFF5 /* Description+DIResolver.swift in Sources */,
@@ -1342,6 +1372,7 @@
 				3547B3055589090F5896BB3D /* InfoWireFrame.swift in Sources */,
 				B179DDC65DB1F871D6790B87 /* Info+DIResolver.swift in Sources */,
 				20FCDEB9EBA1DA0725C90C1C /* InfoDetailViewController.swift in Sources */,
+				20443E802435214800F04CFF /* ModelCountry.swift in Sources */,
 				B4C65281ABD53BA8ECEAD575 /* InfoDetailPresenter.swift in Sources */,
 				942A8EABA41DF4975E6FB770 /* InfoDetailInteractor.swift in Sources */,
 				DA6090236475DB725318D6CF /* InfoDetailProtocols.swift in Sources */,
@@ -1529,7 +1560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = V93MRMNEKV;
 				INFOPLIST_FILE = NCOVMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1541,7 +1572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eskaria.ncov.ios;
 				PRODUCT_NAME = "Coronavirus map";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1552,7 +1583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = V93MRMNEKV;
 				INFOPLIST_FILE = NCOVMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1564,7 +1595,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eskaria.ncov.ios;
 				PRODUCT_NAME = "Coronavirus map";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

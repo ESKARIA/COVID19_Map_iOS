@@ -26,7 +26,7 @@ final class StatsTextCell: BaseTableCell {
         }
     }
 
-    func display(_ type: DescriptionCase, model: StatisticsModel) {
+    func display(_ type: DescriptionCase, models: [ModelCountry]) {
         self.lbl_description.text = type.description
     }
 }

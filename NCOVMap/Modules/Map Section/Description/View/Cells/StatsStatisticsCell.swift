@@ -35,23 +35,23 @@ final class StatsStatisticsCell: BaseTableCell {
         }
     }
 
-    func display(_ type: DescriptionCase, model: StatisticsModel) {
+    func display(_ type: DescriptionCase, models: [ModelCountry], fromCountry: String?) {
         switch type {
         case .confirmed:
 
-            for country in model.mergeCountries().sorted(by: { $0.stats.confirmed > $1.stats.confirmed }) {
+            for model in models.sorted(by: { $0.cases > $1.cases }) {
                 let container = UIView()
                 let view = ParamValueView(configuration: self.getConfig())
-                view.labelParam.text = country.countryName.replaceChina()
-                view.labelValue.text = "\(country.stats.confirmed)"
+                view.labelParam.text = model.country
+                view.labelValue.text = "\(model.cases)"
                 view.labelValue.textAlignment = .left
 
                 let separator = UIView()
                 container.addSubview(view)
                 container.addSubview(separator)
-                
+
                 let rightOffset = UIScreen.main.bounds.width / 3
-                
+
                 view.snp.makeConstraints {
                     $0.top.bottom.equalToSuperview()
                     $0.left.equalToSuperview()
@@ -65,7 +65,7 @@ final class StatsStatisticsCell: BaseTableCell {
                     $0.height.equalTo(1)
                 }
                 separator.backgroundColor = R.color.appBattleshipGrey()?.withAlphaComponent(0.25)
-                if let fromCountry = model.fromCountry, country.countryName.contains(fromCountry) {
+                if let fromCountry = model.fromCountry, model.country.contains(fromCountry) {
                     view.labelValue.textColor = R.color.appRed()
                     view.labelParam.textColor = R.color.appRed()
                     self.sv_stats.insertArrangedSubview(container, at: 0)
@@ -73,6 +73,7 @@ final class StatsStatisticsCell: BaseTableCell {
                     self.sv_stats.addArrangedSubview(container)
                 }
             }
+
         case .died:
             self.hideStats(hidden: true)
         case .recovered:

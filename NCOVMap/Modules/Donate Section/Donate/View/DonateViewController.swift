@@ -66,7 +66,7 @@ class DonateViewController: BaseViewController {
             $0.height.equalTo(27)
         }
         
-        let description_lbl = UILabel.makeLabel(size: 10, weight: .regular, color: R.color.appMarineBlue().unwrapped())
+        let description_lbl = UILabel.makeLabel(size: 14, weight: .regular, color: R.color.appMarineBlue().unwrapped())
         lightContainer.addSubview(description_lbl)
         description_lbl.snp.makeConstraints {
             $0.top.equalToSuperview().offset(65)

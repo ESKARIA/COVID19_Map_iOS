@@ -41,7 +41,7 @@ enum DescriptionCase {
 
 // PRESENTER -> VIEW
 protocol DescriptionViewProtocol: class {
-    func setContent(_ type: DescriptionCase, model: StatisticsModel)
+    func setContent(_ type: DescriptionCase, models: [ModelCountry])
 }
 
 // PRESENTER -> WIREFRAME

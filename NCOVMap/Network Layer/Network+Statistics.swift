@@ -14,12 +14,12 @@ protocol NetworkStatisticsProtocol {
     /// Get full statistics method
     ///
     /// - Parameter completion: statistic model(optioanl), error(optional)
-    func getStatistics(_ completion: @escaping(StatisticsModel?, EKNetworkError?) -> Void)
+    func getStatistics(_ completion: @escaping([ModelCountry]?, EKNetworkError?) -> Void)
 }
 
 extension NetworkRequestProvider: NetworkStatisticsProtocol {
     
-    func getStatistics(_ completion: @escaping (StatisticsModel?, EKNetworkError?) -> Void) {
+    func getStatistics(_ completion: @escaping ([ModelCountry]?, EKNetworkError?) -> Void) {
         let request = StatisticsApiRequest()
         self.runRequest(request, progressResult: nil) { (statusCode, data, networkError) in
             defer {
@@ -35,11 +35,11 @@ extension NetworkRequestProvider: NetworkStatisticsProtocol {
             do {
                 if let data = data {
                     let jsonDecoder = JSONDecoder()
-                    let jsonModel = try jsonDecoder.decode(StatisticsJSONModel.self, from: data)
+                    let jsonModels = try jsonDecoder.decode([JSONCountryBase].self, from: data)
 
-                    let model = StatisticsModel.convert(apiModel: jsonModel)
+                    let models = jsonModels.map { ModelCountry.convert(apiModel: $0) }
                     
-                    completion(model, nil)
+                    completion(models, nil)
                 }
             } catch {
                 completion(nil, EKNetworkErrorStruct(error: error as NSError))

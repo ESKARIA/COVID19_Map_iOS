@@ -39,12 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension UIResponder {
-    
+
     func setupFirebase() {
         self.setupAnalytics()
         self.setupGoogleMapsApi()
     }
-    
+
     private func setupGoogleMapsApi() {
         guard let googleMapsKey = Bundle.main.object(forInfoDictionaryKey: "GoogleMapsApiKey") as? String else {
             fatalError("Insert API key in info.plist!")
@@ -52,8 +52,9 @@ extension UIResponder {
         GMSServices.provideAPIKey(googleMapsKey)
         GMSPlacesClient.provideAPIKey(googleMapsKey)
     }
-    
+
     private func setupAnalytics() {
+        Fabric.with([Crashlytics.self])
         FirebaseApp.configure()
     }
 }

@@ -11,6 +11,7 @@ import SnapKit
 import GoogleMaps
 import GooglePlaces
 import DevHelper
+import EKIPLocation
 
 enum MapViewControllerCountLabelType {
     case recovered
@@ -51,6 +52,7 @@ class MapViewController: BaseViewController {
         let camera = GMSCameraPosition(latitude: 0, longitude: 0, zoom: 1)
         self.mapView = GMSMapView(frame: mapContainer.frame, camera: camera)
         self.mapView.delegate = self
+        self.mapView.setMinZoom(3, maxZoom: 10)
         self.setupMaps()
 
         mapContainer.addSubview(self.mapView)
@@ -60,8 +62,10 @@ class MapViewController: BaseViewController {
 
         self.view.addSubview(mapContainer)
         self.view.addSubview(stackView)
-        mapContainer.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+        mapContainer.snp.makeConstraints {
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(15)
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
         }
 
         stackView.snp.makeConstraints { (make) in
@@ -109,18 +113,18 @@ class MapViewController: BaseViewController {
 
     private func createStackView() -> UIStackView {
 
-        self.confirmedCountLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
+        self.confirmedCountLabel = UILabel.makeLabel(size: 22, weight: .bold, color: .white)
         self.confirmedCountLabel.adjustsFontSizeToFitWidth = true
         self.confirmedCountLabel.numberOfLines = 1
-        
-        self.recoveredCOuntLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
+
+        self.recoveredCOuntLabel = UILabel.makeLabel(size: 22, weight: .bold, color: .white)
         self.recoveredCOuntLabel.adjustsFontSizeToFitWidth = true
         self.recoveredCOuntLabel.numberOfLines = 1
-        
-        self.deathCountLabel = UILabel.makeLabel(size: 25, weight: .bold, color: .white)
+
+        self.deathCountLabel = UILabel.makeLabel(size: 22, weight: .bold, color: .white)
         self.deathCountLabel.adjustsFontSizeToFitWidth = true
         self.deathCountLabel.numberOfLines = 1
-        
+
         self.confirmedCountLabel.text = "0"
         self.recoveredCOuntLabel.text = "0"
         self.deathCountLabel.text = "0"
@@ -194,9 +198,9 @@ class MapViewController: BaseViewController {
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.numberOfLines = 1
         titleLabel.sizeToFit()
-        
+
         titleLabel.layoutIfNeeded()
-        
+
 
         _view.bringSubviewToFront(titleLabel)
         return _view
@@ -210,6 +214,15 @@ class MapViewController: BaseViewController {
 }
 
 extension MapViewController: MapViewProtocol {
+    func centerOnPlace(_ place: EKPlaceModel) {
+        if let lat = place.lat, let lng = place.lon {
+            let coord = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+            DispatchQueue.main.async {
+                self.mapView.animate(toLocation: coord)
+            }
+        }
+    }
+
 
     func showOnMap(model: [StatisticsCircleViewModel]) {
         mapView.clear()
@@ -220,7 +233,7 @@ extension MapViewController: MapViewProtocol {
             circle.fillColor = color
             circle.strokeColor = .clear
             circle.map = mapView
-            
+
             let marker = GMSMarker(position: position)
             marker.opacity = 0
             marker.icon = UIImage()
@@ -236,16 +249,27 @@ extension MapViewController: MapViewProtocol {
         }
     }
 
-    func show(count: StatisticsTotalModel) {
-        self.incrementLabel(to: count.totalConfirmed, in: self.confirmedCountLabel)
-        self.incrementLabel(to: count.totalRecovered, in: self.recoveredCOuntLabel)
-        self.incrementLabel(to: count.totalDeath, in: self.deathCountLabel)
+    func show(count: [ModelCountry]) {
+        
+        var totalCases = 0
+        var totalDeaths = 0
+        var totalRecovered = 0
+        
+        count.forEach {
+            totalCases += $0.cases
+            totalDeaths += $0.deaths
+            totalRecovered += $0.recovered
+        }
+        
+        self.incrementLabel(to: totalCases, in: self.confirmedCountLabel)
+        self.incrementLabel(to: totalDeaths, in: self.recoveredCOuntLabel)
+        self.incrementLabel(to: totalRecovered, in: self.deathCountLabel)
     }
 
     func incrementLabel(to endValue: Int, in label: UILabel) {
         let duration: Double = 2.0 //seconds
         DispatchQueue.global().async {
-            for i in 0 ..< (endValue + 1) {
+            for i in 0...endValue {
                 let sleepTime = UInt32(duration / Double(endValue) * 1000000.0)
                 usleep(sleepTime)
                 DispatchQueue.main.async {
@@ -261,7 +285,7 @@ extension MapViewController: MapViewProtocol {
 }
 
 extension MapViewController: GMSMapViewDelegate {
-   
+
 }
 
 // MARK: - Private

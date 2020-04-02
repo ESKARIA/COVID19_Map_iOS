@@ -19,7 +19,7 @@ class MapInteractor: BaseInteractor {
 
 extension MapInteractor: MapInteractorProtocol {
     
-    func getStatistics(completion: @escaping (StatisticsModel?, EKNetworkError?) -> Void) {
+    func getStatistics(completion: @escaping ([ModelCountry]?, EKNetworkError?) -> Void) {
         self.networking.getStatistics(completion)
     }
 }
