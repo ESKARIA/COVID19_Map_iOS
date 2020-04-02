@@ -21,8 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         UITabBar.appearance().barTintColor = R.color.appDark().unwrapped()
         
-        
-        let purchaseManager = DTIAPProvider(delegate: self)
+        let purchaseManager = DTIAPProvider()
         self.resolver = DIResolver(purchaseManager: purchaseManager)
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
@@ -57,17 +56,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-    }
-}
-
-extension SceneDelegate: DTPurchaseDelegate {
-    
-    func getProductIDs() -> [String] {
-        ["com.eskaria.ncov.ios.donate.1",
-        "com.eskaria.ncov.ios.donate.2",
-        "com.eskaria.ncov.ios.donate.3",
-        "com.eskaria.ncov.ios.donate.4",
-        "com.eskaria.ncov.ios.donate.5",
-        "com.eskaria.ncov.ios.donate.6"]
     }
 }

@@ -4,6 +4,27 @@
 <dict>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>DTPurchase</key>
+	<array>
+		<string>com.eskaria.ncov.ios.donate.1</string>
+		<string>com.eskaria.ncov.ios.donate.2</string>
+		<string>com.eskaria.ncov.ios.donate.3</string>
+		<string>com.eskaria.ncov.ios.donate.4</string>
+		<string>com.eskaria.ncov.ios.donate.5</string>
+		<string>com.eskaria.ncov.ios.donate.6</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>GoogleMapsApiKey</key>
+	<string>AIzaSyBOOcPpUBG-E2qU4l92qKgVXWoI9NB9vdk</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
