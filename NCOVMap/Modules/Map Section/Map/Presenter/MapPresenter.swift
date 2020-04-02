@@ -11,14 +11,14 @@ import EKIPLocation
 import Crashlytics
 
 class MapPresenter: BasePresenter {
-
+    
     weak var view: MapViewProtocol?
     private var wireFrame: MapWireFrameProtocol
     private var interactor: MapInteractorProtocol
-
+    
     private var countries = [ModelCountry]()
     private var fromCountry: String?
-
+    
     init(view: MapViewProtocol, wireFrame: MapWireFrameProtocol, interactor: MapInteractorProtocol) {
         self.view = view
         self.interactor = interactor
@@ -27,22 +27,22 @@ class MapPresenter: BasePresenter {
 }
 
 extension MapPresenter: MapPresenterProtocol {
-
+    
     func viewLoaded() {
         self.getStatistics()
     }
-
+    
     func viewAppeared() {
-
+        
     }
-
+    
     func getStatistics() {
         self.interactor.getStatistics { (models, error) in
-
+            
             if let error = error {
                 print(error.localizedDescription)
             }
-
+            
             EKIPLocationManager.shared.fetchLocation { (place) in
                 guard let models = models else { return }
                 models.forEach {
@@ -63,65 +63,72 @@ extension MapPresenter: MapPresenterProtocol {
             
         }
     }
-
+    
     func requestPoint(zoom: Float = 0) {
-
-        var result = [StatisticsCircleViewModel]()
-
-        var totalConfirmed: Double = 0
-        var totalDeath: Double = 0
-
-        self.countries.forEach {
-            totalConfirmed += Double($0.cases)
-            totalDeath += Double($0.deaths)
+        
+        let queue = DispatchQueue(label: "MapRresenter")
+        
+        queue.async {
+            var result = [StatisticsCircleViewModel]()
+            
+            var totalConfirmed: Double = 0
+            var totalDeath: Double = 0
+            
+            self.countries.forEach {
+                totalConfirmed += Double($0.cases)
+                totalDeath += Double($0.deaths)
+            }
+            
+            for countryModel in self.countries {
+                
+                let currentRegionConfirmed = Double(countryModel.cases)
+                
+                var radius = (currentRegionConfirmed / totalConfirmed) * 1000000
+                
+                if radius < 100000 {
+                    radius = 100000
+                }
+                
+                if radius > 1000000 {
+                    radius = 1000000
+                }
+                
+                let currentRegionDeath = Double(countryModel.deaths)
+                
+                var alpha = (currentRegionDeath / totalDeath) * 100
+                
+                alpha = alpha * 0.7
+                if alpha < 28 {
+                    alpha = 28
+                }
+                
+                let _coordinate = StatisticsCircleViewModel(longitude: countryModel.countryInfo?.long ?? 0,
+                                                            latitude: countryModel.countryInfo?.lat ?? 0,
+                                                            radius: radius,
+                                                            alpha: alpha,
+                                                            countryName: countryModel.country,
+                                                            totalConfirmed: countryModel.cases,
+                                                            totalDeath: countryModel.deaths,
+                                                            totalRecovered: countryModel.recovered)
+                
+                result.append(_coordinate)
+            }
+            
+            DispatchQueue.main.async {
+                self.view?.showOnMap(model: result)
+                self.view?.show(count: self.countries)
+            }
         }
-
-        for countryModel in self.countries {
-
-            let currentRegionConfirmed = Double(countryModel.cases)
-
-            var radius = (currentRegionConfirmed / totalConfirmed) * 1000000
-
-            if radius < 100000 {
-                radius = 100000
-            }
-
-            if radius > 1000000 {
-                radius = 1000000
-            }
-
-            let currentRegionDeath = Double(countryModel.deaths)
-
-            var alpha = (currentRegionDeath / totalDeath) * 100
-
-            alpha = alpha * 0.7
-            if alpha < 28 {
-                alpha = 28
-            }
-
-            let _coordinate = StatisticsCircleViewModel(longitude: countryModel.countryInfo?.long ?? 0,
-                                                        latitude: countryModel.countryInfo?.lat ?? 0,
-                                                        radius: radius,
-                                                        alpha: alpha,
-                                                        countryName: countryModel.country,
-                                                        totalConfirmed: countryModel.cases,
-                                                        totalDeath: countryModel.deaths,
-                                                        totalRecovered: countryModel.recovered)
-
-            result.append(_coordinate)
-        }
-        self.view?.showOnMap(model: result)
-        self.view?.show(count: self.countries)
     }
-
+    
     func didClickConfirmed() {
         self.wireFrame.presentDescriptionViewController(from: self.view, type: .confirmed, models: self.countries)
     }
-
+    
     func didClickDied() {
         self.wireFrame.presentDescriptionViewController(from: self.view, type: .died, models: self.countries)
     }
-
+    
     func didClickCured() {
         self.wireFrame.presentDescriptionViewController(from: self.view, type: .recovered, models: self.countries)
     }
